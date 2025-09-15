@@ -1,0 +1,8 @@
+# Secrets & statics
+echo "venv/
+__pycache__/
+*.pyc
+.env
+media/
+*.db
+.DS_Store" > .gitignore
