@@ -26,6 +26,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    'common',
     'authentication',
     'polls',
     'analytics',
@@ -76,8 +77,8 @@ DATABASES = {
     }
 }
 
-# Custom User Model
-AUTH_USER_MODEL = 'authentication.User'
+# Custom user model
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
