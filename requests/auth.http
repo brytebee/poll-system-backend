@@ -1,0 +1,76 @@
+# requests/auth.http
+@baseUrl = http://127.0.0.1:8000/api/auth
+
+### Register
+POST {{baseUrl}}/register/
+Content-Type: application/json
+
+{
+  "email": "user001@gy.un",
+  "first_name": "User",
+  "last_name": "One",
+  "username": "user001",
+  "password": "secrepass00!",
+  "password_confirm": "secrepass00!"
+}
+
+### Login
+# @name login
+POST {{baseUrl}}/login/
+Content-Type: application/json
+
+{
+  "username": "user001",
+  "password": "newpass123!"
+}
+
+###
+@access_token = {{login.response.body.access}}
+@refresh_token = {{login.response.body.refresh}}
+
+### Token Refresh
+# @name refresh
+POST {{baseUrl}}/token/refresh/
+Content-Type: application/json
+
+{
+  "refresh": "{{refresh_token}}"
+}
+
+####
+@access_token = {{refresh.response.body.access}}
+# @refresh_token = {{refresh.response.body.refresh}}
+
+### Profile (requires access token)
+GET {{baseUrl}}/profile/
+Authorization: Bearer {{access_token}}
+
+### Change Password (requires access token)
+POST {{baseUrl}}/change-password/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "old_password": "newpass123f!",
+  "new_password": "secrepass00!",
+  "new_password_confirm": "secrepass00!"
+}
+
+### Logout
+POST {{baseUrl}}/logout/
+Content-Type: application/json
+# Authorization: Bearer {{access_token}}
+
+{
+  "refresh_token": "{{refresh_token}}"
+}
+
+###
+# @access_token = {{login.response.body.access}}
+# @refresh_token = {{login.response.body.refresh}}
+
+### Check Username
+GET {{baseUrl}}/check-username/?username=user001
+
+### Check Email
+GET {{baseUrl}}/check-email/?email=user001@gy.un
