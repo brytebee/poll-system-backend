@@ -1,5 +1,4 @@
 # poll_system/settings/base.py
-import os
 from decouple import config
 from pathlib import Path
 from datetime import timedelta
@@ -29,6 +28,7 @@ THIRD_PARTY_APPS = [
     'dj_rest_auth',
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
+    'django_filters',
 ]
 
 LOCAL_APPS = [
@@ -106,11 +106,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DRF Configuration
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'authentication.authentication.EnhancedJWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
+        'authentication.permissions.NotBlacklistedPermission', 
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
@@ -160,3 +161,24 @@ SIMPLE_JWT = {
 }
 
 TOKEN_MODEL=None
+
+# Add caching configuration for token blacklist
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',  # For development
+        'LOCATION': 'unique-snowflake',
+    }
+}
+
+# For production, use Redis:
+"""
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
+    }
+}
+"""
