@@ -10,6 +10,8 @@ from .serializers import (
     PollCreateSerializer, PollUpdateSerializer, OptionSerializer
 )
 from .permissions import IsPollOwnerOrReadOnly, CanVotePermission
+from django.db import transaction
+from .serializers import VoteSerializer, VoteCastSerializer
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     """Category ViewSet - Read only"""
@@ -200,3 +202,102 @@ class PollViewSet(viewsets.ModelViewSet):
                 'option_text': None,
                 'voted_at': None
             })
+    
+    @action(detail=True, methods=['post'], permission_classes=[CanVotePermission])
+    def vote(self, request, pk=None):
+        """Cast vote on poll"""
+        poll = self.get_object()
+        
+        # Check if poll accepts votes
+        if not poll.can_vote:
+            return Response(
+                {'error': 'This poll is not accepting votes'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Check authentication for non-anonymous polls
+        if not poll.is_anonymous and not request.user.is_authenticated:
+            return Response(
+                {'error': 'Authentication required for this poll'},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+        
+        serializer = VoteCastSerializer(
+            data=request.data,
+            context={
+                'request': request,
+                'poll_id': poll.id
+            }
+        )
+        
+        if serializer.is_valid():
+            try:
+                with transaction.atomic():
+                    votes = serializer.create_votes()
+                    
+                    return Response({
+                        'message': 'Vote cast successfully',
+                        'votes_count': len(votes),
+                        'poll_id': poll.id,
+                        'voted_options': [
+                            {
+                                'option_id': vote.option.id,
+                                'option_text': vote.option.text
+                            }
+                            for vote in votes
+                        ]
+                    }, status=status.HTTP_201_CREATED)
+            
+            except Exception as e:
+                return Response(
+                    {'error': f'Failed to cast vote: {str(e)}'},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                )
+        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    @action(detail=True, methods=['delete'], permission_classes=[permissions.IsAuthenticated])
+    def remove_vote(self, request, pk=None):
+        """Remove user's vote from poll"""
+        poll = self.get_object()
+        
+        # Check if poll allows vote removal (only if not finalized)
+        if poll.results_finalized:
+            return Response(
+                {'error': 'Cannot remove vote from finalized poll'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Find and delete user's votes
+        votes = Vote.objects.filter(poll=poll, user=request.user)
+        
+        if not votes.exists():
+            return Response(
+                {'error': 'No vote found for this poll'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        
+        vote_count = votes.count()
+        votes.delete()
+        
+        return Response({
+            'message': 'Vote removed successfully',
+            'removed_votes': vote_count,
+            'poll_id': poll.id
+        })
+    
+    @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
+    def my_votes(self, request):
+        """Get current user's votes"""
+        votes = Vote.objects.filter(user=request.user).select_related(
+            'poll', 'option'
+        ).order_by('-created_at')
+        
+        # Pagination
+        page = self.paginate_queryset(votes)
+        if page is not None:
+            serializer = VoteSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+        
+        serializer = VoteSerializer(votes, many=True)
+        return Response(serializer.data)

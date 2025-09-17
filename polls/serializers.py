@@ -184,3 +184,146 @@ class PollUpdateSerializer(serializers.ModelSerializer):
             }
         
         return super().update(instance, validated_data)
+
+class VoteSerializer(serializers.ModelSerializer):
+    """Vote serializer"""
+    poll_title = serializers.ReadOnlyField(source='poll.title')
+    option_text = serializers.ReadOnlyField(source='option.text')
+    voter_name = serializers.SerializerMethodField()
+    
+    class Meta:
+        model = Vote
+        fields = (
+            'id', 'poll', 'option', 'poll_title', 'option_text',
+            'voter_name', 'created_at'
+        )
+        read_only_fields = ('id', 'created_at')
+    
+    def get_voter_name(self, obj):
+        """Get voter name (username or Anonymous)"""
+        if obj.user:
+            return obj.user.display_name
+        return "Anonymous"
+
+class VoteCastSerializer(serializers.Serializer):
+    """Serializer for casting votes"""
+    option_id = serializers.UUIDField()
+    options = serializers.ListField(
+        child=serializers.UUIDField(),
+        required=False,
+        help_text="For multiple choice polls"
+    )
+    
+    def validate_option_id(self, value):
+        """Validate option exists"""
+        try:
+            option = Option.objects.get(id=value)
+            self.option = option
+            return value
+        except Option.DoesNotExist:
+            raise serializers.ValidationError("Invalid option ID")
+    
+    def validate_options(self, value):
+        """Validate multiple options for multiple choice polls"""
+        if not value:
+            return value
+        
+        # Check all options exist
+        options = Option.objects.filter(id__in=value)
+        if len(options) != len(value):
+            raise serializers.ValidationError("One or more invalid option IDs")
+        
+        self.options = options
+        return value
+    
+    def validate(self, attrs):
+        """Cross-field validation"""
+        poll_id = self.context.get('poll_id')
+        request = self.context.get('request')
+        
+        try:
+            poll = Poll.objects.get(id=poll_id)
+        except Poll.DoesNotExist:
+            raise serializers.ValidationError("Invalid poll ID")
+        
+        # Check if poll accepts votes
+        if not poll.can_vote:
+            raise serializers.ValidationError("This poll is not accepting votes")
+        
+        # Validate options belong to poll
+        if 'option_id' in attrs:
+            option = Option.objects.get(id=attrs['option_id'])
+            if option.poll != poll:
+                raise serializers.ValidationError("Option does not belong to this poll")
+        
+        if 'options' in attrs and attrs['options']:
+            options = Option.objects.filter(id__in=attrs['options'])
+            if not all(option.poll == poll for option in options):
+                raise serializers.ValidationError("All options must belong to this poll")
+            
+            # Check if poll allows multiple choice
+            if not poll.multiple_choice:
+                raise serializers.ValidationError("This poll does not allow multiple choices")
+        
+        # Check for existing vote
+        user = request.user if request.user.is_authenticated else None
+        ip_address = self.get_client_ip(request)
+        
+        if user:
+            # Check user hasn't voted
+            if Vote.objects.filter(poll=poll, user=user).exists():
+                raise serializers.ValidationError("You have already voted on this poll")
+        else:
+            # Check IP hasn't voted (for anonymous polls)
+            if Vote.objects.filter(poll=poll, ip_address=ip_address, user__isnull=True).exists():
+                raise serializers.ValidationError("This IP address has already voted on this poll")
+        
+        attrs['poll'] = poll
+        attrs['user'] = user
+        attrs['ip_address'] = ip_address
+        return attrs
+    
+    def get_client_ip(self, request):
+        """Get client IP address"""
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        return ip
+    
+    def create_votes(self):
+        """Create vote records"""
+        validated_data = self.validated_data
+        poll = validated_data['poll']
+        user = validated_data['user']
+        ip_address = validated_data['ip_address']
+        user_agent = self.context['request'].META.get('HTTP_USER_AGENT', '')
+        
+        votes = []
+        
+        if poll.multiple_choice and 'options' in validated_data and validated_data['options']:
+            # Create multiple votes
+            options = Option.objects.filter(id__in=validated_data['options'])
+            for option in options:
+                vote = Vote.objects.create(
+                    poll=poll,
+                    option=option,
+                    user=user,
+                    ip_address=ip_address,
+                    user_agent=user_agent
+                )
+                votes.append(vote)
+        else:
+            # Create single vote
+            option = Option.objects.get(id=validated_data['option_id'])
+            vote = Vote.objects.create(
+                poll=poll,
+                option=option,
+                user=user,
+                ip_address=ip_address,
+                user_agent=user_agent
+            )
+            votes.append(vote)
+        
+        return votes
