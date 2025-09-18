@@ -1,14 +1,16 @@
 # poll_system/settings/base.py
-import os
 from decouple import config
 from pathlib import Path
 from datetime import timedelta
+from celery.schedules import crontab
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='your-secret-key-here')
 
 DEBUG = config('DEBUG', default=True, cast=bool)
+
+ENV = config('ENV', default='dev')
 
 ALLOWED_HOSTS = []
 
@@ -29,6 +31,7 @@ THIRD_PARTY_APPS = [
     'dj_rest_auth',
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
+    'django_filters',
 ]
 
 LOCAL_APPS = [
@@ -106,11 +109,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DRF Configuration
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'authentication.authentication.EnhancedJWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
+        'authentication.permissions.NotBlacklistedPermission', 
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
@@ -160,3 +164,60 @@ SIMPLE_JWT = {
 }
 
 TOKEN_MODEL=None
+
+# Cache configuration
+if ENV == 'prod':
+    # Production - use Redis
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            }
+        }
+    }
+    
+    # Session engine (optional - use Redis for sessions)
+    SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+    SESSION_CACHE_ALIAS = 'default'
+
+else:
+    # Development - use local memory cache
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': 'unique-snowflake',
+        }
+    }
+
+# Cache time settings
+CACHE_TTL = 60 * 15  # 15 minutes
+POLL_RESULTS_CACHE_TTL = 60 * 5  # 5 minutes for active polls
+FINALIZED_RESULTS_CACHE_TTL = 60 * 60 * 24  # 24 hours for finalized
+
+# Celery Configuration
+CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379')
+CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379')
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE
+
+# Celery Configuration
+CELERY_BEAT_SCHEDULE = {
+    'finalize-expired-polls': {
+        'task': 'polls.tasks.finalize_expired_polls',
+        'schedule': crontab(minute=0),  # Run every hour
+    },
+    'cleanup-expired-sessions': {
+        'task': 'polls.tasks.cleanup_expired_sessions',
+        'schedule': crontab(minute=0, hour='*/6'),  # Run every 6 hours
+    },
+    'update-popular-polls-cache': {
+        'task': 'polls.tasks.update_popular_polls_cache',
+        'schedule': crontab(minute='*/30'),  # Run every 30 minutes
+    },
+}
+
+CELERY_TIMEZONE = 'UTC'

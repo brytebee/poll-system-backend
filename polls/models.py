@@ -116,6 +116,16 @@ class Poll(BaseModel):
         default=False,
         help_text="Whether final results have been calculated"
     )
+    starts_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="When the poll becomes active"
+    )
+    
+    auto_finalize = models.BooleanField(
+        default=True,
+        help_text="Automatically finalize when expired"
+    )
     
     objects = PollManager()
 
@@ -134,6 +144,51 @@ class Poll(BaseModel):
         """Validate poll data"""
         if self.expires_at and self.expires_at <= timezone.now():
             raise ValidationError("Expiry date must be in the future")
+    
+    @property
+    def is_scheduled(self):
+        """Check if poll is scheduled for future"""
+        if not self.starts_at:
+            return False
+        return timezone.now() < self.starts_at
+    
+    @property
+    def can_vote(self):
+        """Check if poll can accept votes"""
+        now = timezone.now()
+        
+        # Check if poll is active
+        if not self.is_active:
+            return False
+        
+        # Check if poll has started
+        if self.starts_at and now < self.starts_at:
+            return False
+        
+        # Check if poll has expired
+        if self.expires_at and now > self.expires_at:
+            return False
+        
+        return True
+    
+    @property
+    def status(self):
+        """Get poll status"""
+        now = timezone.now()
+        
+        if not self.is_active:
+            return 'inactive'
+        
+        if self.results_finalized:
+            return 'finalized'
+        
+        if self.starts_at and now < self.starts_at:
+            return 'scheduled'
+        
+        if self.expires_at and now > self.expires_at:
+            return 'expired'
+        
+        return 'active'
 
     @property
     def is_expired(self):

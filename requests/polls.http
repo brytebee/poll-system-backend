@@ -1,0 +1,141 @@
+# requests/polls.http
+
+@baseUrl = http://127.0.0.1:8000/api
+@authUrl = http://127.0.0.1:8000/api/auth
+
+### Login (to get access token)
+# @name login
+POST {{authUrl}}/login/
+Content-Type: application/json
+
+{
+    "username": "user001",
+    "password": "newpass123!"
+}
+
+### Extract tokens from login response
+@access_token = {{login.response.body.access}}
+@refresh_token = {{login.response.body.refresh}}
+
+### Token Refresh (if needed)
+# @name refresh
+POST {{authUrl}}/token/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "{{refresh_token}}"
+}
+
+#### Update access token from refresh response
+# @access_token = {{refresh.response.body.access}}
+
+### GET /api/polls/ - List all polls
+GET {{baseUrl}}/polls/
+
+### GET /api/categories/ - List all categories
+GET {{baseUrl}}/categories/
+
+### POST /api/polls/ - Create new poll
+POST {{baseUrl}}/polls/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "title": "What's your favorite coding drink?",
+    "description": "A poll to determine the most popular drink among developers",
+    "category": "fdd75574-6c90-4256-b772-142958f6dcf3",
+    "options": [
+        {
+            "text": "Python beer"
+        },
+        {
+            "text": "JavaScript beer"
+        },
+        {
+            "text": "Java beer"
+        },
+        {
+            "text": "C++ beer"
+        }
+    ],
+    "is_active": true,
+    "allow_multiple_votes": false
+}
+
+### GET /api/polls/{id}/ - Get specific poll
+GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
+
+### PUT /api/polls/{id}/ - Update poll (requires auth)
+PUT {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "title": "What's your favorite programming language? (Updated)",
+    "description": "An updated poll to determine the most popular programming language",
+    "category": "fdd75574-6c90-4256-b772-142958f6dcf3",
+    "is_active": true,
+    "allow_multiple_votes": true
+}
+
+### PATCH /api/polls/{id}/ - Partial update poll (requires auth)
+PATCH {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "is_active": false
+}
+
+### DELETE /api/polls/{id}/ - Delete poll (requires auth)
+DELETE {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+Authorization: Bearer {{access_token}}
+
+### POST /api/polls/{id}/vote/ - Vote on poll
+POST {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "option_id": "58414a73-e25f-44b2-882f-4504d2ed35a3"
+}
+
+### GET /api/polls/{id}/results/ - Get poll results
+GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/
+
+### GET /api/categories/{id}/ - Get specific category
+GET {{baseUrl}}/categories/6ba7b810-9dad-11d1-80b4-00c04fd430c8/
+
+### POST /api/categories/ - Create new category (likely requires auth)
+POST {{baseUrl}}/categories/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "name": "Technology",
+    "description": "Polls related to technology and programming"
+}
+
+### GET /api/polls/?category={id} - Filter polls by category
+GET {{baseUrl}}/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8
+
+### GET /api/polls/?search={query} - Search polls
+GET {{baseUrl}}/polls/?search=programming
+
+### GET /api/polls/?is_active=true - Filter active polls
+GET {{baseUrl}}/polls/?is_active=true
+
+### GET /api/polls/?ordering=-created_at - Order polls by creation date (newest first)
+GET {{baseUrl}}/polls/?ordering=-created_at
+
+### Profile check (to verify token is working)
+GET {{authUrl}}/profile/
+Authorization: Bearer {{access_token}}
+
+### Logout
+POST {{authUrl}}/logout/
+Content-Type: application/json
+
+{
+    "refresh_token": "{{refresh_token}}"
+}
