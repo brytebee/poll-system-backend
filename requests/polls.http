@@ -63,7 +63,7 @@ Authorization: Bearer {{access_token}}
 }
 
 ### GET /api/polls/{id}/ - Get specific poll
-GET {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
 
 ### PUT /api/polls/{id}/ - Update poll (requires auth)
 PUT {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
@@ -92,16 +92,16 @@ DELETE {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
 Authorization: Bearer {{access_token}}
 
 ### POST /api/polls/{id}/vote/ - Vote on poll
-POST {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/vote/
+POST {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
 Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "option_id": "6ba7b811-9dad-11d1-80b4-00c04fd430c8"
+    "option_id": "58414a73-e25f-44b2-882f-4504d2ed35a3"
 }
 
 ### GET /api/polls/{id}/results/ - Get poll results
-GET {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/results/
+GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/
 
 ### GET /api/categories/{id}/ - Get specific category
 GET {{baseUrl}}/categories/6ba7b810-9dad-11d1-80b4-00c04fd430c8/
