@@ -1,3 +1,4 @@
+# polls/views.py
 from rest_framework import viewsets, status, permissions, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -12,7 +13,9 @@ from .serializers import (
 from .permissions import IsPollOwnerOrReadOnly, CanVotePermission
 from django.db import transaction
 from .serializers import VoteSerializer, VoteCastSerializer
+from .schema import poll_schema, category_schema
 
+@category_schema
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     """Category ViewSet - Read only"""
     queryset = Category.objects.all()
@@ -30,6 +33,7 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
         
         return queryset.order_by('name')
 
+@poll_schema
 class PollViewSet(viewsets.ModelViewSet):
     """Poll ViewSet with full CRUD"""
     queryset = Poll.objects.select_related('created_by', 'category').prefetch_related('options')

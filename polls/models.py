@@ -1,9 +1,11 @@
+# polls/models.py
 from django.db import models
 from django.utils.text import slugify
 from common.models import BaseModel, SlugMixin
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+from polls.validators import validate_poll_title, validate_option_text
 
 class CategoryManager(models.Manager):
     """Custom manager for Category model"""
@@ -75,7 +77,8 @@ class Poll(BaseModel):
     """Main poll model"""
     title = models.CharField(
         max_length=200,
-        help_text="Poll title"
+        help_text="Poll title",
+        validators=[validate_poll_title]
     )
     description = models.TextField(
         blank=True,
@@ -121,7 +124,6 @@ class Poll(BaseModel):
         blank=True,
         help_text="When the poll becomes active"
     )
-    
     auto_finalize = models.BooleanField(
         default=True,
         help_text="Automatically finalize when expired"
@@ -220,7 +222,8 @@ class Option(BaseModel):
     )
     text = models.CharField(
         max_length=500,
-        help_text="Option text"
+        help_text="Option text",
+        validators=[validate_option_text]
     )
     order_index = models.PositiveIntegerField(
         default=0,

@@ -1,0 +1,463 @@
+INFO 2025-09-20 14:25:33,364 autoreload 2032 6636 Watching for file changes with StatReloader
+INFO 2025-09-20 14:34:06,701 autoreload 15204 5512 Watching for file changes with StatReloader
+INFO 2025-09-20 14:37:10,195 autoreload 15204 5512 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\apps.py changed, reloading.
+INFO 2025-09-20 14:37:11,662 autoreload 21896 18308 Watching for file changes with StatReloader
+INFO 2025-09-20 14:37:24,007 autoreload 12504 9104 Watching for file changes with StatReloader
+INFO 2025-09-20 14:37:45,207 autoreload 12504 9104 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\apps.py changed, reloading.
+INFO 2025-09-20 14:37:46,430 autoreload 11640 20224 Watching for file changes with StatReloader
+INFO 2025-09-20 14:38:09,816 autoreload 11640 20224 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\apps.py changed, reloading.
+INFO 2025-09-20 14:38:11,218 autoreload 21892 260 Watching for file changes with StatReloader
+INFO 2025-09-20 14:43:55,788 autoreload 22456 19420 Watching for file changes with StatReloader
+INFO 2025-09-20 17:11:09,897 autoreload 18972 3516 Watching for file changes with StatReloader
+INFO 2025-09-20 17:13:47,964 autoreload 1580 11996 Watching for file changes with StatReloader
+INFO 2025-09-20 18:01:50,146 autoreload 1580 11996 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-20 18:01:52,003 autoreload 3528 24636 Watching for file changes with StatReloader
+INFO 2025-09-20 18:03:47,371 autoreload 3528 24636 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-20 18:03:48,842 autoreload 23756 9780 Watching for file changes with StatReloader
+INFO 2025-09-20 18:05:37,024 autoreload 23756 9780 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-20 18:30:41,341 autoreload 3368 16688 Watching for file changes with StatReloader
+INFO 2025-09-20 19:06:16,065 autoreload 3368 16688 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-20 19:06:18,176 autoreload 5576 288 Watching for file changes with StatReloader
+INFO 2025-09-20 21:58:28,967 autoreload 17144 18964 Watching for file changes with StatReloader
+INFO 2025-09-20 21:59:05,734 autoreload 16452 18612 Watching for file changes with StatReloader
+INFO 2025-09-22 09:01:23,691 autoreload 7648 96 Watching for file changes with StatReloader
+WARNING 2025-09-22 09:02:34,060 log 7648 23260 Not Found: /
+WARNING 2025-09-22 09:02:34,061 basehttp 7648 23260 "GET / HTTP/1.1" 404 2781
+WARNING 2025-09-22 09:02:34,161 log 7648 23260 Not Found: /favicon.ico
+WARNING 2025-09-22 09:02:34,161 basehttp 7648 23260 "GET /favicon.ico HTTP/1.1" 404 2832
+INFO 2025-09-22 09:02:49,219 basehttp 7648 23260 "GET /api/docs HTTP/1.1" 301 0
+INFO 2025-09-22 09:02:49,412 basehttp 7648 14380 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-22 09:02:51,340 log 7648 14380 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:02:51,345 basehttp 7648 14380 "GET /api/schema/ HTTP/1.1" 500 137892
+ERROR 2025-09-22 09:02:51,559 log 7648 14380 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:02:51,563 basehttp 7648 14380 "GET /api/schema/ HTTP/1.1" 500 137892
+ERROR 2025-09-22 09:03:11,630 log 7648 14380 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:03:11,634 basehttp 7648 14380 "GET /api/schema/ HTTP/1.1" 500 138126
+INFO 2025-09-22 09:04:13,961 basehttp 7648 14380 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-22 09:04:14,379 log 7648 14380 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:04:14,382 basehttp 7648 14380 "GET /api/schema/ HTTP/1.1" 500 137892
+ERROR 2025-09-22 09:04:14,601 log 7648 14380 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:04:14,604 basehttp 7648 14380 "GET /api/schema/ HTTP/1.1" 500 137892
+INFO 2025-09-22 09:06:09,379 autoreload 23876 16716 Watching for file changes with StatReloader
+INFO 2025-09-22 09:06:14,992 basehttp 23876 7284 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-22 09:06:15,382 log 23876 7284 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:06:15,387 basehttp 23876 7284 "GET /api/schema/ HTTP/1.1" 500 137892
+ERROR 2025-09-22 09:06:15,586 log 23876 7284 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:06:15,590 basehttp 23876 7284 "GET /api/schema/ HTTP/1.1" 500 137892
+INFO 2025-09-22 09:12:58,504 basehttp 23876 3600 "GET /admin HTTP/1.1" 301 0
+INFO 2025-09-22 09:12:58,622 basehttp 23876 21988 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-22 09:12:58,880 basehttp 23876 21988 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-09-22 09:12:58,905 basehttp 23876 21988 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,918 basehttp 23876 22044 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,919 basehttp 23876 21988 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,921 basehttp 23876 19064 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,926 basehttp 23876 14324 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,927 basehttp 23876 20104 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:12:58,929 basehttp 23876 11684 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:12,962 basehttp 23876 11684 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-22 09:13:13,082 basehttp 23876 11684 "GET /admin/ HTTP/1.1" 200 10502
+INFO 2025-09-22 09:13:13,120 basehttp 23876 11684 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:13,132 basehttp 23876 20104 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:13,133 basehttp 23876 11684 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:30,964 basehttp 23876 11684 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 09:13:30,992 basehttp 23876 11684 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,005 basehttp 23876 14324 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,006 basehttp 23876 19064 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,007 basehttp 23876 22044 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,008 basehttp 23876 21988 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,009 basehttp 23876 20104 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,016 basehttp 23876 14324 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,020 basehttp 23876 19064 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,023 basehttp 23876 22044 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,024 basehttp 23876 21988 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,033 basehttp 23876 21988 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-22 09:13:31,093 basehttp 23876 11684 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 09:13:31,120 basehttp 23876 11684 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-09-22 09:14:20,529 basehttp 23876 11792 "GET /admin/polls/vote/?created_at__year=2025 HTTP/1.1" 200 15708
+INFO 2025-09-22 09:14:20,662 basehttp 23876 11792 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 09:14:24,932 basehttp 23876 7744 "GET /admin/polls/vote/? HTTP/1.1" 200 15230
+INFO 2025-09-22 09:14:25,058 basehttp 23876 7744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 09:14:32,024 basehttp 23876 7744 "POST /admin/polls/vote/? HTTP/1.1" 302 0
+INFO 2025-09-22 09:14:32,134 basehttp 23876 7744 "GET /admin/polls/vote/ HTTP/1.1" 200 15423
+INFO 2025-09-22 09:14:32,238 basehttp 23876 7744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 09:14:32,375 basehttp 23876 7744 "GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 504
+INFO 2025-09-22 09:14:45,443 basehttp 23876 7744 "POST /admin/polls/vote/ HTTP/1.1" 302 0
+INFO 2025-09-22 09:14:45,548 basehttp 23876 7744 "GET /admin/polls/vote/ HTTP/1.1" 200 15423
+INFO 2025-09-22 09:14:45,642 basehttp 23876 7744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 09:18:32,511 autoreload 25596 4876 Watching for file changes with StatReloader
+WARNING 2025-09-22 09:18:59,302 log 25596 20600 Not Found: /api/v1/
+WARNING 2025-09-22 09:18:59,303 basehttp 25596 20600 "GET /api/v1/ HTTP/1.1" 404 8447
+WARNING 2025-09-22 09:19:08,736 log 25596 20600 Forbidden: /api/
+WARNING 2025-09-22 09:19:08,737 basehttp 25596 20600 "GET /api/ HTTP/1.1" 403 63
+INFO 2025-09-22 09:19:29,863 basehttp 25596 20600 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-22 09:19:30,267 log 25596 20600 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:19:30,273 basehttp 25596 20600 "GET /api/schema/ HTTP/1.1" 500 137884
+ERROR 2025-09-22 09:19:30,511 log 25596 20600 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:19:30,514 basehttp 25596 20600 "GET /api/schema/ HTTP/1.1" 500 137884
+INFO 2025-09-22 09:20:49,993 basehttp 25596 24840 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-22 09:20:50,312 log 25596 24840 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:20:50,317 basehttp 25596 24840 "GET /api/schema/ HTTP/1.1" 500 137884
+ERROR 2025-09-22 09:20:50,554 log 25596 24840 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 84, in get
+    return self._get_schema_response(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\generators.py", line 291, in get_schema
+    result = hook(result=result, generator=self, request=request, public=public)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\drf_spectacular\contrib\djangorestframework_camel_case.py", line 9, in camelize_serializer_fields
+    from djangorestframework_camel_case.settings import api_settings
+ModuleNotFoundError: No module named 'djangorestframework_camel_case'
+ERROR 2025-09-22 09:20:50,558 basehttp 25596 24840 "GET /api/schema/ HTTP/1.1" 500 137884
+INFO 2025-09-22 09:27:35,865 autoreload 15768 3036 Watching for file changes with StatReloader
+INFO 2025-09-22 09:27:42,464 basehttp 15768 21696 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 09:27:42,804 basehttp 15768 21696 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 09:28:38,864 basehttp 15768 22800 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+WARNING 2025-09-22 09:28:38,867 log 15768 22800 Bad Request: /api/auth/register/
+WARNING 2025-09-22 09:28:38,868 basehttp 15768 22800 "POST /api/auth/register/ HTTP/1.1" 400 162
+WARNING 2025-09-22 09:31:12,315 log 15768 19116 Not Found: /api/redocs/
+WARNING 2025-09-22 09:31:12,316 basehttp 15768 19116 "GET /api/redocs/ HTTP/1.1" 404 8459
+INFO 2025-09-22 09:31:26,202 basehttp 15768 19116 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 09:31:27,259 basehttp 15768 19116 "GET /api/schema/ HTTP/1.1" 200 39208
+INFO 2025-09-22 09:34:54,678 basehttp 15768 7784 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 09:34:54,962 basehttp 15768 7784 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 09:35:33,796 basehttp 15768 7784 "GET /api/schema/ HTTP/1.1" 200 39208
+INFO 2025-09-22 09:36:02,436 basehttp 15768 19980 "GET /api/schema/ HTTP/1.1" 200 39208
+INFO 2025-09-22 09:36:45,137 basehttp 15768 5436 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 09:36:46,353 basehttp 15768 5436 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 09:42:26,409 autoreload 15768 3036 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\apps.py changed, reloading.
+INFO 2025-09-22 09:42:27,985 autoreload 21000 21240 Watching for file changes with StatReloader
+INFO 2025-09-22 09:52:23,553 autoreload 4332 12996 Watching for file changes with StatReloader
+INFO 2025-09-22 09:52:30,694 basehttp 4332 8924 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 09:52:31,066 basehttp 4332 8924 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 09:52:41,661 basehttp 4332 19452 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 09:52:41,797 basehttp 4332 19452 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 10:12:01,149 autoreload 12892 20532 Watching for file changes with StatReloader
+INFO 2025-09-22 10:12:04,726 basehttp 12892 23756 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 10:12:05,300 basehttp 12892 23756 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 10:14:15,791 basehttp 12892 23368 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 10:14:16,198 basehttp 12892 23368 "GET /api/schema/ HTTP/1.1" 200 39208
+INFO 2025-09-22 10:14:19,611 basehttp 12892 23476 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 10:14:19,726 basehttp 12892 23476 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 10:14:23,098 basehttp 12892 23476 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 10:14:23,326 basehttp 12892 23476 "GET /api/schema/ HTTP/1.1" 200 78727

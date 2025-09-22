@@ -1,4 +1,5 @@
 # poll_system/settings/base.py
+import os
 from decouple import config
 from pathlib import Path
 from datetime import timedelta
@@ -32,6 +33,7 @@ THIRD_PARTY_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
+    'drf_spectacular',
 ]
 
 LOCAL_APPS = [
@@ -52,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'middleware.swagger_middleware.SwaggerDocsMiddleware',
 ]
 
 ROOT_URLCONF = 'poll_system.urls'
@@ -121,6 +124,7 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # CORS Settings
@@ -221,3 +225,162 @@ CELERY_BEAT_SCHEDULE = {
 }
 
 CELERY_TIMEZONE = 'UTC'
+
+# Spectacular settings
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Online Poll System API',
+    'DESCRIPTION': '''
+    A comprehensive polling system with real-time voting, analytics, and advanced features.
+    
+    ## Features
+    - User authentication with JWT tokens
+    - Poll creation and management
+    - Real-time voting system
+    - Category-based organization
+    - Analytics and reporting
+    - Admin controls
+    
+    ## Authentication
+    This API uses JWT (JSON Web Tokens) for authentication. Include the token in the Authorization header:
+    Authorization: Bearer <your_access_token>
+    ## Rate Limiting
+    - 1000 requests per hour for authenticated users
+    - 100 requests per hour for anonymous users
+    
+    ## Versioning
+    Current API version: v1.0.0
+    ''',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SORT_OPERATIONS': False,
+    'ENUM_NAME_OVERRIDES': {
+        'ValidationErrorEnum': 'drf_spectacular.types.ErrorResponse',
+    },
+    'POSTPROCESSING_HOOKS': [
+        'drf_spectacular.contrib.djangorestframework_camel_case.camelize_serializer_fields'
+    ],
+    'PREPROCESSING_HOOKS': [
+        'drf_spectacular.hooks.preprocess_exclude_path_format'
+    ],
+    'SCHEMA_PATH_PREFIX': '/api/',
+    'DEFAULT_GENERATOR_CLASS': 'drf_spectacular.generators.SchemaGenerator',
+    'SERVERS': [
+        {
+            'url': 'http://localhost:8000',
+            'description': 'Development server'
+        },
+        {
+            # TODO: Update link to prod
+            'url': 'https://your-domain.com',
+            'description': 'Production server'
+        },
+    ],
+    'TAGS': [
+        {
+            'name': 'Authentication',
+            'description': 'User authentication, registration, and profile management'
+        },
+        {
+            'name': 'Categories',
+            'description': 'Poll categories for organization'
+        },
+        {
+            'name': 'Polls',
+            'description': 'Poll creation, management, voting, and results'
+        },
+        {
+            'name': 'Analytics',
+            'description': 'Analytics and reporting endpoints (Coming soon)'
+        },
+    ],
+    'EXTERNAL_DOCS': {
+        'description': 'Project Repository',
+        'url': 'https://github.com/brytebee/poll-system'
+    },
+    'CONTACT': {
+        'name': 'API Support',
+        # TODO: Update email
+        'email': 'support@yourpollsystem.com'
+    },
+    'LICENSE': {
+        'name': 'MIT License',
+        'url': 'https://opensource.org/licenses/MIT'
+    }
+}
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+        'json': {
+            'format': '{"level": "%(levelname)s", "time": "%(asctime)s", "module": "%(module)s", "message": "%(message)s"}',
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
+            'maxBytes': 1024*1024*10,  # 10 MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+        'security_file': {
+            'level': 'WARNING',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'security.log'),
+            'maxBytes': 1024*1024*10,
+            'backupCount': 5,
+            'formatter': 'json',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.security': {
+            'handlers': ['security_file', 'mail_admins'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+        'polls': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'authentication': {
+            'handlers': ['console', 'file', 'security_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+# Create logs directory
+os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)

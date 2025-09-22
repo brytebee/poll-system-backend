@@ -18,11 +18,15 @@ from .serializers import (
     PasswordChangeSerializer
 )
 from .models import CustomUser
+from .schema import (
+    change_password_schema, user_profile_schema, logout_schema, check_username_schema, check_email_schema, refresh_token_schema, invalidate_token_schema, register_user_schema, login_user_schema
+)
 
 class UserRegistrationView(APIView):
     """User registration endpoint"""
     permission_classes = [permissions.AllowAny]
     
+    @register_user_schema
     def post(self, request):
         serializer = UserRegistrationSerializer(data=request.data)
         if serializer.is_valid():
@@ -48,6 +52,7 @@ class UserRegistrationView(APIView):
 class UserLoginView(TokenObtainPairView):
     """Enhanced login view with user data"""
     
+    @login_user_schema
     def post(self, request, *args, **kwargs):
         # Get tokens from parent class
         response = super().post(request, *args, **kwargs)
@@ -65,6 +70,8 @@ class UserLoginView(TokenObtainPairView):
         
         return response
 
+# Add to UserProfileView
+@user_profile_schema
 class UserProfileView(RetrieveUpdateAPIView):
     """User profile view"""
     serializer_class = UserProfileSerializer
@@ -82,6 +89,7 @@ class PasswordChangeView(APIView):
     """Password change endpoint"""
     permission_classes = [permissions.IsAuthenticated]
     
+    @change_password_schema
     def post(self, request):
         serializer = PasswordChangeSerializer(
             data=request.data,
@@ -98,6 +106,7 @@ class PasswordChangeView(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
 
+@logout_schema
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
 def logout_view(request):
@@ -155,6 +164,7 @@ def logout_view(request):
             'detail': str(e) if settings.DEBUG else 'Invalid token'
         }, status=status.HTTP_400_BAD_REQUEST)
 
+@check_username_schema
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny])
 def check_username(request):
@@ -171,6 +181,7 @@ def check_username(request):
         'username': username
     })
 
+@check_email_schema
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny])
 def check_email(request):
@@ -187,6 +198,7 @@ def check_email(request):
         'email': email
     })
 
+@refresh_token_schema
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
 def token_refresh_view(request):
@@ -209,6 +221,7 @@ def token_refresh_view(request):
     
     return response
 
+@invalidate_token_schema
 @api_view(['POST'])
 @permission_classes([permissions.IsAuthenticated])
 def invalidate_all_tokens_view(request):
