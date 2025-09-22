@@ -14,6 +14,7 @@ from .permissions import IsPollOwnerOrReadOnly, CanVotePermission
 from django.db import transaction
 from .serializers import VoteSerializer, VoteCastSerializer
 from .schema import poll_schema, category_schema
+from utils.decorators import monitor_performance, cache_result
 
 @category_schema
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
@@ -85,6 +86,8 @@ class PollViewSet(viewsets.ModelViewSet):
         """Set creator when creating poll"""
         serializer.save(created_by=self.request.user)
     
+    @monitor_performance(threshold_seconds=1.0)
+    @cache_result(timeout=300, key_prefix='poll_results')
     @action(detail=True, methods=['get'], permission_classes=[permissions.AllowAny])
     def results(self, request, pk=None):
         """Get poll results"""

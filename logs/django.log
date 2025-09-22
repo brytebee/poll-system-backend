@@ -461,3 +461,14 @@ INFO 2025-09-22 10:14:19,611 basehttp 12892 23476 "GET /admin/polls/vote/ HTTP/1
 INFO 2025-09-22 10:14:19,726 basehttp 12892 23476 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2025-09-22 10:14:23,098 basehttp 12892 23476 "GET /api/docs/ HTTP/1.1" 200 4655
 INFO 2025-09-22 10:14:23,326 basehttp 12892 23476 "GET /api/schema/ HTTP/1.1" 200 78727
+INFO 2025-09-22 10:58:39,400 autoreload 21220 12120 Watching for file changes with StatReloader
+INFO 2025-09-22 10:58:45,491 basehttp 21220 16984 "GET /api/auth/check-username/?username=moire HTTP/1.1" 200 37
+INFO 2025-09-22 15:40:24,279 autoreload 21220 12120 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\authentication\models.py changed, reloading.
+INFO 2025-09-22 15:40:27,335 autoreload 1628 4932 Watching for file changes with StatReloader
+INFO 2025-09-22 16:11:16,317 autoreload 1628 4932 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-22 16:11:18,707 autoreload 23436 10080 Watching for file changes with StatReloader
+INFO 2025-09-22 16:11:41,863 autoreload 23436 10080 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-22 16:11:43,391 autoreload 19544 484 Watching for file changes with StatReloader
+INFO 2025-09-22 16:14:18,123 autoreload 19544 484 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\utils\decorators.py changed, reloading.
+INFO 2025-09-22 16:14:19,551 autoreload 9912 1332 Watching for file changes with StatReloader
+INFO 2025-09-22 16:21:30,239 autoreload 9912 1332 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.

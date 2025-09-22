@@ -111,3 +111,44 @@ def custom_exception_handler(exc, context):
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
     return response
+
+"""
+# common/exceptions.py
+from rest_framework.views import exception_handler
+from rest_framework.response import Response
+from django.conf import settings
+import logging
+
+logger = logging.getLogger(__name__)
+
+def custom_exception_handler(exc, context):
+    request = context.get('request')
+    user = getattr(request, 'user', None)
+    
+    error_data = {
+        'error_type': exc.__class__.__name__,
+        'error_message': str(exc),
+        'path': getattr(request, 'path', None),
+        'method': getattr(request, 'method', None),
+        'user': user.username if user and hasattr(user, 'username') else 'Anonymous',
+    }
+    
+    logger.error(f"API Error: {error_data}")
+    
+    response = exception_handler(exc, context)
+    
+    if response is not None:
+        custom_response_data = {
+            'error': True,
+            'message': 'An error occurred',
+            'details': response.data,
+            'status_code': response.status_code
+        }
+        
+        if not settings.DEBUG and response.status_code >= 500:
+            custom_response_data['details'] = 'Internal server error'
+        
+        response.data = custom_response_data
+    
+    return response
+"""
