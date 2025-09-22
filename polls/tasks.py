@@ -1,5 +1,5 @@
 # polls/tasks.py
-from poll_system.celery import shared_task
+from celery import shared_task
 from django.utils import timezone
 from .models import Poll, VoteSession
 from .services.results_service import PollResultsService

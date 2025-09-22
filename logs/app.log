@@ -1,0 +1,127 @@
+INFO 2025-09-22 16:46:42,412 django.utils.autoreload 25464 23784 Watching for file changes with StatReloader
+INFO 2025-09-22 16:46:50,541 django.server 25464 21268 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:47:13,499 django.server 25464 15068 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:47:20,488 django.server 25464 22236 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:47:22,236 django.server 25464 22236 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:47:26,773 django.server 25464 8440 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:47:49,487 django.server 25464 24468 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:47:54,731 django.server 25464 384 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 16:47:54,858 django.server 25464 384 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:47:59,236 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:00,492 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:00,666 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:00,934 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:01,195 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:01,371 django.server 25464 384 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:48:56,154 django.server 25464 23076 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:49:03,418 django.server 25464 23076 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:49:08,359 django.server 25464 20476 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:49:12,099 django.server 25464 20476 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 16:49:12,179 django.server 25464 20476 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:49:17,368 django.server 25464 9912 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:49:24,695 django.server 25464 8 "POST /admin/logout/ HTTP/1.1" 200 3576
+INFO 2025-09-22 16:49:26,646 django.server 25464 8 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-22 16:49:26,720 django.server 25464 8 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-09-22 16:49:39,657 django.server 25464 22900 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-22 16:49:39,761 django.server 25464 22900 "GET /admin/ HTTP/1.1" 200 10502
+INFO 2025-09-22 16:49:44,518 django.server 25464 19220 "GET /admin/authentication/customuser/ HTTP/1.1" 200 17723
+INFO 2025-09-22 16:49:44,553 django.server 25464 484 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-09-22 16:49:44,559 django.server 25464 2236 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-09-22 16:49:44,621 django.server 25464 19220 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:49:44,639 django.server 25464 19220 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-09-22 16:50:06,959 django.server 25464 14352 "GET /admin/polls/category/ HTTP/1.1" 200 15594
+INFO 2025-09-22 16:50:07,060 django.server 25464 14352 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:12,333 django.server 25464 14352 "GET /admin/polls/option/ HTTP/1.1" 200 21749
+INFO 2025-09-22 16:50:12,426 django.server 25464 14352 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:17,655 django.server 25464 860 "GET /admin/polls/pollresult/ HTTP/1.1" 200 12680
+INFO 2025-09-22 16:50:17,745 django.server 25464 860 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:20,355 django.server 25464 860 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-22 16:50:20,561 django.server 25464 860 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:30,955 django.server 25464 8748 "GET /admin/polls/votesession/ HTTP/1.1" 200 12674
+INFO 2025-09-22 16:50:31,050 django.server 25464 8748 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:34,478 django.server 25464 7140 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-22 16:50:34,676 django.server 25464 7140 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-22 16:50:45,642 django.server 25464 17412 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 16:51:38,542 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:39,812 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:40,099 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:40,318 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:40,533 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:40,743 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:40,974 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:41,192 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:51:41,398 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 16:52:15,975 django.server 25464 6740 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:01:26,418 django.utils.autoreload 25464 23784 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:01:28,010 django.utils.autoreload 13948 11180 Watching for file changes with StatReloader
+INFO 2025-09-22 17:01:28,441 django.server 13948 22900 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:01:30,161 django.server 13948 22900 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:01:48,089 django.utils.autoreload 13948 11180 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:01:49,597 django.utils.autoreload 10852 1940 Watching for file changes with StatReloader
+INFO 2025-09-22 17:01:50,208 django.server 10852 5248 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:01:50,568 django.server 10852 6296 "GET /api/schema/ HTTP/1.1" 200 39492
+INFO 2025-09-22 17:02:37,123 django.utils.autoreload 10852 1940 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:02:38,634 django.utils.autoreload 24696 2404 Watching for file changes with StatReloader
+INFO 2025-09-22 17:02:39,277 django.server 24696 4836 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:02:39,538 django.server 24696 4836 "GET /api/schema/ HTTP/1.1" 200 78914
+INFO 2025-09-22 17:02:57,524 django.utils.autoreload 24696 2404 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:02:59,217 django.utils.autoreload 17520 21280 Watching for file changes with StatReloader
+INFO 2025-09-22 17:02:59,618 django.server 17520 11292 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:13:40,114 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:43,570 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:45,049 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:45,229 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:45,411 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:45,603 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:13:45,802 django.server 17520 5108 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:14:05,223 django.utils.autoreload 17520 21280 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:14:06,928 django.utils.autoreload 23064 20280 Watching for file changes with StatReloader
+INFO 2025-09-22 17:14:07,501 django.server 23064 3520 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:14:07,839 django.server 23064 3520 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:14:16,641 django.server 23064 15236 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:14:16,924 django.server 23064 15236 "GET /api/schema/ HTTP/1.1" 200 78914
+INFO 2025-09-22 17:14:57,936 django.utils.autoreload 22052 25516 Watching for file changes with StatReloader
+INFO 2025-09-22 17:15:02,286 django.server 22052 18300 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:15:02,501 django.server 22052 18300 "GET /api/schema/ HTTP/1.1" 200 78914
+INFO 2025-09-22 17:15:08,628 django.server 22052 9304 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:15:08,902 django.server 22052 9304 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:15:47,539 django.server 22052 5728 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:15:47,800 django.server 22052 5728 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:15:59,284 django.utils.autoreload 22052 25516 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:16:01,258 django.utils.autoreload 6740 13508 Watching for file changes with StatReloader
+INFO 2025-09-22 17:16:02,559 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:16:06,294 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:16:07,026 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:16:07,257 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:16:07,563 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:16:07,823 django.server 6740 2760 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:29:46,514 django.utils.autoreload 6740 13508 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\security\middleware.py changed, reloading.
+INFO 2025-09-22 17:29:48,433 django.utils.autoreload 7336 24796 Watching for file changes with StatReloader
+INFO 2025-09-22 17:29:49,261 django.server 7336 16660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:29:51,611 django.server 7336 16660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:29:52,413 django.server 7336 16660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:29:53,085 django.server 7336 16660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:29:53,508 django.server 7336 16660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:29:58,751 django.server 7336 16032 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:33:21,609 django.utils.autoreload 7336 24796 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:33:23,032 django.utils.autoreload 18944 23516 Watching for file changes with StatReloader
+INFO 2025-09-22 17:33:26,612 django.server 18944 24348 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:33:26,937 django.server 18944 24348 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:33:34,657 django.server 18944 1800 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:33:34,887 django.server 18944 1800 "GET /api/schema/ HTTP/1.1" 200 78914
+INFO 2025-09-22 17:34:41,740 django.utils.autoreload 18944 23516 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-22 17:34:43,576 django.utils.autoreload 14296 16068 Watching for file changes with StatReloader
+INFO 2025-09-22 17:35:16,522 django.server 14296 3852 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:35:16,875 django.server 14296 3852 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:35:28,375 django.server 14296 1408 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:35:28,674 django.server 14296 1408 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:35:30,802 django.server 14296 1408 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:35:31,047 django.server 14296 1408 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:35:51,937 django.utils.autoreload 14912 10564 Watching for file changes with StatReloader
+INFO 2025-09-22 17:35:57,404 django.server 14912 20932 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:36:02,908 django.server 14912 22624 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:36:31,771 django.utils.autoreload 19420 23432 Watching for file changes with StatReloader
+INFO 2025-09-22 17:36:35,641 django.server 19420 16252 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-22 17:36:35,941 django.server 19420 16252 "GET /api/schema/ HTTP/1.1" 200 38792
+INFO 2025-09-22 17:36:52,079 django.server 19420 24572 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-22 17:36:52,322 django.server 19420 24572 "GET /api/schema/ HTTP/1.1" 200 78914
