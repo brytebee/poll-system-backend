@@ -125,3 +125,1111 @@ INFO 2025-09-22 17:36:35,641 django.server 19420 16252 "GET /api/redoc/ HTTP/1.1
 INFO 2025-09-22 17:36:35,941 django.server 19420 16252 "GET /api/schema/ HTTP/1.1" 200 38792
 INFO 2025-09-22 17:36:52,079 django.server 19420 24572 "GET /api/docs/ HTTP/1.1" 200 4655
 INFO 2025-09-22 17:36:52,322 django.server 19420 24572 "GET /api/schema/ HTTP/1.1" 200 78914
+INFO 2025-09-23 02:57:44,591 django.utils.autoreload 8236 7964 Watching for file changes with StatReloader
+INFO 2025-09-23 02:57:58,289 django.server 8236 10976 "GET /admin/polls/vote/ HTTP/1.1" 302 0
+ERROR 2025-09-23 02:58:00,620 django.server 8236 10976 "GET /admin/login/?next=/admin/polls/vote/ HTTP/1.1" 500 59
+ERROR 2025-09-23 07:50:57,966 django.server 8236 24024 "GET /admin/login/?next=/admin/polls/vote/ HTTP/1.1" 500 59
+INFO 2025-09-23 07:51:17,112 django.utils.autoreload 11112 24772 Watching for file changes with StatReloader
+INFO 2025-09-23 07:52:26,995 django.server 11112 16348 "GET /admin/login/?next=/admin/polls/vote/ HTTP/1.1" 200 4203
+INFO 2025-09-23 07:52:27,046 django.server 11112 16348 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,050 django.server 11112 9796 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,054 django.server 11112 16348 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,055 django.server 11112 23148 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,062 django.server 11112 19884 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,064 django.server 11112 23148 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:52:27,064 django.server 11112 11368 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:23,982 django.server 11112 11368 "POST /admin/login/?next=/admin/polls/vote/ HTTP/1.1" 302 0
+INFO 2025-09-23 07:53:24,235 django.server 11112 11368 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-23 07:53:24,282 django.server 11112 23148 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,282 django.server 11112 11368 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,294 django.server 11112 19884 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,294 django.server 11112 16348 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,295 django.server 11112 7084 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,295 django.server 11112 9796 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,295 django.server 11112 11368 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,298 django.server 11112 19884 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,302 django.server 11112 7084 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,316 django.server 11112 7084 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,331 django.server 11112 7084 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,414 django.server 11112 23148 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 07:53:24,463 django.server 11112 23148 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-09-23 07:53:24,463 django.server 11112 7084 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-09-23 07:56:17,928 django.server 11112 10092 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-23 07:56:18,339 django.server 11112 10092 "GET /api/schema/ HTTP/1.1" 200 28048
+INFO 2025-09-23 08:36:43,760 django.server 11112 8740 "GET /api/auth/check-email/?email=user001@gy.un HTTP/1.1" 200 43
+INFO 2025-09-23 08:36:52,996 django.server 11112 2032 "GET /api/auth/check-email/?email=user002@gy.un HTTP/1.1" 200 42
+INFO 2025-09-23 08:37:03,992 django.server 11112 9752 "GET /api/auth/check-username/?username=user001 HTTP/1.1" 200 40
+INFO 2025-09-23 08:37:10,255 django.server 11112 23152 "GET /api/auth/check-username/?username=user002 HTTP/1.1" 200 39
+INFO 2025-09-23 08:38:56,026 django.server 11112 12088 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-23 08:38:56,173 django.server 11112 12088 "GET /api/schema/ HTTP/1.1" 200 56475
+ERROR 2025-09-23 08:39:36,792 common.exceptions 11112 19856 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/change-password/
+WARNING 2025-09-23 08:39:36,795 django.request 11112 19856 Unauthorized: /api/auth/change-password/
+WARNING 2025-09-23 08:39:36,795 django.server 11112 19856 "POST /api/auth/change-password/ HTTP/1.1" 401 270
+ERROR 2025-09-23 08:39:45,256 common.exceptions 11112 11048 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 08:39:45,258 django.request 11112 11048 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 08:39:45,265 django.server 11112 11048 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 08:40:12,050 django.server 11112 14660 "POST /api/auth/login/ HTTP/1.1" 200 926
+ERROR 2025-09-23 08:40:33,802 common.exceptions 11112 24076 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 08:40:33,802 django.request 11112 24076 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 08:40:33,803 django.server 11112 24076 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 08:40:59,497 django.server 11112 20056 "GET /api/auth/profile/ HTTP/1.1" 200 307
+INFO 2025-09-23 08:45:25,199 django.server 11112 10896 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-23 08:45:25,479 django.server 11112 10896 "GET /api/schema/ HTTP/1.1" 200 28048
+INFO 2025-09-23 08:48:39,684 django.server 11112 10896 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-23 08:48:39,812 django.server 11112 10896 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:48:47,063 django.server 11112 10896 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-23 08:48:47,177 django.server 11112 10896 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:48:50,363 django.server 11112 10896 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 08:48:50,473 django.server 11112 10896 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:48:56,286 django.server 11112 10896 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/change/ HTTP/1.1" 200 26629
+INFO 2025-09-23 08:48:56,493 django.server 11112 5440 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:48:56,649 django.server 11112 9228 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9114
+INFO 2025-09-23 08:48:56,653 django.server 11112 9228 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 200 844
+INFO 2025-09-23 08:48:56,656 django.server 11112 9228 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2025-09-23 08:48:56,661 django.server 11112 9228 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-23 08:48:56,666 django.server 11112 9228 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-09-23 08:48:56,667 django.server 11112 11700 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-09-23 08:48:56,670 django.server 11112 9228 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-09-23 08:48:56,684 django.server 11112 10896 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2025-09-23 08:48:56,696 django.server 11112 10896 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2025-09-23 08:48:56,726 django.server 11112 19112 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-09-23 08:48:56,750 django.server 11112 11916 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-09-23 08:48:56,762 django.server 11112 11916 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-09-23 08:48:56,768 django.server 11112 11916 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-09-23 08:48:56,785 django.server 11112 5440 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-09-23 08:48:56,869 django.server 11112 5440 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-09-23 08:48:56,870 django.server 11112 11916 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-09-23 08:49:16,205 django.server 11112 11916 "GET /admin/autocomplete/?app_label=polls&model_name=poll&field_name=category HTTP/1.1" 200 391
+INFO 2025-09-23 08:49:58,195 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/history/ HTTP/1.1" 200 9685
+INFO 2025-09-23 08:50:04,228 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/change/ HTTP/1.1" 200 26629
+INFO 2025-09-23 08:50:09,218 django.server 11112 8092 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 08:50:09,346 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:11,113 django.server 11112 8092 "GET /admin/polls/pollresult/ HTTP/1.1" 200 12680
+INFO 2025-09-23 08:50:11,212 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:13,988 django.server 11112 8092 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 08:50:14,090 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:21,728 django.server 11112 8092 "GET /admin/polls/pollresult/ HTTP/1.1" 200 12680
+INFO 2025-09-23 08:50:21,889 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:33,900 django.server 11112 8092 "GET /admin/polls/vote/ HTTP/1.1" 200 15230
+INFO 2025-09-23 08:50:34,004 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:35,961 django.server 11112 8092 "GET /admin/polls/votesession/ HTTP/1.1" 200 12674
+INFO 2025-09-23 08:50:36,055 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:38,637 django.server 11112 8092 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 08:50:38,740 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:50:48,536 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/change/ HTTP/1.1" 200 26629
+INFO 2025-09-23 08:50:48,638 django.server 11112 8092 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 08:51:28,032 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 302 0
+INFO 2025-09-23 08:51:28,107 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/change/ HTTP/1.1" 302 0
+INFO 2025-09-23 08:51:28,195 django.server 11112 8092 "GET /admin/ HTTP/1.1" 200 10709
+INFO 2025-09-23 08:51:28,228 django.server 11112 8092 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-23 08:51:28,244 django.server 11112 8092 "GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 504
+INFO 2025-09-23 08:51:55,448 django.server 11112 8092 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/change/ HTTP/1.1" 200 26629
+WARNING 2025-09-23 08:52:09,619 django.request 11112 8092 Not Found: /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:52:09,620 django.server 11112 8092 "GET /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 6056
+INFO 2025-09-23 08:52:48,358 django.server 11112 3780 "POST /api/auth/login/ HTTP/1.1" 200 930
+WARNING 2025-09-23 08:53:10,578 django.request 11112 23908 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:53:10,579 django.server 11112 23908 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 42
+WARNING 2025-09-23 08:55:21,281 django.request 11112 24872 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:55:21,282 django.server 11112 24872 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 42
+INFO 2025-09-23 08:55:55,527 django.utils.autoreload 11112 24772 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 08:55:58,458 django.utils.autoreload 9180 12332 Watching for file changes with StatReloader
+INFO 2025-09-23 08:57:01,490 django.utils.autoreload 9180 12332 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-23 08:57:03,109 django.utils.autoreload 4864 12880 Watching for file changes with StatReloader
+ERROR 2025-09-23 08:57:17,836 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 08:57:19,887 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 08:57:22,932 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 08:57:25,976 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 08:57:29,013 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 08:57:32,060 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 08:57:35,108 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 08:57:38,150 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 08:57:41,186 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 08:57:44,232 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 08:57:47,276 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 08:57:50,306 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (11/20) in 1.00 second.
+WARNING 2025-09-23 08:57:51,889 django.request 4864 20300 Not Found: /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:57:51,890 django.server 4864 20300 "GET /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 6056
+ERROR 2025-09-23 08:57:53,363 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (12/20) in 1.00 second.
+WARNING 2025-09-23 08:57:53,826 django.request 4864 20300 Not Found: /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:57:53,827 django.server 4864 20300 "GET /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 6056
+WARNING 2025-09-23 08:57:54,461 django.request 4864 20300 Not Found: /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:57:54,461 django.server 4864 20300 "GET /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 6056
+WARNING 2025-09-23 08:57:54,864 django.request 4864 20300 Not Found: /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:57:54,865 django.server 4864 20300 "GET /admin/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 6056
+ERROR 2025-09-23 08:57:56,405 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 08:57:59,425 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 08:58:02,450 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 08:58:05,473 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 08:58:08,502 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 08:58:11,538 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 08:58:14,586 celery.backends.redis 4864 7156 Connection to Redis lost: Retry (19/20) in 1.00 second.
+WARNING 2025-09-23 08:58:15,557 django.request 4864 22876 Not Found: /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 08:58:15,558 django.server 4864 22876 "GET /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 3071
+CRITICAL 2025-09-23 08:58:17,613 celery.backends.redis 4864 7156 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 08:58:17,619 django.request 4864 7156 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 08:58:17,620 django.server 4864 7156 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+WARNING 2025-09-23 08:58:25,498 django.request 4864 22876 Not Found: /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
+WARNING 2025-09-23 08:58:25,499 django.server 4864 22876 "GET /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 404 3056
+INFO 2025-09-23 09:02:22,929 django.utils.autoreload 4864 12880 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-23 09:07:56,007 django.utils.autoreload 15504 17524 Watching for file changes with StatReloader
+INFO 2025-09-23 09:09:44,282 django.utils.autoreload 15504 17524 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-23 09:09:45,769 django.utils.autoreload 7648 16436 Watching for file changes with StatReloader
+INFO 2025-09-23 09:11:23,040 django.utils.autoreload 8272 8 Watching for file changes with StatReloader
+INFO 2025-09-23 09:12:25,792 django.utils.autoreload 8272 8 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-23 09:12:27,268 django.utils.autoreload 7160 25236 Watching for file changes with StatReloader
+INFO 2025-09-23 09:12:53,310 django.utils.autoreload 7160 25236 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-23 09:14:42,691 django.utils.autoreload 11176 16696 Watching for file changes with StatReloader
+WARNING 2025-09-23 09:15:43,095 django.request 11176 20680 Not Found: /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
+WARNING 2025-09-23 09:15:43,095 django.server 11176 20680 "GET /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 404 3056
+WARNING 2025-09-23 09:15:45,285 django.request 11176 20680 Not Found: /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
+WARNING 2025-09-23 09:15:45,286 django.server 11176 20680 "GET /polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 404 3056
+INFO 2025-09-23 09:15:49,422 django.server 11176 20680 "GET /admin HTTP/1.1" 301 0
+INFO 2025-09-23 09:15:49,583 django.server 11176 13348 "GET /admin/ HTTP/1.1" 200 10502
+INFO 2025-09-23 09:15:53,105 django.server 11176 10896 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 09:15:53,228 django.server 11176 10896 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2025-09-23 09:16:07,581 common.exceptions 11176 22920 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:16:07,582 django.request 11176 22920 Unauthorized: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:16:07,583 django.server 11176 22920 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 401 270
+INFO 2025-09-23 09:16:28,868 django.server 11176 24988 "POST /api/auth/login/ HTTP/1.1" 200 930
+ERROR 2025-09-23 09:16:50,107 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 09:16:52,147 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 09:16:55,188 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 09:16:58,224 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 09:17:01,265 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 09:17:04,307 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 09:17:07,350 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 09:17:10,373 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 09:17:13,401 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 09:17:16,442 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 09:17:19,477 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 09:17:22,534 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 09:17:25,566 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 09:17:28,614 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 09:17:31,652 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 09:17:34,695 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 09:17:37,735 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 09:17:40,749 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 09:17:43,801 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 09:17:46,849 celery.backends.redis 11176 15380 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL 2025-09-23 09:17:49,888 celery.backends.redis 11176 15380 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 09:17:49,890 django.request 11176 15380 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 09:17:49,891 django.server 11176 15380 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+INFO 2025-09-23 09:20:31,073 django.server 11176 8756 "GET /admin/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/change/ HTTP/1.1" 200 26629
+INFO 2025-09-23 09:20:31,223 django.server 11176 8756 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2025-09-23 09:20:41,235 django.request 11176 8756 Not Found: /api/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:20:41,236 django.server 11176 8756 "GET /api/polls/poll/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 404 8725
+ERROR 2025-09-23 09:20:52,658 common.exceptions 11176 8756 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:20:52,660 django.request 11176 8756 Method Not Allowed: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:20:52,661 django.server 11176 8756 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 405 141
+ERROR 2025-09-23 09:23:05,382 common.exceptions 11176 8756 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:23:05,382 django.request 11176 8756 Method Not Allowed: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 09:23:05,383 django.server 11176 8756 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 405 141
+INFO 2025-09-23 11:33:50,319 django.server 11176 24808 "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-23 11:33:50,432 django.server 11176 24808 "GET /admin/ HTTP/1.1" 200 10502
+INFO 2025-09-23 15:42:30,680 django.utils.autoreload 11176 16696 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\authentication\permissions.py changed, reloading.
+INFO 2025-09-23 15:42:41,593 django.utils.autoreload 17628 23880 Watching for file changes with StatReloader
+ERROR 2025-09-23 17:01:46,775 common.exceptions 17628 20404 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 17:01:46,787 django.request 17628 20404 Unauthorized: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 17:01:46,790 django.server 17628 20404 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 401 270
+INFO 2025-09-23 17:02:07,626 django.server 17628 21156 "POST /api/auth/login/ HTTP/1.1" 200 930
+INFO 2025-09-23 17:02:17,185 django.server 17628 8416 "GET /api/auth/profile/ HTTP/1.1" 200 311
+ERROR 2025-09-23 17:02:32,489 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 17:02:34,513 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 17:02:37,570 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 17:02:40,620 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 17:02:43,663 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 17:02:46,704 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 17:02:49,738 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 17:02:52,782 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 17:02:55,823 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 17:02:58,853 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 17:03:01,900 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 17:03:04,942 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 17:03:07,990 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 17:03:11,042 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 17:03:14,089 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 17:03:17,124 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 17:03:20,166 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 17:03:23,190 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 17:03:26,229 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 17:03:29,293 celery.backends.redis 17628 1948 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL 2025-09-23 17:03:32,344 celery.backends.redis 17628 1948 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 17:03:32,349 django.request 17628 1948 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:03:32,350 django.server 17628 1948 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+ERROR 2025-09-23 17:03:36,442 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 17:03:38,489 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 17:03:41,541 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 17:03:44,564 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 17:03:47,599 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 17:03:50,634 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 17:03:53,657 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 17:03:56,704 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 17:03:59,781 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 17:04:02,833 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 17:04:05,871 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 17:04:08,896 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 17:04:11,944 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 17:04:14,996 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 17:04:18,031 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 17:04:21,077 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 17:04:24,114 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 17:04:27,143 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 17:04:30,184 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 17:04:33,228 celery.backends.redis 17628 19984 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL 2025-09-23 17:04:36,283 celery.backends.redis 17628 19984 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 17:04:36,285 django.request 17628 19984 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:04:36,287 django.server 17628 19984 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+ERROR 2025-09-23 17:04:40,376 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 17:04:42,407 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 17:04:45,446 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 17:04:48,474 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 17:04:51,512 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 17:04:54,543 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 17:04:57,598 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 17:05:00,625 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 17:05:03,654 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 17:05:06,675 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 17:05:09,721 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 17:05:12,788 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 17:05:15,829 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 17:05:18,871 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 17:05:21,925 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 17:05:24,975 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 17:05:28,008 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 17:05:31,041 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 17:05:34,068 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 17:05:37,102 celery.backends.redis 17628 9704 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL 2025-09-23 17:05:40,133 celery.backends.redis 17628 9704 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 17:05:40,135 django.request 17628 9704 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:05:40,137 django.server 17628 9704 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+ERROR 2025-09-23 17:05:44,245 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 17:05:46,299 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 17:05:49,337 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 17:05:52,373 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 17:05:55,411 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 17:05:58,463 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 17:06:01,500 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 17:06:04,550 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 17:06:07,611 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 17:06:10,669 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 17:06:13,702 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 17:06:16,750 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 17:06:19,780 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 17:06:22,806 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 17:06:25,820 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 17:06:28,837 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (15/20) in 1.00 second.
+ERROR 2025-09-23 17:06:31,882 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (16/20) in 1.00 second.
+ERROR 2025-09-23 17:06:34,930 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (17/20) in 1.00 second.
+ERROR 2025-09-23 17:06:37,970 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (18/20) in 1.00 second.
+ERROR 2025-09-23 17:06:41,040 celery.backends.redis 17628 17004 Connection to Redis lost: Retry (19/20) in 1.00 second.
+CRITICAL 2025-09-23 17:06:44,080 celery.backends.redis 17628 17004 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+ERROR 2025-09-23 17:06:44,082 django.request 17628 17004 Internal Server Error: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:06:44,083 django.server 17628 17004 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 500 150
+INFO 2025-09-23 17:18:33,932 django.utils.autoreload 17628 23880 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 17:18:37,017 django.utils.autoreload 13664 21644 Watching for file changes with StatReloader
+INFO 2025-09-23 17:19:01,793 django.utils.autoreload 13664 21644 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-23 17:19:03,305 django.utils.autoreload 13740 12456 Watching for file changes with StatReloader
+INFO 2025-09-23 17:19:17,820 django.utils.autoreload 4392 23940 Watching for file changes with StatReloader
+ERROR 2025-09-23 17:20:08,236 common.exceptions 4392 12568 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 17:20:08,237 django.request 4392 12568 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 17:20:08,238 django.server 4392 12568 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 17:20:19,023 django.server 4392 24832 "POST /api/auth/login/ HTTP/1.1" 200 930
+INFO 2025-09-23 17:20:26,147 django.server 4392 25484 "GET /api/auth/profile/ HTTP/1.1" 200 311
+ERROR 2025-09-23 17:46:34,407 common.exceptions 4392 15492 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:46:34,410 django.request 4392 15492 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:46:34,412 django.server 4392 15492 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-23 17:46:41,611 common.exceptions 4392 1596 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 17:46:41,612 django.request 4392 1596 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 17:46:41,613 django.server 4392 1596 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 17:46:59,225 django.server 4392 17012 "POST /api/auth/login/ HTTP/1.1" 200 930
+INFO 2025-09-23 17:47:03,306 django.server 4392 23680 "GET /api/auth/profile/ HTTP/1.1" 200 311
+WARNING 2025-09-23 17:48:07,336 django.request 4392 18300 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 17:48:07,336 django.server 4392 18300 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 42
+WARNING 2025-09-23 17:48:18,211 django.request 4392 10972 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 17:48:18,212 django.server 4392 10972 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+INFO 2025-09-23 17:48:36,397 django.server 4392 25260 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 201 1279
+WARNING 2025-09-23 17:49:00,525 django.request 4392 10468 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 17:49:00,526 django.server 4392 10468 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+ERROR 2025-09-23 17:50:24,624 common.exceptions 4392 21816 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/
+WARNING 2025-09-23 17:50:24,625 django.request 4392 21816 Unauthorized: /api/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/
+WARNING 2025-09-23 17:50:24,625 django.server 4392 21816 "GET /api/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/ HTTP/1.1" 401 158
+WARNING 2025-09-23 17:50:47,678 django.request 4392 14672 Not Found: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/
+WARNING 2025-09-23 17:50:47,679 django.server 4392 14672 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/ HTTP/1.1" 404 6023
+ERROR 2025-09-23 17:51:57,539 common.exceptions 4392 8364 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:51:57,542 django.request 4392 8364 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:51:57,544 django.server 4392 8364 "GET /api/polls/?search=programming HTTP/1.1" 401 158
+ERROR 2025-09-23 17:52:16,495 common.exceptions 4392 2068 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:16,495 django.request 4392 2068 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:16,540 django.server 4392 2068 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-23 17:52:18,121 common.exceptions 4392 11672 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:18,122 django.request 4392 11672 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:18,123 django.server 4392 11672 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-23 17:52:24,963 common.exceptions 4392 17516 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:24,963 django.request 4392 17516 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:24,964 django.server 4392 17516 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+INFO 2025-09-23 17:52:33,901 django.server 4392 19396 "GET /api/auth/profile/ HTTP/1.1" 200 311
+ERROR 2025-09-23 17:52:35,740 common.exceptions 4392 17396 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:35,741 django.request 4392 17396 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:35,742 django.server 4392 17396 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-23 17:52:38,133 common.exceptions 4392 12976 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:38,135 django.request 4392 12976 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:38,135 django.server 4392 12976 "GET /api/polls/?is_active=true HTTP/1.1" 401 158
+ERROR 2025-09-23 17:52:41,495 common.exceptions 4392 14480 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 17:52:41,496 django.request 4392 14480 Unauthorized: /api/polls/
+WARNING 2025-09-23 17:52:41,496 django.server 4392 14480 "GET /api/polls/?search=programming HTTP/1.1" 401 158
+WARNING 2025-09-23 19:05:08,278 django.request 4392 8224 Not Found: /api/auth/health/
+WARNING 2025-09-23 19:05:08,281 django.server 4392 8224 "POST /api/auth/health/ HTTP/1.1" 404 7504
+ERROR 2025-09-23 19:06:30,138 common.exceptions 4392 23656 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /health/
+WARNING 2025-09-23 19:06:30,141 django.request 4392 23656 Method Not Allowed: /health/
+WARNING 2025-09-23 19:06:30,142 django.server 4392 23656 "POST /health/ HTTP/1.1" 405 142
+INFO 2025-09-23 19:06:46,201 django.server 4392 24436 "GET /health/ HTTP/1.1" 200 149
+INFO 2025-09-23 19:07:07,249 django.server 4392 14908 "GET /health/ HTTP/1.1" 200 148
+WARNING 2025-09-23 19:07:44,226 django.request 4392 23600 Not Found: /api/health/
+WARNING 2025-09-23 19:07:44,227 django.server 4392 23600 "GET /api/health/ HTTP/1.1" 404 5891
+INFO 2025-09-23 19:08:18,195 django.utils.autoreload 4392 23940 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\urls.py changed, reloading.
+INFO 2025-09-23 19:08:21,507 django.utils.autoreload 22284 10632 Watching for file changes with StatReloader
+INFO 2025-09-23 19:08:24,438 django.server 22284 24664 "GET /api/health/ HTTP/1.1" 200 149
+INFO 2025-09-23 19:08:43,389 django.server 22284 6836 "GET /api/health/ HTTP/1.1" 200 149
+INFO 2025-09-23 19:10:17,521 django.server 22284 16892 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-23 19:10:18,196 django.server 22284 16892 "GET /api/schema/ HTTP/1.1" 200 56479
+INFO 2025-09-23 19:10:36,214 django.server 22284 16892 "GET /api/health/ HTTP/1.1" 200 149
+ERROR 2025-09-23 19:12:40,271 common.exceptions 22284 18616 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:12:40,272 django.request 22284 18616 Unauthorized: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:12:40,273 django.server 22284 18616 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 401 270
+INFO 2025-09-23 19:12:56,006 django.server 22284 14908 "POST /api/auth/login/ HTTP/1.1" 200 930
+WARNING 2025-09-23 19:13:16,576 django.request 22284 18260 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:13:16,576 django.server 22284 18260 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+INFO 2025-09-23 19:14:45,687 django.server 22284 5188 "GET /admin/polls/poll/ HTTP/1.1" 200 19197
+INFO 2025-09-23 19:14:45,788 django.server 22284 7512 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-09-23 19:14:45,792 django.server 22284 19392 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-09-23 19:14:45,894 django.server 22284 5188 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 19:14:52,230 django.server 22284 13172 "GET /admin/polls/poll/b3933e86-217d-4952-b7da-4e00d57ef386/change/ HTTP/1.1" 200 26580
+INFO 2025-09-23 19:14:52,419 django.server 22284 13172 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 19:15:31,295 django.server 22284 22472 "GET /admin/autocomplete/?app_label=polls&model_name=poll&field_name=category HTTP/1.1" 200 391
+ERROR 2025-09-23 19:15:43,491 common.exceptions 22284 2236 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-23 19:15:43,600 django.request 22284 2236 Internal Server Error: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:15:43,600 django.server 22284 2236 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 500 123
+ERROR 2025-09-23 19:16:18,957 common.exceptions 22284 8748 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:18,958 django.request 22284 8748 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:18,958 django.server 22284 8748 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-23 19:16:40,180 common.exceptions 22284 9944 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:40,181 django.request 22284 9944 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:40,182 django.server 22284 9944 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-23 19:16:42,193 common.exceptions 22284 9360 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:42,194 django.request 22284 9360 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:42,194 django.server 22284 9360 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-23 19:16:43,143 common.exceptions 22284 7172 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:43,143 django.request 22284 7172 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:43,144 django.server 22284 7172 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-23 19:16:54,781 common.exceptions 22284 14848 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:54,781 django.request 22284 14848 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:16:54,782 django.server 22284 14848 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-23 19:17:29,105 common.exceptions 22284 18428 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:17:29,106 django.request 22284 18428 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:17:29,106 django.server 22284 18428 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 158
+INFO 2025-09-23 19:17:41,339 django.server 22284 4408 "GET /api/auth/profile/ HTTP/1.1" 200 311
+ERROR 2025-09-23 19:17:55,442 common.exceptions 22284 24832 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:17:55,443 django.request 22284 24832 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:17:55,443 django.server 22284 24832 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 158
+INFO 2025-09-23 19:19:14,955 django.utils.autoreload 22284 10632 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 19:19:17,723 django.utils.autoreload 16992 23260 Watching for file changes with StatReloader
+INFO 2025-09-23 19:19:47,176 django.utils.autoreload 16992 23260 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-23 19:19:49,164 django.utils.autoreload 6888 10948 Watching for file changes with StatReloader
+INFO 2025-09-23 19:19:53,479 django.server 6888 3656 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1432
+ERROR 2025-09-23 19:20:21,210 common.exceptions 6888 15160 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:20:21,210 django.request 6888 15160 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:20:21,211 django.server 6888 15160 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:22:40,147 django.utils.autoreload 6888 10948 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 19:22:42,298 django.utils.autoreload 16168 13804 Watching for file changes with StatReloader
+INFO 2025-09-23 19:24:25,717 django.utils.autoreload 16168 13804 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 19:24:27,952 django.utils.autoreload 8176 9552 Watching for file changes with StatReloader
+ERROR 2025-09-23 19:24:33,335 common.exceptions 8176 14428 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:24:33,337 django.request 8176 14428 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:24:33,338 django.server 8176 14428 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:24:39,506 common.exceptions 8176 19896 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:24:39,522 django.request 8176 19896 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:24:39,533 django.server 8176 19896 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:25:30,572 django.utils.autoreload 8176 9552 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-23 19:25:32,908 django.utils.autoreload 6092 3984 Watching for file changes with StatReloader
+ERROR 2025-09-23 19:25:45,585 common.exceptions 6092 17524 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:25:45,585 django.request 6092 17524 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:25:45,586 django.server 6092 17524 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:26:00,004 common.exceptions 6092 9676 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:00,005 django.request 6092 9676 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:00,006 django.server 6092 9676 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:26:01,652 common.exceptions 6092 24036 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:01,653 django.request 6092 24036 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:01,654 django.server 6092 24036 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:26:03,065 common.exceptions 6092 7004 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:03,066 django.request 6092 7004 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:26:03,066 django.server 6092 7004 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:26:14,847 common.exceptions 6092 18364 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:26:14,848 django.request 6092 18364 Forbidden: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:26:14,848 django.server 6092 18364 "PUT /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:26:16,471 common.exceptions 6092 16292 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:26:16,472 django.request 6092 16292 Forbidden: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:26:16,472 django.server 6092 16292 "PUT /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:26:21,411 django.server 6092 13196 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1432
+INFO 2025-09-23 19:26:31,614 django.server 6092 21404 "GET /api/auth/profile/ HTTP/1.1" 200 311
+INFO 2025-09-23 19:27:17,984 django.server 6092 25256 "POST /admin/polls/poll/b3933e86-217d-4952-b7da-4e00d57ef386/change/ HTTP/1.1" 302 0
+INFO 2025-09-23 19:27:18,388 django.server 6092 25256 "GET /admin/polls/poll/ HTTP/1.1" 200 19441
+INFO 2025-09-23 19:27:18,576 django.server 6092 25256 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 19:27:36,788 django.server 6092 13120 "GET /api/polls/ HTTP/1.1" 200 2749
+INFO 2025-09-23 19:28:26,902 django.server 6092 16732 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1432
+INFO 2025-09-23 19:29:11,404 django.server 6092 10480 "GET /admin/polls/poll/b3933e86-217d-4952-b7da-4e00d57ef386/change/ HTTP/1.1" 200 26572
+INFO 2025-09-23 19:29:22,371 django.server 6092 23856 "POST /admin/polls/poll/b3933e86-217d-4952-b7da-4e00d57ef386/change/ HTTP/1.1" 302 0
+INFO 2025-09-23 19:29:22,551 django.server 6092 23856 "GET /admin/polls/poll/ HTTP/1.1" 200 19441
+INFO 2025-09-23 19:29:22,752 django.server 6092 23856 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-23 19:29:28,428 django.server 6092 25084 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1430
+ERROR 2025-09-23 19:30:05,098 common.exceptions 6092 17972 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:30:05,099 django.request 6092 17972 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:30:05,100 django.server 6092 17972 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 270
+ERROR 2025-09-23 19:30:20,863 common.exceptions 6092 5576 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 19:30:20,865 django.request 6092 5576 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 19:30:20,866 django.server 6092 5576 "GET /api/auth/profile/ HTTP/1.1" 401 270
+ERROR 2025-09-23 19:30:22,139 common.exceptions 6092 16292 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,142 django.request 6092 16292 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,143 django.server 6092 16292 "GET /api/auth/profile/ HTTP/1.1" 401 270
+ERROR 2025-09-23 19:30:22,353 common.exceptions 6092 584 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,354 django.request 6092 584 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,355 django.server 6092 584 "GET /api/auth/profile/ HTTP/1.1" 401 270
+ERROR 2025-09-23 19:30:22,620 common.exceptions 6092 11292 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,621 django.request 6092 11292 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 19:30:22,622 django.server 6092 11292 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 19:30:27,647 django.server 6092 20200 "POST /api/auth/login/ HTTP/1.1" 200 930
+INFO 2025-09-23 19:30:32,438 django.server 6092 25184 "GET /api/auth/profile/ HTTP/1.1" 200 311
+INFO 2025-09-23 19:30:38,199 django.server 6092 8592 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1430
+ERROR 2025-09-23 19:30:48,258 common.exceptions 6092 16096 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:30:48,258 django.request 6092 16096 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:30:48,259 django.server 6092 16096 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:30:57,241 common.exceptions 6092 7212 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:30:57,241 django.request 6092 7212 Forbidden: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:30:57,242 django.server 6092 7212 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 403 163
+ERROR 2025-09-23 19:30:58,710 common.exceptions 6092 19348 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:30:58,710 django.request 6092 19348 Forbidden: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-23 19:30:58,711 django.server 6092 19348 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:32:43,006 django.server 6092 18164 "POST /api/auth/login/ HTTP/1.1" 200 926
+INFO 2025-09-23 19:32:48,253 django.server 6092 14448 "GET /api/auth/profile/ HTTP/1.1" 200 307
+INFO 2025-09-23 19:32:59,747 django.server 6092 15796 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1430
+ERROR 2025-09-23 19:33:27,229 common.exceptions 6092 14936 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:33:27,230 django.request 6092 14936 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:33:27,231 django.server 6092 14936 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:33:46,062 django.server 6092 22248 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1430
+WARNING 2025-09-23 19:34:24,851 django.request 6092 4144 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:34:24,851 django.server 6092 4144 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 41
+WARNING 2025-09-23 19:34:30,928 django.request 6092 8124 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:34:30,928 django.server 6092 8124 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 39
+WARNING 2025-09-23 19:34:48,145 django.request 6092 14680 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-23 19:34:48,145 django.server 6092 14680 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 60
+INFO 2025-09-23 19:35:06,199 django.server 6092 8716 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1430
+ERROR 2025-09-23 19:35:41,102 common.exceptions 6092 10480 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:35:41,103 django.request 6092 10480 Forbidden: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-23 19:35:41,104 django.server 6092 10480 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 403 163
+INFO 2025-09-23 19:36:11,343 django.server 6092 23680 "GET /api/polls/ HTTP/1.1" 200 2747
+ERROR 2025-09-23 19:37:17,904 common.exceptions 6092 24152 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-23 19:37:17,906 django.request 6092 24152 Bad Request: /api/polls/
+WARNING 2025-09-23 19:37:17,907 django.server 6092 24152 "POST /api/polls/ HTTP/1.1" 400 166
+ERROR 2025-09-23 19:38:03,094 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:05,112 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:06,248 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:06,771 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:07,005 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:07,261 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:07,471 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:08,138 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:08,274 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:08,791 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:09,039 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:09,297 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:09,494 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:11,171 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:11,289 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:11,818 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:12,072 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:12,321 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:12,520 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:14,204 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:14,314 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:14,855 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:15,099 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:15,364 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:15,554 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:17,222 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:17,344 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:17,887 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:18,110 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:18,354 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:18,388 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:18,578 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:20,261 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:20,384 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:20,384 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:20,907 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:21,145 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:21,418 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:21,602 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:22,712 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:38:23,290 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:23,417 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:23,417 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:23,939 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:24,163 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:24,448 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:24,632 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:24,755 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:38:26,322 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:26,457 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:26,458 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:27,019 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:27,218 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:27,468 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:27,653 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:27,779 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-23 19:38:29,346 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:29,471 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:29,471 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:30,045 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:30,246 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:30,488 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:30,673 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:30,819 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-23 19:38:32,369 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:32,502 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:32,503 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:33,080 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:33,273 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:33,512 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:33,711 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:33,838 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-23 19:38:35,403 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:35,528 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:35,545 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:36,102 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:36,300 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:36,536 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:36,744 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-23 19:38:36,860 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-23 19:38:38,432 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:38,558 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:38,591 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:39,144 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:39,350 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:39,551 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:39,788 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-23 19:38:39,894 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-23 19:38:41,461 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:41,585 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-23 19:38:41,618 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:42,199 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:42,402 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:42,587 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:42,824 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-23 19:38:42,924 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-23 19:38:44,494 celery.backends.redis 6092 2228 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-23 19:38:44,627 celery.backends.redis 6092 23444 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-23 19:38:44,642 celery.backends.redis 6092 21828 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:45,217 celery.backends.redis 6092 3348 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:45,426 celery.backends.redis 6092 9356 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:45,609 celery.backends.redis 6092 1540 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:45,852 celery.backends.redis 6092 5192 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-23 19:38:45,959 celery.backends.redis 6092 16292 Connection to Redis lost: Retry (8/20) in 1.00 second.
+INFO 2025-09-23 19:42:44,105 django.utils.autoreload 1268 22976 Watching for file changes with StatReloader
+ERROR 2025-09-23 19:42:56,517 celery.backends.redis 1268 7160 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-23 19:42:58,563 celery.backends.redis 1268 7160 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-23 19:43:01,600 celery.backends.redis 1268 7160 Connection to Redis lost: Retry (2/20) in 1.00 second.
+INFO 2025-09-23 19:48:09,893 django.utils.autoreload 22580 17960 Watching for file changes with StatReloader
+ERROR 2025-09-23 19:53:46,578 common.exceptions 22580 2404 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-23 19:53:46,586 django.request 22580 2404 Unauthorized: /api/polls/
+WARNING 2025-09-23 19:53:46,587 django.server 22580 2404 "POST /api/polls/ HTTP/1.1" 401 270
+INFO 2025-09-23 19:53:59,618 django.server 22580 8740 "GET /api/health/ HTTP/1.1" 200 148
+ERROR 2025-09-23 19:54:06,137 common.exceptions 22580 10392 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-23 19:54:06,138 django.request 22580 10392 Unauthorized: /api/auth/profile/
+WARNING 2025-09-23 19:54:06,138 django.server 22580 10392 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-23 19:54:13,478 django.server 22580 6696 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-23 19:54:21,664 common.exceptions 22580 8204 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-23 19:54:21,665 django.request 22580 8204 Bad Request: /api/polls/
+WARNING 2025-09-23 19:54:21,666 django.server 22580 8204 "POST /api/polls/ HTTP/1.1" 400 215
+ERROR 2025-09-23 19:55:30,646 common.exceptions 22580 13048 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-23 19:55:30,647 django.request 22580 13048 Bad Request: /api/polls/
+WARNING 2025-09-23 19:55:30,647 django.server 22580 13048 "POST /api/polls/ HTTP/1.1" 400 215
+INFO 2025-09-25 14:33:42,579 django.utils.autoreload 24496 9728 Watching for file changes with StatReloader
+INFO 2025-09-25 14:34:35,666 django.server 24496 14392 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-25 14:34:36,137 django.server 24496 14392 "GET /api/schema/ HTTP/1.1" 200 56479
+ERROR 2025-09-25 14:45:14,876 common.exceptions 24496 10668 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:45:14,885 django.request 24496 10668 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:45:14,889 django.server 24496 10668 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-25 14:45:19,756 common.exceptions 24496 23004 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-25 14:45:19,757 django.request 24496 23004 Unauthorized: /api/auth/profile/
+WARNING 2025-09-25 14:45:19,758 django.server 24496 23004 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-25 14:45:26,037 django.server 24496 29624 "POST /api/auth/login/ HTTP/1.1" 200 927
+INFO 2025-09-25 14:45:31,652 django.server 24496 4464 "GET /api/auth/profile/ HTTP/1.1" 200 308
+ERROR 2025-09-25 14:46:05,088 common.exceptions 24496 27940 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:46:05,089 django.request 24496 27940 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:46:05,090 django.server 24496 27940 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+INFO 2025-09-25 14:48:03,466 django.utils.autoreload 24496 9728 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\urls.py changed, reloading.
+INFO 2025-09-25 14:48:06,252 django.utils.autoreload 29592 29748 Watching for file changes with StatReloader
+ERROR 2025-09-25 14:53:35,098 common.exceptions 29592 27972 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:53:35,100 django.request 29592 27972 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:53:35,100 django.server 29592 27972 "GET /api/polls/ HTTP/1.1" 401 158
+INFO 2025-09-25 14:53:49,588 django.server 29592 25108 "GET /api/auth/profile/ HTTP/1.1" 200 308
+ERROR 2025-09-25 14:53:57,981 common.exceptions 29592 30120 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:53:57,981 django.request 29592 30120 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:53:58,004 django.server 29592 30120 "GET /api/polls/ HTTP/1.1" 401 158
+ERROR 2025-09-25 14:54:33,208 common.exceptions 29592 8516 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/
+WARNING 2025-09-25 14:54:33,209 django.request 29592 8516 Unauthorized: /api/categories/
+WARNING 2025-09-25 14:54:33,210 django.server 29592 8516 "GET /api/categories/ HTTP/1.1" 401 158
+ERROR 2025-09-25 14:54:36,457 common.exceptions 29592 20396 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 14:54:36,457 django.request 29592 20396 Bad Request: /api/polls/
+WARNING 2025-09-25 14:54:36,458 django.server 29592 20396 "POST /api/polls/ HTTP/1.1" 400 215
+ERROR 2025-09-25 14:55:07,428 common.exceptions 29592 22924 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:55:07,431 django.request 29592 22924 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:55:07,436 django.server 29592 22924 "GET /api/polls/ HTTP/1.1" 401 158
+ERROR 2025-09-25 14:55:57,984 common.exceptions 29592 11304 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/
+WARNING 2025-09-25 14:55:57,985 django.request 29592 11304 Unauthorized: /api/categories/
+WARNING 2025-09-25 14:55:57,985 django.server 29592 11304 "GET /api/categories/ HTTP/1.1" 401 158
+ERROR 2025-09-25 14:56:03,832 common.exceptions 29592 412 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 14:56:03,834 django.request 29592 412 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 14:56:03,836 django.server 29592 412 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 158
+ERROR 2025-09-25 14:56:08,981 common.exceptions 29592 6128 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-25 14:56:08,989 django.request 29592 6128 Internal Server Error: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 14:56:08,989 django.server 29592 6128 "PUT /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 500 123
+INFO 2025-09-25 14:57:31,582 django.server 29592 30532 "GET /api/auth/profile/ HTTP/1.1" 200 308
+ERROR 2025-09-25 14:57:35,631 common.exceptions 29592 30456 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:57:35,637 django.request 29592 30456 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:57:35,639 django.server 29592 30456 "GET /api/polls/?ordering=-created_at HTTP/1.1" 401 158
+ERROR 2025-09-25 14:58:27,562 common.exceptions 29592 28788 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 14:58:27,563 django.request 29592 28788 Unauthorized: /api/polls/
+WARNING 2025-09-25 14:58:27,563 django.server 29592 28788 "GET /api/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8 HTTP/1.1" 401 158
+ERROR 2025-09-25 14:58:31,075 common.exceptions 29592 29164 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/categories/
+WARNING 2025-09-25 14:58:31,075 django.request 29592 29164 Method Not Allowed: /api/categories/
+WARNING 2025-09-25 14:58:31,076 django.server 29592 29164 "POST /api/categories/ HTTP/1.1" 405 142
+ERROR 2025-09-25 14:58:37,673 common.exceptions 29592 25416 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-25 14:58:37,675 django.request 29592 25416 Internal Server Error: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 14:58:37,676 django.server 29592 25416 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 500 123
+ERROR 2025-09-25 14:58:56,534 common.exceptions 29592 20412 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 14:58:56,541 django.request 29592 20412 Bad Request: /api/polls/
+WARNING 2025-09-25 14:58:56,543 django.server 29592 20412 "POST /api/polls/ HTTP/1.1" 400 215
+INFO 2025-09-25 15:08:24,706 django.utils.autoreload 29592 29748 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-25 15:08:27,289 django.utils.autoreload 26160 14540 Watching for file changes with StatReloader
+INFO 2025-09-25 15:08:35,550 django.utils.autoreload 26160 14540 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-25 15:08:37,041 django.utils.autoreload 2656 29476 Watching for file changes with StatReloader
+INFO 2025-09-25 15:11:50,609 django.utils.autoreload 2656 29476 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-25 15:11:52,387 django.utils.autoreload 12740 24520 Watching for file changes with StatReloader
+ERROR 2025-09-25 15:12:30,906 common.exceptions 12740 1776 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-25 15:12:30,908 django.request 12740 1776 Unauthorized: /api/auth/profile/
+WARNING 2025-09-25 15:12:30,909 django.server 12740 1776 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:12:43,908 django.server 12740 16800 "POST /api/auth/login/ HTTP/1.1" 200 927
+INFO 2025-09-25 15:12:50,206 django.server 12740 24892 "GET /api/auth/profile/ HTTP/1.1" 200 308
+INFO 2025-09-25 15:12:56,440 django.server 12740 24412 "GET /api/polls/?ordering=-created_at HTTP/1.1" 200 5979
+INFO 2025-09-25 15:13:18,003 django.server 12740 13444 "GET /api/polls/?is_active=true HTTP/1.1" 200 5979
+ERROR 2025-09-25 15:13:46,787 common.exceptions 12740 16980 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 15:13:46,789 django.request 12740 16980 Bad Request: /api/polls/
+WARNING 2025-09-25 15:13:46,791 django.server 12740 16980 "GET /api/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8 HTTP/1.1" 400 178
+INFO 2025-09-25 15:14:07,251 django.server 12740 6964 "GET /api/polls/?search=programming HTTP/1.1" 200 1650
+ERROR 2025-09-25 15:14:54,672 common.exceptions 12740 12556 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 15:14:54,673 django.request 12740 12556 Bad Request: /api/polls/
+WARNING 2025-09-25 15:14:54,673 django.server 12740 12556 "GET /api/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8 HTTP/1.1" 400 178
+INFO 2025-09-25 15:15:58,760 django.utils.autoreload 20220 13912 Watching for file changes with StatReloader
+INFO 2025-09-25 15:16:08,251 django.server 20220 30572 "GET /api/polls/?polls_category=6ba7b810-9dad-11d1-80b4-00c04fd430c8 HTTP/1.1" 200 5979
+ERROR 2025-09-25 15:16:36,039 common.exceptions 20220 2488 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 15:16:36,039 django.request 20220 2488 Bad Request: /api/polls/
+WARNING 2025-09-25 15:16:36,040 django.server 20220 2488 "GET /api/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8 HTTP/1.1" 400 178
+ERROR 2025-09-25 15:16:56,511 common.exceptions 20220 17136 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+WARNING 2025-09-25 15:16:56,512 django.request 20220 17136 Bad Request: /api/polls/
+WARNING 2025-09-25 15:16:56,513 django.server 20220 17136 "GET /api/polls/?category=programming HTTP/1.1" 400 145
+INFO 2025-09-25 15:17:10,719 django.server 20220 24684 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 15:17:28,165 django.server 20220 19440 "GET /api/polls/?category=cdced65a-147c-4a24-a308-90a15760e69e HTTP/1.1" 200 52
+INFO 2025-09-25 15:17:39,748 django.server 20220 25840 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 15:17:56,034 django.server 20220 19416 "GET /api/polls/?category=21315e90-6545-4cdb-973b-d85b55dc9ef2 HTTP/1.1" 200 52
+INFO 2025-09-25 15:18:07,425 django.server 20220 30636 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 15:18:49,301 django.server 20220 1504 "GET /api/polls/?category=fdd75574-6c90-4256-b772-142958f6dcf3 HTTP/1.1" 200 1145
+INFO 2025-09-25 15:19:32,286 django.server 20220 30148 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 15:27:41,619 django.server 20220 26600 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 15:31:58,998 django.utils.autoreload 20220 13912 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py changed, reloading.
+INFO 2025-09-25 15:32:01,528 django.utils.autoreload 23152 30108 Watching for file changes with StatReloader
+INFO 2025-09-25 15:32:09,537 django.server 23152 27120 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 15:32:16,179 django.server 23152 28728 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 15:32:23,711 django.server 23152 19612 "GET /api/categories/ HTTP/1.1" 200 960
+ERROR 2025-09-25 15:32:39,166 common.exceptions 23152 8188 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:32:39,175 django.request 23152 8188 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:32:39,177 django.server 23152 8188 "POST /api/polls/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:34:22,781 django.utils.autoreload 23152 30108 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py changed, reloading.
+INFO 2025-09-25 15:34:24,610 django.utils.autoreload 28500 11876 Watching for file changes with StatReloader
+ERROR 2025-09-25 15:34:31,819 common.exceptions 28500 17960 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:34:31,820 django.request 28500 17960 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:34:31,820 django.server 28500 17960 "POST /api/polls/ HTTP/1.1" 401 270
+ERROR 2025-09-25 15:34:33,752 common.exceptions 28500 29816 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:34:33,754 django.request 28500 29816 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:34:33,760 django.server 28500 29816 "POST /api/polls/ HTTP/1.1" 401 270
+ERROR 2025-09-25 15:34:34,901 common.exceptions 28500 30664 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:34:34,902 django.request 28500 30664 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:34:34,904 django.server 28500 30664 "POST /api/polls/ HTTP/1.1" 401 270
+ERROR 2025-09-25 15:34:36,018 common.exceptions 28500 4580 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:34:36,020 django.request 28500 4580 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:34:36,023 django.server 28500 4580 "POST /api/polls/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:34:37,546 django.server 28500 24412 "GET /api/categories/ HTTP/1.1" 200 960
+ERROR 2025-09-25 15:34:44,974 common.exceptions 28500 26432 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:34:44,974 django.request 28500 26432 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:34:44,976 django.server 28500 26432 "POST /api/polls/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:35:50,275 django.utils.autoreload 28500 11876 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\urls.py changed, reloading.
+INFO 2025-09-25 15:35:52,660 django.utils.autoreload 16576 29988 Watching for file changes with StatReloader
+ERROR 2025-09-25 15:36:53,171 common.exceptions 16576 30096 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 15:36:53,172 django.request 16576 30096 Unauthorized: /api/polls/
+WARNING 2025-09-25 15:36:53,173 django.server 16576 30096 "POST /api/polls/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:37:11,503 django.server 16576 2092 "POST /api/auth/logout/ HTTP/1.1" 200 56
+INFO 2025-09-25 15:37:15,925 django.server 16576 28816 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-25 15:37:27,052 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 15:37:29,101 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-25 15:37:31,692 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 15:37:32,154 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-25 15:37:33,728 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-25 15:37:35,196 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-25 15:37:36,763 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-25 15:37:38,240 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-25 15:37:39,799 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-25 15:37:41,274 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-25 15:37:42,833 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-25 15:37:44,314 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-25 15:37:45,874 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-25 15:37:47,365 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-25 15:37:48,919 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-25 15:37:50,407 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-25 15:37:51,954 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-25 15:37:53,463 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-25 15:37:54,997 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-25 15:37:56,492 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-25 15:37:58,036 celery.backends.redis 16576 29744 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-25 15:37:59,531 celery.backends.redis 16576 3056 Connection to Redis lost: Retry (11/20) in 1.00 second.
+INFO 2025-09-25 15:40:35,094 django.utils.autoreload 30400 4660 Watching for file changes with StatReloader
+ERROR 2025-09-25 15:40:48,494 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 15:40:50,541 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-25 15:40:53,588 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (2/20) in 1.00 second.
+ERROR 2025-09-25 15:40:56,631 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (3/20) in 1.00 second.
+ERROR 2025-09-25 15:40:59,682 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (4/20) in 1.00 second.
+ERROR 2025-09-25 15:41:02,726 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (5/20) in 1.00 second.
+ERROR 2025-09-25 15:41:05,767 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (6/20) in 1.00 second.
+ERROR 2025-09-25 15:41:08,810 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (7/20) in 1.00 second.
+ERROR 2025-09-25 15:41:11,860 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (8/20) in 1.00 second.
+ERROR 2025-09-25 15:41:14,906 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (9/20) in 1.00 second.
+ERROR 2025-09-25 15:41:17,931 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (10/20) in 1.00 second.
+ERROR 2025-09-25 15:41:20,967 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (11/20) in 1.00 second.
+ERROR 2025-09-25 15:41:24,008 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (12/20) in 1.00 second.
+ERROR 2025-09-25 15:41:27,034 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (13/20) in 1.00 second.
+ERROR 2025-09-25 15:41:30,059 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (14/20) in 1.00 second.
+ERROR 2025-09-25 15:41:33,089 celery.backends.redis 30400 15672 Connection to Redis lost: Retry (15/20) in 1.00 second.
+INFO 2025-09-25 15:46:59,861 django.utils.autoreload 28956 8624 Watching for file changes with StatReloader
+INFO 2025-09-25 15:47:12,103 django.server 28956 6964 "GET /api/categories/ HTTP/1.1" 200 960
+ERROR 2025-09-25 15:47:32,419 celery.backends.redis 28956 13144 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 15:47:34,460 celery.backends.redis 28956 13144 Connection to Redis lost: Retry (1/20) in 1.00 second.
+INFO 2025-09-25 15:47:43,802 django.utils.autoreload 28020 29332 Watching for file changes with StatReloader
+INFO 2025-09-25 15:47:52,493 django.server 28020 6816 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+ERROR 2025-09-25 15:49:21,404 common.exceptions 28020 15272 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 15:49:21,405 django.request 28020 15272 Not Found: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 15:49:21,405 django.server 28020 15272 "PUT /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 404 96
+INFO 2025-09-25 15:50:04,187 django.server 28020 10776 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+ERROR 2025-09-25 15:51:55,569 common.exceptions 28020 14292 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:51:55,569 django.request 28020 14292 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:51:55,573 django.server 28020 14292 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 15:52:00,018 common.exceptions 28020 10312 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:52:00,019 django.request 28020 10312 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:52:00,021 django.server 28020 10312 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+INFO 2025-09-25 15:53:11,711 django.server 28020 21948 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+ERROR 2025-09-25 15:53:43,934 common.exceptions 28020 3448 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:53:43,934 django.request 28020 3448 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:53:43,935 django.server 28020 3448 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 270
+ERROR 2025-09-25 15:53:53,711 common.exceptions 28020 10640 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:53:53,711 django.request 28020 10640 Unauthorized: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:53:53,712 django.server 28020 10640 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:54:12,326 django.server 28020 19392 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+ERROR 2025-09-25 15:54:32,130 common.exceptions 28020 30224 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-25 15:54:32,131 django.request 28020 30224 Unauthorized: /api/auth/profile/
+WARNING 2025-09-25 15:54:32,132 django.server 28020 30224 "GET /api/auth/profile/ HTTP/1.1" 401 270
+ERROR 2025-09-25 15:54:36,887 common.exceptions 28020 7824 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-25 15:54:36,889 django.request 28020 7824 Unauthorized: /api/auth/profile/
+WARNING 2025-09-25 15:54:36,891 django.server 28020 7824 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-25 15:54:47,906 django.server 28020 29768 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-25 15:55:09,567 common.exceptions 28020 28484 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:55:09,568 django.request 28020 28484 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 15:55:09,569 django.server 28020 28484 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:01:21,692 common.exceptions 28020 14060 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:01:21,693 django.request 28020 14060 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:01:21,693 django.server 28020 14060 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:01:25,634 common.exceptions 28020 26548 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:01:25,635 django.request 28020 26548 Not Found: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:01:25,635 django.server 28020 26548 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 404 96
+WARNING 2025-09-25 16:01:37,171 django.request 28020 24028 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-25 16:01:37,172 django.server 28020 24028 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+INFO 2025-09-25 16:01:47,920 django.server 28020 14500 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/ HTTP/1.1" 200 1220
+WARNING 2025-09-25 16:01:58,431 django.request 28020 29908 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-25 16:01:58,437 django.server 28020 29908 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+ERROR 2025-09-25 16:02:01,015 common.exceptions 28020 23128 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:02:01,015 django.request 28020 23128 Not Found: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:02:01,015 django.server 28020 23128 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:02:14,865 common.exceptions 28020 26992 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:02:14,866 django.request 28020 26992 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:02:14,867 django.server 28020 26992 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+INFO 2025-09-25 16:02:18,729 django.server 28020 11760 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+INFO 2025-09-25 16:03:12,881 django.utils.autoreload 28020 29332 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-25 16:03:15,309 django.utils.autoreload 22456 27692 Watching for file changes with StatReloader
+INFO 2025-09-25 16:05:27,332 django.utils.autoreload 22456 27692 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py changed, reloading.
+INFO 2025-09-25 16:05:28,965 django.utils.autoreload 26172 27036 Watching for file changes with StatReloader
+INFO 2025-09-25 16:05:32,875 django.server 26172 18612 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-25 16:05:41,649 common.exceptions 26172 27008 Unhandled exception: name 'obj' is not defined
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py", line 66, in has_permission
+    owner = getattr(obj, owner_field, None)
+                    ^^^
+NameError: name 'obj' is not defined
+ERROR 2025-09-25 16:05:41,656 django.request 26172 27008 Internal Server Error: /api/polls/
+ERROR 2025-09-25 16:05:41,657 django.server 26172 27008 "POST /api/polls/ HTTP/1.1" 500 104
+INFO 2025-09-25 16:07:17,898 django.server 26172 30344 "POST /api/auth/login/ HTTP/1.1" 200 927
+INFO 2025-09-25 16:07:23,034 django.server 26172 20252 "GET /api/auth/profile/ HTTP/1.1" 200 308
+INFO 2025-09-25 16:07:25,596 django.server 26172 16800 "POST /api/auth/logout/ HTTP/1.1" 200 56
+INFO 2025-09-25 16:07:30,054 django.server 26172 17220 "POST /api/auth/login/ HTTP/1.1" 200 927
+INFO 2025-09-25 16:07:38,389 django.server 26172 27620 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 16:07:40,352 django.server 26172 30436 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-09-25 16:07:44,591 django.server 26172 19316 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+WARNING 2025-09-25 16:07:52,401 django.request 26172 30696 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-25 16:07:52,402 django.server 26172 30696 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+INFO 2025-09-25 16:07:59,218 django.server 26172 29024 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/ HTTP/1.1" 200 1220
+INFO 2025-09-25 16:08:34,406 django.server 26172 29456 "GET /api/polls/?category=fdd75574-6c90-4256-b772-142958f6dcf3 HTTP/1.1" 200 1145
+INFO 2025-09-25 16:08:36,622 django.server 26172 24008 "GET /api/polls/?search=programming HTTP/1.1" 200 1650
+ERROR 2025-09-25 16:08:50,725 common.exceptions 26172 12392 Unhandled exception: name 'obj' is not defined
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py", line 66, in has_permission
+    owner = getattr(obj, owner_field, None)
+                    ^^^
+NameError: name 'obj' is not defined
+ERROR 2025-09-25 16:08:50,728 django.request 26172 12392 Internal Server Error: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 16:08:50,729 django.server 26172 12392 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 500 104
+INFO 2025-09-25 16:12:51,560 django.utils.autoreload 26172 27036 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py changed, reloading.
+INFO 2025-09-25 16:12:53,053 django.utils.autoreload 1128 24520 Watching for file changes with StatReloader
+INFO 2025-09-25 16:15:12,586 django.utils.autoreload 1128 24520 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py changed, reloading.
+INFO 2025-09-25 16:15:14,122 django.utils.autoreload 30388 27972 Watching for file changes with StatReloader
+INFO 2025-09-25 16:15:38,693 django.server 30388 11344 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-25 16:15:51,142 celery.backends.redis 30388 13920 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 16:15:53,188 celery.backends.redis 30388 13920 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-25 16:15:56,225 celery.backends.redis 30388 13920 Connection to Redis lost: Retry (2/20) in 1.00 second.
+INFO 2025-09-25 16:16:03,631 django.utils.autoreload 27128 13476 Watching for file changes with StatReloader
+ERROR 2025-09-25 16:16:23,503 common.exceptions 27128 27292 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:16:23,503 django.request 27128 27292 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:16:23,504 django.server 27128 27292 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:17:46,927 common.exceptions 27128 26912 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:17:46,928 django.request 27128 26912 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:17:46,928 django.server 27128 26912 "PATCH /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:18:07,915 common.exceptions 27128 11876 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:18:07,916 django.request 27128 11876 Not Found: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+WARNING 2025-09-25 16:18:07,918 django.server 27128 11876 "DELETE /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 404 96
+INFO 2025-09-25 16:18:41,958 django.server 27128 30620 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 16:19:16,538 django.server 27128 9392 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 16:19:52,504 django.server 27128 29896 "GET /api/polls/ HTTP/1.1" 200 5979
+INFO 2025-09-25 16:20:17,411 django.server 27128 29224 "OPTIONS /api/polls/ HTTP/1.1" 200 0
+ERROR 2025-09-25 16:21:08,561 common.exceptions 27128 18824 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+WARNING 2025-09-25 16:21:08,562 django.request 27128 18824 Not Found: /api/polls/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+WARNING 2025-09-25 16:21:08,562 django.server 27128 18824 "GET /api/polls/3fa85f64-5717-4562-b3fc-2c963f66afa6/ HTTP/1.1" 404 96
+INFO 2025-09-25 16:25:33,696 django.server 27128 10132 "GET /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 200 1493
+INFO 2025-09-25 16:26:05,360 django.server 27128 29448 "GET /api/auth/profile/ HTTP/1.1" 200 308
+INFO 2025-09-25 16:26:36,081 django.server 27128 19088 "GET /api/polls/?is_active=true HTTP/1.1" 200 5979
+INFO 2025-09-25 16:30:12,654 django.utils.autoreload 27128 13476 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-25 16:30:14,703 django.utils.autoreload 27196 21692 Watching for file changes with StatReloader
+INFO 2025-09-25 16:31:28,999 django.utils.autoreload 27196 21692 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\views.py changed, reloading.
+INFO 2025-09-25 16:31:30,381 django.utils.autoreload 28056 13216 Watching for file changes with StatReloader
+ERROR 2025-09-25 16:32:42,428 common.exceptions 28056 30280 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+WARNING 2025-09-25 16:32:42,429 django.request 28056 30280 Unauthorized: /api/polls/
+WARNING 2025-09-25 16:32:42,429 django.server 28056 30280 "POST /api/polls/ HTTP/1.1" 401 270
+ERROR 2025-09-25 16:32:53,703 common.exceptions 28056 21468 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-25 16:32:53,704 django.request 28056 21468 Unauthorized: /api/auth/profile/
+WARNING 2025-09-25 16:32:53,705 django.server 28056 21468 "GET /api/auth/profile/ HTTP/1.1" 401 270
+INFO 2025-09-25 16:33:05,492 django.server 28056 29788 "POST /api/auth/login/ HTTP/1.1" 200 927
+ERROR 2025-09-25 16:33:34,702 celery.backends.redis 28056 24664 Connection to Redis lost: Retry (0/20) now.
+ERROR 2025-09-25 16:33:36,745 celery.backends.redis 28056 24664 Connection to Redis lost: Retry (1/20) in 1.00 second.
+ERROR 2025-09-25 16:33:39,784 celery.backends.redis 28056 24664 Connection to Redis lost: Retry (2/20) in 1.00 second.
+INFO 2025-09-25 16:33:48,070 django.utils.autoreload 28384 22772 Watching for file changes with StatReloader
+INFO 2025-09-25 16:34:53,473 django.server 28384 20608 "GET /api/polls/mine/ HTTP/1.1" 200 4885
+INFO 2025-09-25 16:35:53,556 django.server 28384 21924 "PATCH /api/polls/24811685-1e29-43eb-99f4-242299d84b69/ HTTP/1.1" 200 575
+INFO 2025-09-25 16:36:08,553 django.server 28384 15272 "PATCH /api/polls/24811685-1e29-43eb-99f4-242299d84b69/ HTTP/1.1" 200 577
+INFO 2025-09-25 16:36:25,830 django.server 28384 3760 "PATCH /api/polls/24811685-1e29-43eb-99f4-242299d84b69/ HTTP/1.1" 200 575
+INFO 2025-09-25 16:37:54,719 django.server 28384 24684 "DELETE /api/polls/24811685-1e29-43eb-99f4-242299d84b69/ HTTP/1.1" 204 0
+ERROR 2025-09-25 16:38:01,901 common.exceptions 28384 29416 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/24811685-1e29-43eb-99f4-242299d84b69/
+WARNING 2025-09-25 16:38:01,901 django.request 28384 29416 Not Found: /api/polls/24811685-1e29-43eb-99f4-242299d84b69/
+WARNING 2025-09-25 16:38:01,902 django.server 28384 29416 "PATCH /api/polls/24811685-1e29-43eb-99f4-242299d84b69/ HTTP/1.1" 404 96
+INFO 2025-09-25 16:38:10,512 django.server 28384 29448 "GET /api/polls/mine/ HTTP/1.1" 200 4412
+INFO 2025-09-25 16:39:08,991 django.server 28384 12408 "GET /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:40:25,344 django.server 28384 21324 "PATCH /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:41:17,426 django.server 28384 26724 "GET /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:42:03,349 django.server 28384 1964 "PATCH /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:42:10,582 django.server 28384 28860 "PATCH /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:42:23,368 django.server 28384 28856 "GET /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:42:33,139 django.server 28384 11840 "PATCH /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:42:56,235 django.server 28384 18596 "GET /api/polls/ HTTP/1.1" 200 5507
+INFO 2025-09-25 16:43:41,050 django.server 28384 27356 "GET /admin/ HTTP/1.1" 200 11197
+INFO 2025-09-25 16:43:41,092 django.server 28384 27356 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,106 django.server 28384 21700 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,110 django.server 28384 27356 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,111 django.server 28384 21480 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,111 django.server 28384 4976 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,112 django.server 28384 7920 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,115 django.server 28384 24892 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,126 django.server 28384 24892 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:41,126 django.server 28384 7920 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,161 django.server 28384 7920 "GET /admin/polls/poll/ HTTP/1.1" 200 24524
+INFO 2025-09-25 16:43:44,205 django.server 28384 7920 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,210 django.server 28384 24892 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,211 django.server 28384 21700 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,211 django.server 28384 21480 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,211 django.server 28384 4976 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,228 django.server 28384 7920 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,239 django.server 28384 24892 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,240 django.server 28384 21700 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,244 django.server 28384 21480 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,254 django.server 28384 4976 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,264 django.server 28384 21480 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,258 django.server 28384 24892 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,275 django.server 28384 21480 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:44,335 django.server 28384 27356 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:43:44,365 django.server 28384 27356 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,393 django.server 28384 27356 "GET /admin/polls/poll/25e6ac20-89af-4224-aeb5-69af5a02e611/change/ HTTP/1.1" 200 26582
+INFO 2025-09-25 16:43:54,436 django.server 28384 7920 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,437 django.server 28384 21700 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,437 django.server 28384 4976 "GET /static/admin/css/autocomplete.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,438 django.server 28384 27356 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,438 django.server 28384 24892 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,447 django.server 28384 7920 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,453 django.server 28384 21700 "GET /static/admin/js/vendor/select2/i18n/en.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,457 django.server 28384 4976 "GET /static/admin/js/autocomplete.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,457 django.server 28384 24892 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,458 django.server 28384 27356 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,463 django.server 28384 7920 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,475 django.server 28384 7920 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,481 django.server 28384 7920 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,545 django.server 28384 21480 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:43:54,632 django.server 28384 7920 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:43:54,633 django.server 28384 21480 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-09-25 16:44:11,608 django.server 28384 21480 "GET /admin/polls/poll/25e6ac20-89af-4224-aeb5-69af5a02e611/delete/ HTTP/1.1" 200 10731
+INFO 2025-09-25 16:44:11,890 django.server 28384 21480 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-09-25 16:44:16,240 django.server 28384 21480 "POST /admin/polls/poll/25e6ac20-89af-4224-aeb5-69af5a02e611/delete/ HTTP/1.1" 302 0
+INFO 2025-09-25 16:44:16,412 django.server 28384 21480 "GET /admin/polls/poll/ HTTP/1.1" 200 24061
+INFO 2025-09-25 16:44:16,525 django.server 28384 21480 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:45:00,887 django.server 28384 9496 "POST /admin/polls/poll/ HTTP/1.1" 200 11948
+INFO 2025-09-25 16:45:05,599 django.server 28384 9496 "POST /admin/polls/poll/ HTTP/1.1" 302 0
+INFO 2025-09-25 16:45:05,753 django.server 28384 9496 "GET /admin/polls/poll/ HTTP/1.1" 200 20113
+INFO 2025-09-25 16:45:05,977 django.server 28384 9496 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:45:14,407 django.server 28384 9496 "GET /admin/polls/poll/ HTTP/1.1" 200 19978
+INFO 2025-09-25 16:45:14,501 django.server 28384 9496 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2025-09-25 16:45:42,440 common.exceptions 28384 30172 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:45:42,441 django.request 28384 30172 Not Found: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+WARNING 2025-09-25 16:45:42,441 django.server 28384 30172 "PUT /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/ HTTP/1.1" 404 96
+ERROR 2025-09-25 16:46:00,787 common.exceptions 28384 25564 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/
+WARNING 2025-09-25 16:46:00,787 django.request 28384 25564 Not Found: /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/
+WARNING 2025-09-25 16:46:00,788 django.server 28384 25564 "PATCH /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/ HTTP/1.1" 404 96
+INFO 2025-09-25 16:46:13,028 django.server 28384 12188 "GET /api/polls/mine/ HTTP/1.1" 200 1038
+INFO 2025-09-25 16:46:34,942 django.server 28384 16924 "GET /api/polls/50b50bc4-f267-46cc-aede-b2eee97172a2/ HTTP/1.1" 200 585
+INFO 2025-09-25 16:46:52,620 django.server 28384 26244 "DELETE /api/polls/50b50bc4-f267-46cc-aede-b2eee97172a2/ HTTP/1.1" 204 0
+INFO 2025-09-25 16:47:00,803 django.server 28384 29864 "GET /api/polls/mine/ HTTP/1.1" 200 556
+INFO 2025-09-25 16:47:22,065 django.server 28384 21520 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 200 1220
+WARNING 2025-09-25 16:47:46,037 django.request 28384 28896 Bad Request: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+WARNING 2025-09-25 16:47:46,038 django.server 28384 28896 "POST /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/ HTTP/1.1" 400 65
+INFO 2025-09-25 16:47:57,140 django.server 28384 8360 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 200 1220
+INFO 2025-09-25 16:48:42,249 django.server 28384 9496 "GET /admin/polls/poll/ HTTP/1.1" 200 19231
+INFO 2025-09-25 16:48:42,375 django.server 28384 9496 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:48:59,728 django.server 28384 26996 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-09-25 16:49:45,645 django.server 28384 9496 "GET /admin/polls/poll/a4050f7b-2021-467f-b39a-b26eee43282f/change/ HTTP/1.1" 200 26750
+INFO 2025-09-25 16:49:45,782 django.server 28384 9496 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-25 16:50:19,772 django.server 28384 9496 "GET /admin/polls/poll/a4050f7b-2021-467f-b39a-b26eee43282f/history/ HTTP/1.1" 200 9691
+INFO 2025-09-25 16:50:28,500 django.server 28384 9496 "GET /admin/polls/poll/a4050f7b-2021-467f-b39a-b26eee43282f/change/ HTTP/1.1" 200 26750

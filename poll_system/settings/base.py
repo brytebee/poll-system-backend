@@ -239,6 +239,7 @@ if ENV == 'prod':
                 'IGNORE_EXCEPTIONS': True,
             },
             'KEY_PREFIX': 'poll_system',
+            'TIMEOUT': 300,  # 5 minutes default
         }
     }
     SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
@@ -331,6 +332,14 @@ LOGGING = {
             'formatter': 'json',
             'level': 'WARNING',
         },
+        'db_queries_file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR / 'logs' / 'db_queries.log',
+            'maxBytes': 1024 * 1024 * 5,  # 5MB
+            'backupCount': 10,
+            'formatter': 'json',
+            'level': 'DEBUG',
+        },
     },
     'root': {
         'handlers': ['console', 'file'],
@@ -360,6 +369,11 @@ LOGGING = {
         'common': {
             'handlers': ['console', 'file', 'error_file'],
             'level': 'DEBUG',
+            'propagate': False,
+        },
+        'django.db.backends': {
+             'handlers': ['console'] if DEBUG else [],
+            'level': 'DEBUG' if DEBUG else 'INFO',
             'propagate': False,
         },
     },

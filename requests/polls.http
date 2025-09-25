@@ -41,54 +41,72 @@ Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "title": "What's your favorite coding drink?",
-    "description": "A poll to determine the most popular drink among developers",
+    "title": "Should all programmers learn CSS",
+    "description": "A poll to determine all developers should learn CSS",
     "category": "fdd75574-6c90-4256-b772-142958f6dcf3",
     "options": [
         {
-            "text": "Python beer"
+            "text": "Most definitely"
         },
         {
-            "text": "JavaScript beer"
+            "text": "If they think it's necessary"
         },
         {
-            "text": "Java beer"
+            "text": "Maybe"
         },
         {
-            "text": "C++ beer"
+            "text": "Hell no"
         }
     ],
     "is_active": true,
-    "allow_multiple_votes": false
+    "allow_multiple_votes": true
 }
+
+### GET /api/polls/mine/ - Get Polls created by current user
+GET {{baseUrl}}/polls/mine/
+Authorization: Bearer {{access_token}}
+
 
 ### GET /api/polls/{id}/ - Get specific poll
 GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
 
 ### PUT /api/polls/{id}/ - Update poll (requires auth)
-PUT {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+PUT {{baseUrl}}/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
 Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "title": "What's your favorite programming language? (Updated)",
-    "description": "An updated poll to determine the most popular programming language",
-    "category": "fdd75574-6c90-4256-b772-142958f6dcf3",
+    "title": "Best sport to watch on Sports Channel 5?",
+    "description": "Which sport do you enjoy watching the most?",
+    "category": "21315e90-6545-4cdb-973b-d85b55dc9ef2",
     "is_active": true,
     "allow_multiple_votes": true
 }
 
-### PATCH /api/polls/{id}/ - Partial update poll (requires auth)
-PATCH {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+### PATCH /api/polls/{id}/
+PATCH {{baseUrl}}/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/
 Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "is_active": false
+    "options":  [
+        {
+            "text": "Python beer"
+        },
+        {
+            "text": "C++ beer"
+        },
+        {
+            "text": "TS beer"
+        },
+        {
+            "text": "JS beer"
+        }
+    ]
 }
 
 ### DELETE /api/polls/{id}/ - Delete poll (requires auth)
-DELETE {{baseUrl}}/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+DELETE {{baseUrl}}/polls/50b50bc4-f267-46cc-aede-b2eee97172a2/
 Authorization: Bearer {{access_token}}
 
 ### POST /api/polls/{id}/vote/ - Vote on poll
@@ -104,7 +122,7 @@ Authorization: Bearer {{access_token}}
 GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/
 
 ### GET /api/categories/{id}/ - Get specific category
-GET {{baseUrl}}/categories/6ba7b810-9dad-11d1-80b4-00c04fd430c8/
+GET {{baseUrl}}/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/
 
 ### POST /api/categories/ - Create new category (likely requires auth)
 POST {{baseUrl}}/categories/
@@ -117,7 +135,7 @@ Authorization: Bearer {{access_token}}
 }
 
 ### GET /api/polls/?category={id} - Filter polls by category
-GET {{baseUrl}}/polls/?category=6ba7b810-9dad-11d1-80b4-00c04fd430c8
+GET {{baseUrl}}/polls/?category=fdd75574-6c90-4256-b772-142958f6dcf3
 
 ### GET /api/polls/?search={query} - Search polls
 GET {{baseUrl}}/polls/?search=programming
@@ -139,3 +157,7 @@ Content-Type: application/json
 {
     "refresh_token": "{{refresh_token}}"
 }
+
+### Health Check
+GET http://127.0.0.1:8000/api/health/
+Content-Type: application/json

@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 
 ####
-@access_token = {{refresh.response.body.access}}
+# @access_token = {{refresh.response.body.access}}
 # @refresh_token = {{refresh.response.body.refresh}}
 
 ### Profile (requires access token)
