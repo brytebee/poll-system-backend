@@ -1,3 +1,4 @@
+# polls/schema.py
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiExample, OpenApiParameter
 from drf_spectacular.types import OpenApiTypes
 from rest_framework import status

@@ -1,0 +1,197 @@
+ERROR 2025-09-23 08:39:36,792 common.exceptions 11112 19856 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/change-password/
+ERROR 2025-09-23 08:39:45,256 common.exceptions 11112 11048 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 08:40:33,802 common.exceptions 11112 24076 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 09:16:07,581 common.exceptions 11176 22920 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 09:20:52,658 common.exceptions 11176 8756 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 09:23:05,382 common.exceptions 11176 8756 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:01:46,775 common.exceptions 17628 20404 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 17:20:08,236 common.exceptions 4392 12568 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 17:46:34,407 common.exceptions 4392 15492 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:46:41,611 common.exceptions 4392 1596 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 17:50:24,624 common.exceptions 4392 21816 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/
+ERROR 2025-09-23 17:51:57,539 common.exceptions 4392 8364 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:16,495 common.exceptions 4392 2068 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:18,121 common.exceptions 4392 11672 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:24,963 common.exceptions 4392 17516 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:35,740 common.exceptions 4392 17396 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:38,133 common.exceptions 4392 12976 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 17:52:41,495 common.exceptions 4392 14480 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 19:06:30,138 common.exceptions 4392 23656 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /health/
+ERROR 2025-09-23 19:12:40,271 common.exceptions 22284 18616 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+ERROR 2025-09-23 19:15:43,491 common.exceptions 22284 2236 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-23 19:16:18,957 common.exceptions 22284 8748 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:16:40,180 common.exceptions 22284 9944 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:16:42,193 common.exceptions 22284 9360 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:16:43,143 common.exceptions 22284 7172 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:16:54,781 common.exceptions 22284 14848 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:17:29,105 common.exceptions 22284 18428 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:17:55,442 common.exceptions 22284 24832 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:20:21,210 common.exceptions 6888 15160 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:24:33,335 common.exceptions 8176 14428 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:24:39,506 common.exceptions 8176 19896 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:25:45,585 common.exceptions 6092 17524 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:26:00,004 common.exceptions 6092 9676 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:26:01,652 common.exceptions 6092 24036 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:26:03,065 common.exceptions 6092 7004 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:26:14,847 common.exceptions 6092 18364 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-23 19:26:16,471 common.exceptions 6092 16292 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-23 19:30:05,098 common.exceptions 6092 17972 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:30:20,863 common.exceptions 6092 5576 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 19:30:22,139 common.exceptions 6092 16292 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 19:30:22,353 common.exceptions 6092 584 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 19:30:22,620 common.exceptions 6092 11292 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 19:30:48,258 common.exceptions 6092 16096 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:30:57,241 common.exceptions 6092 7212 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-23 19:30:58,710 common.exceptions 6092 19348 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-23 19:33:27,229 common.exceptions 6092 14936 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:35:41,102 common.exceptions 6092 10480 API Error: PermissionDenied - An error occurred - Status: 403 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-23 19:37:17,904 common.exceptions 6092 24152 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-23 19:53:46,578 common.exceptions 22580 2404 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-23 19:54:06,137 common.exceptions 22580 10392 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-23 19:54:21,664 common.exceptions 22580 8204 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-23 19:55:30,646 common.exceptions 22580 13048 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 14:45:14,876 common.exceptions 24496 10668 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:45:19,756 common.exceptions 24496 23004 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-25 14:46:05,088 common.exceptions 24496 27940 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:53:35,098 common.exceptions 29592 27972 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:53:57,981 common.exceptions 29592 30120 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:54:33,208 common.exceptions 29592 8516 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/
+ERROR 2025-09-25 14:54:36,457 common.exceptions 29592 20396 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 14:55:07,428 common.exceptions 29592 22924 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:55:57,984 common.exceptions 29592 11304 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/categories/
+ERROR 2025-09-25 14:56:03,832 common.exceptions 29592 412 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 14:56:08,981 common.exceptions 29592 6128 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-25 14:57:35,631 common.exceptions 29592 30456 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:58:27,562 common.exceptions 29592 28788 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 14:58:31,075 common.exceptions 29592 29164 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/categories/
+ERROR 2025-09-25 14:58:37,673 common.exceptions 29592 25416 Unhandled exception: 'Poll' object has no attribute 'total_votes'
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\mixins.py", line 75, in update
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\serializers.py", line 443, in get_options
+    obj.total_votes
+AttributeError: 'Poll' object has no attribute 'total_votes'. Did you mean: 'get_total_votes'?
+ERROR 2025-09-25 14:58:56,534 common.exceptions 29592 20412 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 15:12:30,906 common.exceptions 12740 1776 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-25 15:13:46,787 common.exceptions 12740 16980 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 15:14:54,672 common.exceptions 12740 12556 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 15:16:36,039 common.exceptions 20220 2488 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 15:16:56,511 common.exceptions 20220 17136 API Error: ValidationError - An error occurred - Status: 400 - Path: /api/polls/
+ERROR 2025-09-25 15:32:39,166 common.exceptions 23152 8188 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:34:31,819 common.exceptions 28500 17960 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:34:33,752 common.exceptions 28500 29816 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:34:34,901 common.exceptions 28500 30664 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:34:36,018 common.exceptions 28500 4580 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:34:44,974 common.exceptions 28500 26432 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:36:53,171 common.exceptions 16576 30096 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 15:49:21,404 common.exceptions 28020 15272 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 15:51:55,569 common.exceptions 28020 14292 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 15:52:00,018 common.exceptions 28020 10312 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 15:53:43,934 common.exceptions 28020 3448 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 15:53:53,711 common.exceptions 28020 10640 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 15:54:32,130 common.exceptions 28020 30224 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-25 15:54:36,887 common.exceptions 28020 7824 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-25 15:55:09,567 common.exceptions 28020 28484 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:01:21,692 common.exceptions 28020 14060 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:01:25,634 common.exceptions 28020 26548 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 16:02:01,015 common.exceptions 28020 23128 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 16:02:14,865 common.exceptions 28020 26992 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:05:41,649 common.exceptions 26172 27008 Unhandled exception: name 'obj' is not defined
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py", line 66, in has_permission
+    owner = getattr(obj, owner_field, None)
+                    ^^^
+NameError: name 'obj' is not defined
+ERROR 2025-09-25 16:08:50,725 common.exceptions 26172 12392 Unhandled exception: name 'obj' is not defined
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\polls\permissions.py", line 66, in has_permission
+    owner = getattr(obj, owner_field, None)
+                    ^^^
+NameError: name 'obj' is not defined
+ERROR 2025-09-25 16:16:23,503 common.exceptions 27128 27292 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:17:46,927 common.exceptions 27128 26912 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:18:07,915 common.exceptions 27128 11876 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/
+ERROR 2025-09-25 16:21:08,561 common.exceptions 27128 18824 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/3fa85f64-5717-4562-b3fc-2c963f66afa6/
+ERROR 2025-09-25 16:32:42,428 common.exceptions 28056 30280 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/polls/
+ERROR 2025-09-25 16:32:53,703 common.exceptions 28056 21468 API Error: InvalidToken - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-25 16:38:01,901 common.exceptions 28384 29416 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/24811685-1e29-43eb-99f4-242299d84b69/
+ERROR 2025-09-25 16:45:42,440 common.exceptions 28384 30172 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
+ERROR 2025-09-25 16:46:00,787 common.exceptions 28384 25564 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/

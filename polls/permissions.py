@@ -1,15 +1,25 @@
+# polls/permissions.py
 from rest_framework import permissions
 
 class IsPollOwnerOrReadOnly(permissions.BasePermission):
     """
     Custom permission to only allow owners of a poll to edit it.
+    Allows read access to everyone for active polls.
     """
-    
+
+    def has_permission(self, request, view):
+        # Read permissions for any request
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        # Write permissions require authentication
+        return request.user and request.user.is_authenticated
+
     def has_object_permission(self, request, view, obj):
         # Read permissions for any request
         if request.method in permissions.SAFE_METHODS:
             return True
-        
+
         # Write permissions only to the owner of the poll
         return obj.created_by == request.user
 
@@ -17,6 +27,16 @@ class CanVotePermission(permissions.BasePermission):
     """
     Custom permission for voting
     """
+    
+    def has_permission(self, request, view):
+        # Voting action is POST only
+        if request.method != 'POST':
+            return True
+        
+        # For anonymous polls, anyone can vote
+        # For non-anonymous polls, authentication is required
+        # This is handled at the object level
+        return True
     
     def has_object_permission(self, request, view, obj):
         # Check if poll can accept votes
@@ -28,20 +48,23 @@ class CanVotePermission(permissions.BasePermission):
             return True
         
         # Non-anonymous polls require authentication
-        return request.user.is_authenticated
+        return request.user and request.user.is_authenticated
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
     """
     Generic permission for owner-based access
     """
     
-    def has_object_permission(self, request, view, obj):
+    def has_permission(self, request, view):
         # Read permissions for any request
         if request.method in permissions.SAFE_METHODS:
             return True
         
-        # Check for owner attribute (works with created_by, user, etc.)
-        owner_field = getattr(view, 'owner_field', 'created_by')
-        owner = getattr(obj, owner_field, None)
-        
-        return owner == request.user
+        # Write permissions require authentication
+        return request.user and request.user.is_authenticated
+    
+    def has_object_permission(self, request, view, obj):
+        # Read permissions for any request
+        if request.method in permissions.SAFE_METHODS:
+            return True
+    

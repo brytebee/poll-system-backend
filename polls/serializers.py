@@ -1,73 +1,109 @@
+# polls/serializers.py
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+from django.db import transaction
+from django.core.cache import cache
 from .models import Category, Poll, Option, Vote
 
 User = get_user_model()
 
 class CategorySerializer(serializers.ModelSerializer):
-    """Category serializer"""
-    polls_count = serializers.ReadOnlyField(source='get_polls_count')
+    """Category serializer with optimized poll count"""
+    polls_count = serializers.SerializerMethodField()
     
     class Meta:
         model = Category
         fields = ('id', 'name', 'description', 'slug', 'polls_count', 'created_at')
         read_only_fields = ('id', 'slug', 'created_at')
+    
+    def get_polls_count(self, obj):
+        """Get cached polls count to avoid N+1 queries"""
+        # Check if we have annotated count from queryset
+        if hasattr(obj, 'polls_count'):
+            return obj.polls_count
+        
+        # Fallback to cached count
+        cache_key = f"category_{obj.id}_polls_count"
+        count = cache.get(cache_key)
+        if count is None:
+            count = obj.polls.filter(is_active=True).count()
+            cache.set(cache_key, count, timeout=300)  # 5 minutes
+        return count
 
 class OptionSerializer(serializers.ModelSerializer):
-    """Option serializer"""
-    vote_count = serializers.ReadOnlyField(source='get_vote_count')
+    """Option serializer with optimized vote count"""
+    vote_count = serializers.SerializerMethodField()
+    percentage = serializers.SerializerMethodField()
     
     class Meta:
         model = Option
-        fields = ('id', 'text', 'order_index', 'vote_count', 'created_at')
-        read_only_fields = ('id', 'vote_count', 'created_at')
-
-class OptionCreateSerializer(serializers.ModelSerializer):
-    """Option creation serializer"""
+        fields = ('id', 'text', 'order_index', 'vote_count', 'percentage', 'created_at')
+        read_only_fields = ('id', 'created_at')
     
-    class Meta:
-        model = Option
-        fields = ('text', 'order_index')
-
-class UserSummarySerializer(serializers.ModelSerializer):
-    """Minimal user serializer for poll data"""
+    def get_vote_count(self, obj):
+        """Get vote count - use annotated value if available"""
+        return getattr(obj, 'vote_count', obj.votes.count())
     
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'display_name', 'avatar')
+    def get_percentage(self, obj):
+        """Calculate percentage of votes"""
+        vote_count = self.get_vote_count(obj)
+        
+        # Try to get total votes from poll context
+        poll = obj.poll
+        if hasattr(poll, 'total_votes_count'):
+            total_votes = poll.total_votes_count
+        elif hasattr(poll, 'total_votes'):
+            total_votes = poll.total_votes
+        else:
+            total_votes = poll.get_total_votes()
+        
+        if total_votes == 0:
+            return 0
+        return round((vote_count / total_votes) * 100, 2)
 
 class PollListSerializer(serializers.ModelSerializer):
-    """Poll list serializer (lightweight)"""
-    created_by = UserSummarySerializer(read_only=True)
-    category = CategorySerializer(read_only=True)
-    total_votes = serializers.ReadOnlyField(source='get_total_votes')
+    """Optimized poll list serializer"""
+    created_by = serializers.SerializerMethodField()
+    category_name = serializers.CharField(source='category.name', read_only=True)
+    total_votes = serializers.SerializerMethodField()
     options_count = serializers.SerializerMethodField()
-    is_expired = serializers.ReadOnlyField()
-    can_vote = serializers.ReadOnlyField()
     
     class Meta:
         model = Poll
         fields = (
-            'id', 'title', 'description', 'created_by', 'category',
+            'id', 'title', 'description', 'created_by', 'category_name',
             'is_active', 'is_anonymous', 'multiple_choice', 'expires_at',
             'total_votes', 'options_count', 'is_expired', 'can_vote',
             'created_at', 'updated_at'
         )
     
+    def get_created_by(self, obj):
+        """Return user info without additional query"""
+        return {
+            'id': str(obj.created_by.id),
+            'username': obj.created_by.username,
+        }
+    
+    def get_total_votes(self, obj):
+        """Get total votes using annotated value or method"""
+        if hasattr(obj, 'total_votes'):
+            return obj.total_votes
+        return obj.get_total_votes()
+    
     def get_options_count(self, obj):
-        """Get options count"""
+        """Get options count using annotated value or method"""
+        if hasattr(obj, 'options_count'):
+            return obj.options_count
         return obj.options.count()
 
 class PollDetailSerializer(serializers.ModelSerializer):
-    """Poll detail serializer (complete data)"""
-    created_by = UserSummarySerializer(read_only=True)
+    """Optimized poll detail serializer"""
+    created_by = serializers.SerializerMethodField()
     category = CategorySerializer(read_only=True)
-    options = OptionSerializer(many=True, read_only=True)
-    total_votes = serializers.ReadOnlyField(source='get_total_votes')
-    unique_voters = serializers.ReadOnlyField(source='get_unique_voters')
-    is_expired = serializers.ReadOnlyField()
-    can_vote = serializers.ReadOnlyField()
+    options = serializers.SerializerMethodField()
+    total_votes = serializers.SerializerMethodField()
+    unique_voters = serializers.SerializerMethodField()
     user_has_voted = serializers.SerializerMethodField()
     
     class Meta:
@@ -80,41 +116,132 @@ class PollDetailSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at'
         )
     
+    def get_created_by(self, obj):
+        """Return user info without additional query"""
+        return {
+            'id': str(obj.created_by.id),
+            'username': obj.created_by.username,
+            'display_name': getattr(obj.created_by, 'display_name', obj.created_by.username)
+        }
+    
+    def get_options(self, obj):
+        """Return prefetched options with vote counts"""
+        options_data = []
+        total_votes = self.get_total_votes(obj)
+        
+        for option in obj.options.all():
+            vote_count = getattr(option, 'vote_count', 0)
+            options_data.append({
+                'id': str(option.id),
+                'text': option.text,
+                'order_index': option.order_index,
+                'vote_count': vote_count,
+                'percentage': self._calculate_percentage(vote_count, total_votes),
+                'created_at': option.created_at
+            })
+        return options_data
+    
+    def _calculate_percentage(self, vote_count, total_votes):
+        """Calculate vote percentage"""
+        if total_votes == 0:
+            return 0
+        return round((vote_count / total_votes) * 100, 2)
+    
+    def get_total_votes(self, obj):
+        """Get total votes using annotated value or method"""
+        if hasattr(obj, 'total_votes_count'):
+            return obj.total_votes_count
+        elif hasattr(obj, 'total_votes'):
+            return obj.total_votes
+        return obj.get_total_votes()
+    
+    def get_unique_voters(self, obj):
+        """Get unique voters using annotated value or method"""
+        if hasattr(obj, 'unique_voters_count'):
+            return obj.unique_voters_count
+        elif hasattr(obj, 'unique_voters'):
+            return obj.unique_voters
+        return obj.get_unique_voters()
+    
     def get_user_has_voted(self, obj):
-        """Check if current user has voted"""
+        """Check if current user has voted using prefetched data"""
         request = self.context.get('request')
         if not request or not request.user.is_authenticated:
             return False
+        
+        # Check if we have user_votes prefetched
+        if hasattr(obj, 'user_votes'):
+            return len(obj.user_votes) > 0
+        
+        # Fallback to database query
         return Vote.objects.filter(poll=obj, user=request.user).exists()
 
 class PollCreateSerializer(serializers.ModelSerializer):
-    """Poll creation serializer"""
-    options = OptionCreateSerializer(many=True, write_only=True)
-    category_id = serializers.UUIDField(write_only=True, required=False)
+    """Optimized poll creation serializer with atomic transactions"""
+    options = serializers.ListField(
+        child=serializers.DictField(),
+        min_length=2,
+        max_length=10,
+        write_only=True
+    )
+    category = serializers.UUIDField(write_only=True, required=False, allow_null=True)
     
     class Meta:
         model = Poll
         fields = (
-            'title', 'description', 'category_id', 'options',
+            'title', 'description', 'category', 'options',
             'is_anonymous', 'multiple_choice', 'expires_at'
         )
-        extra_kwargs = {
-            'title': {'max_length': 200},
-            'description': {'required': False},
-        }
     
     def validate_options(self, value):
-        """Validate options"""
-        if len(value) < 2:
-            raise serializers.ValidationError("Poll must have at least 2 options")
-        if len(value) > 10:
-            raise serializers.ValidationError("Poll cannot have more than 10 options")
+        """Validate options - handle both dict and string formats"""
+        if not isinstance(value, list):
+            raise serializers.ValidationError("Options must be a list")
         
-        # Check for duplicate option texts
-        option_texts = [option['text'].strip().lower() for option in value]
-        if len(option_texts) != len(set(option_texts)):
-            raise serializers.ValidationError("Option texts must be unique")
+        option_texts = []
+        for i, option in enumerate(value):
+            # Handle different option formats
+            if isinstance(option, dict):
+                if 'text' in option:
+                    text = option['text']
+                else:
+                    raise serializers.ValidationError(f"Option {i+1}: Dict format must have 'text' field")
+            elif isinstance(option, str):
+                text = option
+            else:
+                raise serializers.ValidationError(f"Option {i+1}: Must be either string or dict with 'text' field")
+            
+            # Validate text content
+            if not isinstance(text, str):
+                raise serializers.ValidationError(f"Option {i+1}: Text must be a string")
+            
+            text = text.strip()
+            if not text:
+                raise serializers.ValidationError(f"Option {i+1}: Text cannot be empty")
+            
+            if len(text) > 500:
+                raise serializers.ValidationError(f"Option {i+1}: Text cannot exceed 500 characters")
+            
+            option_texts.append(text)
         
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_options = []
+        for option in option_texts:
+            option_lower = option.lower()
+            if option_lower not in seen:
+                seen.add(option_lower)
+                unique_options.append(option)
+        
+        if len(unique_options) < 2:
+            raise serializers.ValidationError("Poll must have at least 2 unique options")
+        
+        return unique_options
+    
+    def validate_category(self, value):
+        """Validate category exists"""
+        if value and not Category.objects.filter(id=value).exists():
+            raise serializers.ValidationError("Invalid category ID")
         return value
     
     def validate_expires_at(self, value):
@@ -123,48 +250,54 @@ class PollCreateSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Expiry date must be in the future")
         return value
     
-    def validate_category_id(self, value):
-        """Validate category exists"""
-        if value:
-            try:
-                Category.objects.get(id=value)
-            except Category.DoesNotExist:
-                raise serializers.ValidationError("Invalid category ID")
-        return value
-    
+    @transaction.atomic
     def create(self, validated_data):
-        """Create poll with options"""
+        """Create poll with options in a single transaction"""
         options_data = validated_data.pop('options')
-        category_id = validated_data.pop('category_id', None)
+        category_id = validated_data.pop('category', None)
         
-        # Set category if provided
+        # Set relationships
+        validated_data['created_by'] = self.context['request'].user
         if category_id:
             validated_data['category_id'] = category_id
-        
-        # Set creator
-        validated_data['created_by'] = self.context['request'].user
         
         # Create poll
         poll = Poll.objects.create(**validated_data)
         
-        # Create options
-        for index, option_data in enumerate(options_data):
-            Option.objects.create(
+        # Bulk create options for better performance
+        option_objects = [
+            Option(
                 poll=poll,
-                text=option_data['text'].strip(),
-                order_index=option_data.get('order_index', index + 1)
+                text=text,
+                order_index=index + 1
             )
+            for index, text in enumerate(options_data)
+        ]
+        Option.objects.bulk_create(option_objects)
+        
+        # Invalidate relevant caches
+        if category_id:
+            cache.delete(f"category_{category_id}_polls_count")
         
         return poll
 
 class PollUpdateSerializer(serializers.ModelSerializer):
-    """Poll update serializer"""
+    """Serializer for updating polls"""
+    category = serializers.UUIDField(write_only=True, required=False, allow_null=True)
     
     class Meta:
         model = Poll
         fields = (
-            'title', 'description', 'is_active', 'expires_at'
+            'title', 'description', 'category', 'is_active',
+            'is_anonymous', 'multiple_choice', 'expires_at',
+            'results_finalized', 'auto_finalize'
         )
+    
+    def validate_category(self, value):
+        """Validate category exists"""
+        if value and not Category.objects.filter(id=value).exists():
+            raise serializers.ValidationError("Invalid category ID")
+        return value
     
     def validate_expires_at(self, value):
         """Validate expiry date"""
@@ -173,157 +306,153 @@ class PollUpdateSerializer(serializers.ModelSerializer):
         return value
     
     def update(self, instance, validated_data):
-        """Update poll with validation"""
-        # Don't allow changes if poll has votes and is finalized
-        if instance.results_finalized and instance.get_total_votes() > 0:
-            # Only allow title and description changes
-            allowed_fields = ['title', 'description']
-            validated_data = {
-                k: v for k, v in validated_data.items() 
-                if k in allowed_fields
-            }
+        """Update poll instance"""
+        category_id = validated_data.pop('category', None)
+        
+        if category_id is not None:
+            if category_id:
+                validated_data['category_id'] = category_id
+            else:
+                validated_data['category'] = None
+        
+        # Clear cache when updating
+        cache.delete(f"poll_detail_{instance.id}")
+        if instance.category_id:
+            cache.delete(f"category_{instance.category_id}_polls_count")
         
         return super().update(instance, validated_data)
 
-class VoteSerializer(serializers.ModelSerializer):
-    """Vote serializer"""
-    poll_title = serializers.ReadOnlyField(source='poll.title')
-    option_text = serializers.ReadOnlyField(source='option.text')
-    voter_name = serializers.SerializerMethodField()
-    
-    class Meta:
-        model = Vote
-        fields = (
-            'id', 'poll', 'option', 'poll_title', 'option_text',
-            'voter_name', 'created_at'
-        )
-        read_only_fields = ('id', 'created_at')
-    
-    def get_voter_name(self, obj):
-        """Get voter name (username or Anonymous)"""
-        if obj.user:
-            return obj.user.display_name
-        return "Anonymous"
-
 class VoteCastSerializer(serializers.Serializer):
-    """Serializer for casting votes"""
-    option_id = serializers.UUIDField()
-    options = serializers.ListField(
+    """Optimized vote casting serializer"""
+    option_id = serializers.UUIDField(required=False)
+    option_ids = serializers.ListField(
         child=serializers.UUIDField(),
         required=False,
-        help_text="For multiple choice polls"
+        min_length=1,
+        max_length=10
     )
     
-    def validate_option_id(self, value):
-        """Validate option exists"""
-        try:
-            option = Option.objects.get(id=value)
-            self.option = option
-            return value
-        except Option.DoesNotExist:
-            raise serializers.ValidationError("Invalid option ID")
-    
-    def validate_options(self, value):
-        """Validate multiple options for multiple choice polls"""
-        if not value:
-            return value
+    def validate(self, attrs):
+        """Validate that either option_id or option_ids is provided"""
+        option_id = attrs.get('option_id')
+        option_ids = attrs.get('option_ids')
         
-        # Check all options exist
-        options = Option.objects.filter(id__in=value)
-        if len(options) != len(value):
+        if not option_id and not option_ids:
+            raise serializers.ValidationError("Either option_id or option_ids must be provided")
+        
+        if option_id and option_ids:
+            raise serializers.ValidationError("Provide either option_id or option_ids, not both")
+        
+        # Normalize to option_ids list
+        if option_id:
+            option_ids = [option_id]
+        
+        attrs['option_ids'] = option_ids
+        return self.validate_options_and_poll(attrs)
+    
+    def validate_options_and_poll(self, attrs):
+        """Validate options exist and belong to same poll"""
+        option_ids = attrs['option_ids']
+        poll = self.context.get('poll')
+        
+        # Single query to get all options with poll info
+        if poll:
+            options = Option.objects.filter(id__in=option_ids, poll=poll)
+        else:
+            options = Option.objects.select_related('poll').filter(id__in=option_ids)
+            if options:
+                poll = options[0].poll
+                # Check all options belong to same poll
+                if not all(option.poll.id == poll.id for option in options):
+                    raise serializers.ValidationError("All options must belong to the same poll")
+        
+        if len(options) != len(option_ids):
             raise serializers.ValidationError("One or more invalid option IDs")
         
-        self.options = options
-        return value
+        self.poll = poll
+        self.options = list(options)
+        
+        return self.cross_validate(attrs)
     
-    def validate(self, attrs):
-        """Cross-field validation"""
-        poll_id = self.context.get('poll_id')
+    def cross_validate(self, attrs):
+        """Cross-field validation with optimized queries"""
+        poll = self.poll
+        options = self.options
         request = self.context.get('request')
         
-        try:
-            poll = Poll.objects.get(id=poll_id)
-        except Poll.DoesNotExist:
-            raise serializers.ValidationError("Invalid poll ID")
+        # Validate poll state
+        if not poll.is_active:
+            raise serializers.ValidationError("Poll is not active")
         
-        # Check if poll accepts votes
-        if not poll.can_vote:
-            raise serializers.ValidationError("This poll is not accepting votes")
+        if poll.expires_at and poll.expires_at <= timezone.now():
+            raise serializers.ValidationError("Poll has expired")
         
-        # Validate options belong to poll
-        if 'option_id' in attrs:
-            option = Option.objects.get(id=attrs['option_id'])
-            if option.poll != poll:
-                raise serializers.ValidationError("Option does not belong to this poll")
+        # Validate multiple choice
+        if len(options) > 1 and not poll.multiple_choice:
+            raise serializers.ValidationError("This poll does not allow multiple choices")
         
-        if 'options' in attrs and attrs['options']:
-            options = Option.objects.filter(id__in=attrs['options'])
-            if not all(option.poll == poll for option in options):
-                raise serializers.ValidationError("All options must belong to this poll")
-            
-            # Check if poll allows multiple choice
-            if not poll.multiple_choice:
-                raise serializers.ValidationError("This poll does not allow multiple choices")
-        
-        # Check for existing vote
+        # Check for existing votes
         user = request.user if request.user.is_authenticated else None
-        ip_address = self.get_client_ip(request)
+        ip_address = self._get_client_ip(request)
         
+        existing_votes_query = Vote.objects.filter(poll=poll)
         if user:
-            # Check user hasn't voted
-            if Vote.objects.filter(poll=poll, user=user).exists():
-                raise serializers.ValidationError("You have already voted on this poll")
+            existing_votes_query = existing_votes_query.filter(user=user)
         else:
-            # Check IP hasn't voted (for anonymous polls)
-            if Vote.objects.filter(poll=poll, ip_address=ip_address, user__isnull=True).exists():
-                raise serializers.ValidationError("This IP address has already voted on this poll")
+            existing_votes_query = existing_votes_query.filter(
+                ip_address=ip_address, 
+                user__isnull=True
+            )
         
-        attrs['poll'] = poll
-        attrs['user'] = user
-        attrs['ip_address'] = ip_address
+        if existing_votes_query.exists():
+            voter_type = "user" if user else "IP address"
+            raise serializers.ValidationError(f"This {voter_type} has already voted on this poll")
+        
+        attrs.update({
+            'poll': poll,
+            'options': options,
+            'user': user,
+            'ip_address': ip_address
+        })
         return attrs
     
-    def get_client_ip(self, request):
+    def _get_client_ip(self, request):
         """Get client IP address"""
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
         if x_forwarded_for:
-            ip = x_forwarded_for.split(',')[0]
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-        return ip
+            return x_forwarded_for.split(',')[0].strip()
+        return request.META.get('REMOTE_ADDR')
     
+    @transaction.atomic
     def create_votes(self):
-        """Create vote records"""
+        """Create votes with optimized bulk operations"""
         validated_data = self.validated_data
         poll = validated_data['poll']
+        options = validated_data['options']
         user = validated_data['user']
         ip_address = validated_data['ip_address']
-        user_agent = self.context['request'].META.get('HTTP_USER_AGENT', '')
+        user_agent = self.context['request'].META.get('HTTP_USER_AGENT', '')[:500]
         
-        votes = []
-        
-        if poll.multiple_choice and 'options' in validated_data and validated_data['options']:
-            # Create multiple votes
-            options = Option.objects.filter(id__in=validated_data['options'])
-            for option in options:
-                vote = Vote.objects.create(
-                    poll=poll,
-                    option=option,
-                    user=user,
-                    ip_address=ip_address,
-                    user_agent=user_agent
-                )
-                votes.append(vote)
-        else:
-            # Create single vote
-            option = Option.objects.get(id=validated_data['option_id'])
-            vote = Vote.objects.create(
+        # Bulk create votes
+        vote_objects = [
+            Vote(
                 poll=poll,
                 option=option,
                 user=user,
                 ip_address=ip_address,
                 user_agent=user_agent
             )
-            votes.append(vote)
+            for option in options
+        ]
         
-        return votes
+        created_votes = Vote.objects.bulk_create(vote_objects)
+        
+        # Update poll cache
+        cache_key = f"poll_{poll.id}_total_votes"
+        cache.delete(cache_key)
+        
+        # Update category cache if exists
+        if poll.category_id:
+            cache.delete(f"category_{poll.category_id}_polls_count")
+        
+        return created_votes
