@@ -63,6 +63,7 @@ volumes:
   static_volume:
   media_volume:
   redis_data:
+  postgres_data:
 
 networks:
   nexuspolls-network:
