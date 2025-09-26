@@ -16,8 +16,8 @@ services:
     build: .
     command: gunicorn --bind 0.0.0.0:8000 poll_system.wsgi:application
     # restart: unless-stopped
-    environment:
-      - DJANGO_SETTINGS_MODULE=poll_system.settings.prod
+    environment: 
+      - DJANGO_SETTINGS_MODULE=poll_system.settings.base
       - DB_NAME=poll_system
       - DB_USER=postgres
       - DB_PASSWORD=supersecret
