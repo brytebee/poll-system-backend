@@ -1,6 +1,4 @@
 # docker-compose.prod.yml
-version: '3.8'
-
 services:
   db:
     image: postgres:15
@@ -18,16 +16,17 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=${DB_HOST}
-      - DB_PORT=${DB_PORT}
+      - DB_NAME=poll_system
+      - DB_USER=postgres
+      - DB_PASSWORD=supersecret
+      - DB_HOST=db        # point to the db service name
+      - DB_PORT=5432
       - SECRET_KEY=${SECRET_KEY}
       - DEBUG=False
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - REDIS_URL=redis://redis:6379/0
     depends_on:
+      - db
       - redis
     volumes:
       - static_volume:/app/staticfiles
@@ -60,10 +59,10 @@ services:
       - nexuspolls-network
 
 volumes:
+  postgres_data:
   static_volume:
   media_volume:
   redis_data:
-  postgres_data:
 
 networks:
   nexuspolls-network:
