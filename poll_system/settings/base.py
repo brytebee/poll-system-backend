@@ -139,18 +139,17 @@ if DEBUG:
         "http://localhost:3001",
     ]
 else:
-    # Explicit origins from .env
     CORS_ALLOWED_ORIGINS = config(
         'CORS_ALLOWED_ORIGINS',
         default='https://yourdomain.com',
         cast=lambda v: [s.strip() for s in v.split(',')]
     )
 
-    # Handle wildcard ngrok subdomains
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https://.*\.ngrok\.io$",
-        r"^https://.*\.ngrok-free\.app$",
-    ]
+    CORS_ALLOWED_ORIGIN_REGEXES = config(
+        'CORS_ALLOWED_ORIGIN_REGEXES',
+        default='',
+        cast=lambda v: [s.strip() for s in v.split(',')] if v else []
+    )
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_HEADERS = [
