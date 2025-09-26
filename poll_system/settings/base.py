@@ -344,7 +344,7 @@ LOGGING = {
         'db_queries_file': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
+            'formatter': 'detailed',
         },
     },
     'root': {
