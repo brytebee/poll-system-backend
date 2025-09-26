@@ -16,6 +16,7 @@ services:
     build: .
     restart: unless-stopped
     environment:
+      - DJANGO_SETTINGS_MODULE=poll_system.settings.prod
       - DB_NAME=poll_system
       - DB_USER=postgres
       - DB_PASSWORD=supersecret
