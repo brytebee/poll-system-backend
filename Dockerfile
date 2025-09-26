@@ -17,12 +17,13 @@ RUN pip install --no-cache-dir -r requirements/base.txt gunicorn
 # Copy application code
 COPY . .
 
-# Create necessary directories and set permissions
+# Create necessary directories, users, and log files
 RUN mkdir -p staticfiles media logs \
+    && touch logs/errors.log logs/db_queries.log logs/debug.log logs/app.log logs/django.log logs/security.log \
     && useradd -m -u 1000 appuser \
     && chown -R appuser:appuser /app
 
-# Collect static files
+# Collect static files as root (safe, no logging yet)
 RUN python manage.py collectstatic --noinput --settings=poll_system.settings
 
 # Switch to non-root user
