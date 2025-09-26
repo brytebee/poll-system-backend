@@ -11,25 +11,38 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - nexuspolls-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   web:
     build: .
-    command: gunicorn --bind 0.0.0.0:8000 poll_system.wsgi:application
-    # restart: unless-stopped
+    command: >
+      bash -c "
+      echo 'Waiting for database...' &&
+      python manage.py migrate &&
+      echo 'Starting Gunicorn...' &&
+      gunicorn --bind 0.0.0.0:8000 --timeout 120 --workers 1 --access-logfile - --error-logfile - poll_system.wsgi:application
+      "
+    restart: unless-stopped
     environment: 
       - DJANGO_SETTINGS_MODULE=poll_system.settings.base
       - DB_NAME=poll_system
       - DB_USER=postgres
       - DB_PASSWORD=supersecret
-      - DB_HOST=db        # point to the db service name
+      - DB_HOST=db
       - DB_PORT=5432
       - SECRET_KEY=${SECRET_KEY}
       - DEBUG=False
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - REDIS_URL=redis://redis:6379/0
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
@@ -69,3 +82,4 @@ volumes:
 networks:
   nexuspolls-network:
     driver: bridge
+    
