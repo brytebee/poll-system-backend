@@ -332,19 +332,13 @@ LOGGING = {
             'formatter': 'json',
             'level': 'WARNING',
         },
-        # disable this log in prod
-        # 'db_queries_file': {
-        #     'class': 'logging.handlers.RotatingFileHandler',
-        #     'filename': BASE_DIR / 'logs' / 'db_queries.log',
-        #     'maxBytes': 1024 * 1024 * 5,  # 5MB
-        #     'backupCount': 10,
-        #     'formatter': 'json',
-        #     'level': 'DEBUG',
-        # },
         'db_queries_file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR / 'logs' / 'db_queries.log',
+            'maxBytes': 1024 * 1024 * 5,  # 5MB
+            'backupCount': 10,
+            'formatter': 'json',
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'detailed',
         },
     },
     'root': {
