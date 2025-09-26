@@ -11,7 +11,11 @@ SECRET_KEY = config('SECRET_KEY', default='your-secret-key-here')
 DEBUG = config('DEBUG', default=True, cast=bool)
 ENV = config('ENV', default='dev')
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
+ALLOWED_HOSTS = config(
+    'ALLOWED_HOSTS',
+    default='localhost,127.0.0.1',
+    cast=lambda v: [s.strip() for s in v.split(',')]
+)
 
 # Application definition
 DJANGO_APPS = [
@@ -128,17 +132,25 @@ RATE_LIMIT_PER_MINUTE = config('RATE_LIMIT_PER_MINUTE', default=60, cast=int)
 
 # CORS Settings - Properly configured
 if DEBUG:
-    CORS_ALLOW_ALL_ORIGINS = False  # Never use True, even in dev
+    CORS_ALLOW_ALL_ORIGINS = False
     CORS_ALLOWED_ORIGINS = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:3001",
     ]
 else:
-    CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', 
-        default='https://yourdomain.com', 
+    # Explicit origins from .env
+    CORS_ALLOWED_ORIGINS = config(
+        'CORS_ALLOWED_ORIGINS',
+        default='https://yourdomain.com',
         cast=lambda v: [s.strip() for s in v.split(',')]
     )
+
+    # Handle wildcard ngrok subdomains
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://.*\.ngrok\.io$",
+        r"^https://.*\.ngrok-free\.app$",
+    ]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_HEADERS = [
