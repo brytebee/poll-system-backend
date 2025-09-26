@@ -17,14 +17,15 @@ RUN pip install --no-cache-dir -r requirements/base.txt gunicorn
 # Copy application code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p staticfiles media logs
+# Create necessary directories and set permissions
+RUN mkdir -p staticfiles media logs \
+    && useradd -m -u 1000 appuser \
+    && chown -R appuser:appuser /app
 
 # Collect static files
 RUN python manage.py collectstatic --noinput --settings=poll_system.settings
 
-# Create non-root user for security
-RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+# Switch to non-root user
 USER appuser
 
 EXPOSE 8000
