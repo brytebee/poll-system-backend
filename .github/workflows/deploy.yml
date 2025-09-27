@@ -170,16 +170,3 @@ jobs:
           else
             echo "❌ Deployment failed. Check logs for details."
           fi
-
-
-
-git add .
-git commit -m "🚀 Add production deployment with Ngrok tunnel
-
-- Added Docker configuration for production
-- Added Nginx reverse proxy setup
-- Added comprehensive health checks
-- Added GitHub Actions CI/CD pipeline
-- Added ngrok tunnel configuration
-- Ready for live deployment"
-git push origin main
