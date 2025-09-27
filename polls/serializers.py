@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.db import transaction
 from django.core.cache import cache
+from drf_spectacular.utils import extend_schema_field
 from .models import Category, Poll, Option, Vote
 
 User = get_user_model()
@@ -17,6 +18,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description', 'slug', 'polls_count', 'created_at')
         read_only_fields = ('id', 'slug', 'created_at')
     
+    @extend_schema_field(serializers.IntegerField())
     def get_polls_count(self, obj):
         """Get cached polls count to avoid N+1 queries"""
         # Check if we have annotated count from queryset
@@ -78,6 +80,7 @@ class PollListSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at'
         )
     
+    @extend_schema_field(serializers.CharField())
     def get_created_by(self, obj):
         """Return user info without additional query"""
         return {
@@ -85,17 +88,32 @@ class PollListSerializer(serializers.ModelSerializer):
             'username': obj.created_by.username,
         }
     
+    @extend_schema_field(serializers.IntegerField())
     def get_total_votes(self, obj):
         """Get total votes using annotated value or method"""
         if hasattr(obj, 'total_votes'):
             return obj.total_votes
         return obj.get_total_votes()
     
+    @extend_schema_field(serializers.IntegerField())
     def get_options_count(self, obj):
         """Get options count using annotated value or method"""
         if hasattr(obj, 'options_count'):
             return obj.options_count
         return obj.options.count()
+    
+    @extend_schema_field(serializers.BooleanField())
+    def is_expired(self, obj) -> bool:
+        """Check if poll is expired"""
+        return obj.is_expired()
+
+    @extend_schema_field(serializers.BooleanField())
+    def can_vote(self, obj) -> bool:
+        """Check if user can vote"""
+        request = self.context.get('request')
+        if not request or not request.user.is_authenticated:
+            return False
+        return obj.can_vote(request.user)
 
 class PollDetailSerializer(serializers.ModelSerializer):
     """Optimized poll detail serializer"""
@@ -105,6 +123,8 @@ class PollDetailSerializer(serializers.ModelSerializer):
     total_votes = serializers.SerializerMethodField()
     unique_voters = serializers.SerializerMethodField()
     user_has_voted = serializers.SerializerMethodField()
+    is_expired = serializers.ReadOnlyField()
+    can_vote = serializers.ReadOnlyField()
     
     class Meta:
         model = Poll
@@ -116,6 +136,7 @@ class PollDetailSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at'
         )
     
+    @extend_schema_field(serializers.CharField())
     def get_created_by(self, obj):
         """Return user info without additional query"""
         return {
@@ -124,6 +145,7 @@ class PollDetailSerializer(serializers.ModelSerializer):
             'display_name': getattr(obj.created_by, 'display_name', obj.created_by.username)
         }
     
+    @extend_schema_field(serializers.ListField())
     def get_options(self, obj):
         """Return prefetched options with vote counts"""
         options_data = []
@@ -147,6 +169,7 @@ class PollDetailSerializer(serializers.ModelSerializer):
             return 0
         return round((vote_count / total_votes) * 100, 2)
     
+    @extend_schema_field(serializers.IntegerField())
     def get_total_votes(self, obj):
         """Get total votes using annotated value or method"""
         if hasattr(obj, 'total_votes_count'):
@@ -155,6 +178,7 @@ class PollDetailSerializer(serializers.ModelSerializer):
             return obj.total_votes
         return obj.get_total_votes()
     
+    @extend_schema_field(serializers.IntegerField())
     def get_unique_voters(self, obj):
         """Get unique voters using annotated value or method"""
         if hasattr(obj, 'unique_voters_count'):
@@ -163,6 +187,7 @@ class PollDetailSerializer(serializers.ModelSerializer):
             return obj.unique_voters
         return obj.get_unique_voters()
     
+    @extend_schema_field(serializers.BooleanField())
     def get_user_has_voted(self, obj):
         """Check if current user has voted using prefetched data"""
         request = self.context.get('request')
@@ -175,6 +200,19 @@ class PollDetailSerializer(serializers.ModelSerializer):
         
         # Fallback to database query
         return Vote.objects.filter(poll=obj, user=request.user).exists()
+    
+    @extend_schema_field(serializers.BooleanField())
+    def is_expired(self, obj) -> bool:
+        """Check if poll is expired"""
+        return obj.is_expired()
+
+    @extend_schema_field(serializers.BooleanField())
+    def can_vote(self, obj) -> bool:
+        """Check if user can vote"""
+        request = self.context.get('request')
+        if not request or not request.user.is_authenticated:
+            return False
+        return obj.can_vote(request.user)
 
 class PollCreateSerializer(serializers.ModelSerializer):
     """Optimized poll creation serializer with atomic transactions"""

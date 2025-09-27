@@ -3,6 +3,7 @@ echo "venv/
 __pycache__/
 *.pyc
 .env
+.env.prod
 media/
 *.db
 .DS_Store" > .gitignore

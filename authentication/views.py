@@ -12,21 +12,77 @@ from rest_framework.generics import RetrieveUpdateAPIView
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
+from drf_spectacular.utils import extend_schema, OpenApiResponse, OpenApiExample
 from .serializers import (
     UserRegistrationSerializer, UserLoginSerializer,
     UserProfileSerializer, UserUpdateSerializer,
     PasswordChangeSerializer
 )
 from .models import CustomUser
-from .schema import (
-    change_password_schema, user_profile_schema, logout_schema, check_username_schema, check_email_schema, refresh_token_schema, invalidate_token_schema, register_user_schema, login_user_schema
-)
+
+# Response serializers for OpenAPI documentation
+from rest_framework import serializers
+
+class UserRegistrationResponseSerializer(serializers.Serializer):
+    message = serializers.CharField()
+    user = UserProfileSerializer()
+    tokens = serializers.DictField()
+
+class LoginResponseSerializer(serializers.Serializer):
+    access = serializers.CharField()
+    refresh = serializers.CharField()
+    user = UserProfileSerializer()
+    message = serializers.CharField()
+
+class MessageResponseSerializer(serializers.Serializer):
+    message = serializers.CharField()
+
+class ErrorResponseSerializer(serializers.Serializer):
+    error = serializers.CharField()
+    detail = serializers.CharField(required=False)
+
+class AvailabilityResponseSerializer(serializers.Serializer):
+    available = serializers.BooleanField()
+    username = serializers.CharField(required=False)
+    email = serializers.EmailField(required=False)
+
+class TokenRefreshRequestSerializer(serializers.Serializer):
+    refresh = serializers.CharField()
+
+class TokenRefreshResponseSerializer(serializers.Serializer):
+    access = serializers.CharField()
+
+class LogoutRequestSerializer(serializers.Serializer):
+    refresh_token = serializers.CharField()
 
 class UserRegistrationView(APIView):
     """User registration endpoint"""
     permission_classes = [permissions.AllowAny]
+    serializer_class = UserRegistrationSerializer
     
-    @register_user_schema
+    @extend_schema(
+        summary="Register new user",
+        description="Register a new user account with automatic login",
+        tags=['Authentication'],
+        request=UserRegistrationSerializer,
+        responses={
+            201: OpenApiResponse(
+                response=UserRegistrationResponseSerializer,
+                description="Registration successful",
+                examples=[
+                    OpenApiExample(
+                        'Success',
+                        value={
+                            'message': 'Registration successful',
+                            'user': {'id': 1, 'username': 'john_doe', 'email': 'john@example.com'},
+                            'tokens': {'access': 'token...', 'refresh': 'token...'}
+                        }
+                    )
+                ]
+            ),
+            400: OpenApiResponse(response=ErrorResponseSerializer, description="Validation errors")
+        }
+    )
     def post(self, request):
         serializer = UserRegistrationSerializer(data=request.data)
         if serializer.is_valid():
@@ -51,8 +107,21 @@ class UserRegistrationView(APIView):
 
 class UserLoginView(TokenObtainPairView):
     """Enhanced login view with user data"""
+    serializer_class = UserLoginSerializer
     
-    @login_user_schema
+    @extend_schema(
+        summary="User login",
+        description="Authenticate user and return tokens with user profile",
+        tags=['Authentication'],
+        request=UserLoginSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=LoginResponseSerializer,
+                description="Login successful"
+            ),
+            400: OpenApiResponse(response=ErrorResponseSerializer, description="Invalid credentials")
+        }
+    )
     def post(self, request, *args, **kwargs):
         # Get tokens from parent class
         response = super().post(request, *args, **kwargs)
@@ -70,8 +139,6 @@ class UserLoginView(TokenObtainPairView):
         
         return response
 
-# Add to UserProfileView
-@user_profile_schema
 class UserProfileView(RetrieveUpdateAPIView):
     """User profile view"""
     serializer_class = UserProfileSerializer
@@ -81,15 +148,60 @@ class UserProfileView(RetrieveUpdateAPIView):
         return self.request.user
     
     def get_serializer_class(self):
-        if self.request.method == 'PUT' or self.request.method == 'PATCH':
+        if self.request.method in ['PUT', 'PATCH']:
             return UserUpdateSerializer
         return UserProfileSerializer
+    
+    @extend_schema(
+        summary="Get user profile",
+        description="Retrieve current user's profile information",
+        tags=['Authentication'],
+        responses={
+            200: OpenApiResponse(response=UserProfileSerializer, description="User profile")
+        }
+    )
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+    
+    @extend_schema(
+        summary="Update user profile",
+        description="Update current user's profile information",
+        tags=['Authentication'],
+        request=UserUpdateSerializer,
+        responses={
+            200: OpenApiResponse(response=UserProfileSerializer, description="Profile updated")
+        }
+    )
+    def put(self, request, *args, **kwargs):
+        return super().put(request, *args, **kwargs)
+    
+    @extend_schema(
+        summary="Partially update user profile",
+        description="Partially update current user's profile information",
+        tags=['Authentication'],
+        request=UserUpdateSerializer,
+        responses={
+            200: OpenApiResponse(response=UserProfileSerializer, description="Profile updated")
+        }
+    )
+    def patch(self, request, *args, **kwargs):
+        return super().patch(request, *args, **kwargs)
 
 class PasswordChangeView(APIView):
     """Password change endpoint"""
     permission_classes = [permissions.IsAuthenticated]
+    serializer_class = PasswordChangeSerializer
     
-    @change_password_schema
+    @extend_schema(
+        summary="Change password",
+        description="Change current user's password",
+        tags=['Authentication'],
+        request=PasswordChangeSerializer,
+        responses={
+            200: OpenApiResponse(response=MessageResponseSerializer, description="Password changed successfully"),
+            400: OpenApiResponse(response=ErrorResponseSerializer, description="Validation errors")
+        }
+    )
     def post(self, request):
         serializer = PasswordChangeSerializer(
             data=request.data,
@@ -106,7 +218,16 @@ class PasswordChangeView(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
 
-@logout_schema
+@extend_schema(
+    summary="Logout user",
+    description="Logout user and blacklist tokens",
+    tags=['Authentication'],
+    request=LogoutRequestSerializer,
+    responses={
+        200: OpenApiResponse(response=MessageResponseSerializer, description="Logout successful"),
+        400: OpenApiResponse(response=ErrorResponseSerializer, description="Invalid token")
+    }
+)
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
 def logout_view(request):
@@ -120,7 +241,7 @@ def logout_view(request):
                 'error': 'Refresh token is required'
             }, status=status.HTTP_400_BAD_REQUEST)
         
-        # Blacklist the refresh token (your existing logic)
+        # Blacklist the refresh token
         try:
             token = RefreshToken(refresh_token)
             token.blacklist()
@@ -164,7 +285,24 @@ def logout_view(request):
             'detail': str(e) if settings.DEBUG else 'Invalid token'
         }, status=status.HTTP_400_BAD_REQUEST)
 
-@check_username_schema
+@extend_schema(
+    summary="Check username availability",
+    description="Check if a username is available for registration",
+    tags=['Authentication'],
+    parameters=[
+        {
+            'name': 'username',
+            'in': 'query',
+            'description': 'Username to check',
+            'required': True,
+            'schema': {'type': 'string'}
+        }
+    ],
+    responses={
+        200: OpenApiResponse(response=AvailabilityResponseSerializer, description="Username availability status"),
+        400: OpenApiResponse(response=ErrorResponseSerializer, description="Missing username parameter")
+    }
+)
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny])
 def check_username(request):
@@ -181,7 +319,24 @@ def check_username(request):
         'username': username
     })
 
-@check_email_schema
+@extend_schema(
+    summary="Check email availability",
+    description="Check if an email is available for registration",
+    tags=['Authentication'],
+    parameters=[
+        {
+            'name': 'email',
+            'in': 'query',
+            'description': 'Email to check',
+            'required': True,
+            'schema': {'type': 'string', 'format': 'email'}
+        }
+    ],
+    responses={
+        200: OpenApiResponse(response=AvailabilityResponseSerializer, description="Email availability status"),
+        400: OpenApiResponse(response=ErrorResponseSerializer, description="Missing email parameter")
+    }
+)
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny])
 def check_email(request):
@@ -198,7 +353,16 @@ def check_email(request):
         'email': email
     })
 
-@refresh_token_schema
+@extend_schema(
+    summary="Refresh access token",
+    description="Refresh access token using refresh token",
+    tags=['Authentication'],
+    request=TokenRefreshRequestSerializer,
+    responses={
+        200: OpenApiResponse(response=TokenRefreshResponseSerializer, description="Token refreshed successfully"),
+        400: OpenApiResponse(response=ErrorResponseSerializer, description="Invalid refresh token")
+    }
+)
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
 def token_refresh_view(request):
@@ -221,7 +385,16 @@ def token_refresh_view(request):
     
     return response
 
-@invalidate_token_schema
+@extend_schema(
+    summary="Invalidate all tokens (Admin only)",
+    description="Invalidate all user tokens system-wide (requires admin privileges)",
+    tags=['Authentication'],
+    responses={
+        200: OpenApiResponse(response=MessageResponseSerializer, description="All tokens invalidated"),
+        403: OpenApiResponse(response=ErrorResponseSerializer, description="Admin privileges required"),
+        500: OpenApiResponse(response=ErrorResponseSerializer, description="Internal server error")
+    }
+)
 @api_view(['POST'])
 @permission_classes([permissions.IsAuthenticated])
 def invalidate_all_tokens_view(request):

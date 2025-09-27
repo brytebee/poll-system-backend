@@ -1,5 +1,7 @@
 # poll_system/settings/base.py
 import os
+import secrets
+import string
 from decouple import config
 from pathlib import Path
 from datetime import timedelta
@@ -7,9 +9,16 @@ from celery.schedules import crontab
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = config('SECRET_KEY', default='your-secret-key-here')
-DEBUG = config('DEBUG', default=True, cast=bool)
-ENV = config('ENV', default='dev')
+# Generate strong secret key function
+def generate_secret_key():
+    """Generate a cryptographically secure secret key"""
+    alphabet = string.ascii_letters + string.digits + '!@#$%^&*(-_=+)'
+    return ''.join(secrets.choice(alphabet) for i in range(64))
+
+# Use generated secret key (generate once and use in .env file)
+SECRET_KEY = config('SECRET_KEY', default=generate_secret_key())
+DEBUG = config('DEBUG', default=False, cast=bool)
+ENV = config('ENV', default='prod')
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
@@ -43,7 +52,7 @@ LOCAL_APPS = [
     'authentication',
     'polls',
     'analytics',
-    'health',  # Add health app
+    'health',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -60,17 +69,12 @@ MIDDLEWARE_BASE = [
     'middleware.swagger_middleware.SwaggerDocsMiddleware',
 ]
 
-# Add security middleware conditionally
 MIDDLEWARE = MIDDLEWARE_BASE.copy()
 
-# Only add custom security middleware in production or when explicitly enabled
+# Security middleware for production
 ENABLE_SECURITY_MIDDLEWARE = config('ENABLE_SECURITY_MIDDLEWARE', default=False, cast=bool)
-
 if ENV == 'prod' or ENABLE_SECURITY_MIDDLEWARE:
     MIDDLEWARE.insert(0, 'security.middleware.SecurityMiddleware')
-
-# Rate limiting settings
-RATE_LIMIT_PER_MINUTE = config('RATE_LIMIT_PER_MINUTE', default=60, cast=int)
 
 ROOT_URLCONF = 'poll_system.urls'
 
@@ -103,7 +107,8 @@ DATABASES = {
         'PORT': config('DB_PORT', default='5432'),
         'OPTIONS': {
             'connect_timeout': 60,
-            'options': '-c default_transaction_isolation=serializable'
+            'options': '-c default_transaction_isolation=serializable',
+            'sslmode': 'require' if config('USE_DATABASE_SSL', default=False, cast=bool) else 'disable',
         }
     }
 }
@@ -127,10 +132,34 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Security Settings
-RATE_LIMIT_PER_MINUTE = config('RATE_LIMIT_PER_MINUTE', default=60, cast=int)
+# Production Security Settings
+if not DEBUG:
+    # HTTPS Settings
+    SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    
+    # HSTS Settings
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    
+    # Security Headers
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
+    
+    # Cookie Security
+    SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_HTTPONLY = True
+    SESSION_COOKIE_SAMESITE = 'Lax'
+    SESSION_COOKIE_AGE = 1209600  # 2 weeks
+    
+    CSRF_COOKIE_SECURE = True
+    CSRF_COOKIE_HTTPONLY = True
+    CSRF_COOKIE_SAMESITE = 'Lax'
 
-# CORS Settings - Properly configured
+# CORS Settings
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = False
     CORS_ALLOWED_ORIGINS = [
@@ -143,12 +172,6 @@ else:
         'CORS_ALLOWED_ORIGINS',
         default='https://yourdomain.com',
         cast=lambda v: [s.strip() for s in v.split(',')]
-    )
-
-    CORS_ALLOWED_ORIGIN_REGEXES = config(
-        'CORS_ALLOWED_ORIGIN_REGEXES',
-        default='',
-        cast=lambda v: [s.strip() for s in v.split(',')] if v else []
     )
 
 CORS_ALLOW_CREDENTIALS = True
@@ -164,7 +187,7 @@ CORS_ALLOWED_HEADERS = [
     'x-requested-with',
 ]
 
-# DRF Configuration - Corrected
+# DRF Configuration
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'authentication.authentication.EnhancedJWTAuthentication',
@@ -181,16 +204,13 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     
-    # API versioning
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
     'DEFAULT_VERSION': 'v1',
     'ALLOWED_VERSIONS': ['v1'],
     'VERSION_PARAM': 'version',
     
-    # Exception handling - Fixed
     'EXCEPTION_HANDLER': 'common.exceptions.custom_exception_handler',
     
-    # Throttling
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
         'rest_framework.throttling.UserRateThrottle'
@@ -198,10 +218,9 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '100/hour',
         'user': '1000/hour',
-        'login': '5/min',  # Add login throttling
+        'login': '5/min',
     },
     
-    # Filtering
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend',
         'rest_framework.filters.SearchFilter',
@@ -209,7 +228,7 @@ REST_FRAMEWORK = {
     ],
 }
 
-# JWT Configuration - Enhanced Security
+# JWT Configuration
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(hours=1),
@@ -250,7 +269,7 @@ if ENV == 'prod':
                 'IGNORE_EXCEPTIONS': True,
             },
             'KEY_PREFIX': 'poll_system',
-            'TIMEOUT': 300,  # 5 minutes default
+            'TIMEOUT': 300,
         }
     }
     SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
@@ -264,9 +283,9 @@ else:
     }
 
 # Cache TTL settings
-CACHE_TTL = 60 * 15  # 15 minutes
-POLL_RESULTS_CACHE_TTL = 60 * 5  # 5 minutes
-FINALIZED_RESULTS_CACHE_TTL = 60 * 60 * 24  # 24 hours
+CACHE_TTL = 60 * 15
+POLL_RESULTS_CACHE_TTL = 60 * 5
+FINALIZED_RESULTS_CACHE_TTL = 60 * 60 * 24
 
 # Celery Configuration
 CELERY_BROKER_URL = REDIS_URL
@@ -276,8 +295,8 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
-CELERY_TASK_SOFT_TIME_LIMIT = 25 * 60  # 25 minutes
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_TASK_SOFT_TIME_LIMIT = 25 * 60
 
 CELERY_BEAT_SCHEDULE = {
     'finalize-expired-polls': {
@@ -294,11 +313,11 @@ CELERY_BEAT_SCHEDULE = {
     },
 }
 
-# Create necessary directories
+# Create directories
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
 os.makedirs(BASE_DIR / 'media', exist_ok=True)
 
-# Logging Configuration - Single, unified config
+# Logging Configuration
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -323,14 +342,14 @@ LOGGING = {
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs' / 'app.log',
-            'maxBytes': 1024 * 1024 * 10,  # 10MB
+            'maxBytes': 1024 * 1024 * 10,
             'backupCount': 5,
             'formatter': 'detailed',
         },
         'error_file': {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs' / 'errors.log',
-            'maxBytes': 1024 * 1024 * 10,  # 10MB
+            'maxBytes': 1024 * 1024 * 10,
             'backupCount': 5,
             'formatter': 'detailed',
             'level': 'ERROR',
@@ -338,18 +357,10 @@ LOGGING = {
         'security_file': {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs' / 'security.log',
-            'maxBytes': 1024 * 1024 * 5,  # 5MB
+            'maxBytes': 1024 * 1024 * 5,
             'backupCount': 10,
             'formatter': 'json',
             'level': 'WARNING',
-        },
-        'db_queries_file': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR / 'logs' / 'db_queries.log',
-            'maxBytes': 1024 * 1024 * 5,  # 5MB
-            'backupCount': 10,
-            'formatter': 'json',
-            'level': 'DEBUG',
         },
     },
     'root': {
@@ -369,28 +380,28 @@ LOGGING = {
         },
         'polls': {
             'handlers': ['console', 'file', 'error_file'],
-            'level': 'DEBUG',
+            'level': 'DEBUG' if DEBUG else 'INFO',
             'propagate': False,
         },
         'authentication': {
             'handlers': ['console', 'file', 'security_file'],
-            'level': 'DEBUG',
+            'level': 'DEBUG' if DEBUG else 'INFO',
             'propagate': False,
         },
         'common': {
             'handlers': ['console', 'file', 'error_file'],
-            'level': 'DEBUG',
+            'level': 'DEBUG' if DEBUG else 'INFO',
             'propagate': False,
         },
         'django.db.backends': {
-             'handlers': ['console'] if DEBUG else [],
+            'handlers': ['console'] if DEBUG else [],
             'level': 'DEBUG' if DEBUG else 'INFO',
             'propagate': False,
         },
     },
 }
 
-# Spectacular settings - Cleaned up
+# Spectacular settings with authentication extension
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Online Poll System API',
     'DESCRIPTION': 'A comprehensive polling system with real-time voting and analytics.',
@@ -400,8 +411,8 @@ SPECTACULAR_SETTINGS = {
     'SCHEMA_PATH_PREFIX': '/api/',
     'SERVERS': [
         {
-            'url': 'http://localhost:8000',
-            'description': 'Development server'
+            'url': 'http://localhost:8000' if DEBUG else config('API_BASE_URL', default='https://api.yourdomain.com'),
+            'description': 'Development server' if DEBUG else 'Production server'
         },
     ],
     'TAGS': [
@@ -410,20 +421,12 @@ SPECTACULAR_SETTINGS = {
         {'name': 'Polls', 'description': 'Poll operations'},
         {'name': 'Health', 'description': 'System health checks'},
     ],
+    'EXTENSIONS': [
+        'authentication.openapi_extensions.EnhancedJWTAuthenticationExtension',
+    ],
 }
 
-# Security Headers (Django's built-in)
-if not DEBUG:
-    SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
-    SECURE_HSTS_SECONDS = 31536000  # 1 year
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_PRELOAD = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True
-    SECURE_BROWSER_XSS_FILTER = True
-    X_FRAME_OPTIONS = 'DENY'
-    SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
-
-# Email Configuration (for error alerts)
+# Email Configuration
 if not DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
@@ -435,6 +438,9 @@ if not DEBUG:
     ADMINS = [('Admin', config('ADMIN_EMAIL', default='admin@pollsystem.com'))]
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Rate limiting
+RATE_LIMIT_PER_MINUTE = config('RATE_LIMIT_PER_MINUTE', default=60, cast=int)
 
 # Project metadata
 PROJECT_NAME = 'Poll System'

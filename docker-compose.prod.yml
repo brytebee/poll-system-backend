@@ -22,22 +22,32 @@ services:
     command: >
       bash -c "
       echo 'Waiting for database...' &&
+      python manage.py collectstatic --noinput &&
       python manage.py migrate &&
       echo 'Starting Gunicorn...' &&
       gunicorn --bind 0.0.0.0:8000 --timeout 120 --workers 1 --access-logfile - --error-logfile - poll_system.wsgi:application
       "
     restart: unless-stopped
-    environment: 
+    environment:
       - DJANGO_SETTINGS_MODULE=poll_system.settings.base
+      - ENV=${ENV:-dev}
+      - DEBUG=${DEBUG:-True}
       - DB_NAME=poll_system
       - DB_USER=postgres
       - DB_PASSWORD=supersecret
       - DB_HOST=db
       - DB_PORT=5432
       - SECRET_KEY=${SECRET_KEY}
-      - DEBUG=False
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - CORS_ALLOWED_ORIGINS=${CORS_ALLOWED_ORIGINS}
+      - CORS_ALLOWED_ORIGIN_REGEXES=${CORS_ALLOWED_ORIGIN_REGEXES}
       - REDIS_URL=redis://redis:6379/0
+      - USE_HTTPS=${USE_HTTPS:-False}
+      - SECURE_SSL_REDIRECT=${SECURE_SSL_REDIRECT:-False}
+      - USE_DATABASE_SSL=${USE_DATABASE_SSL:-False}
+      - ENABLE_SECURITY_MIDDLEWARE=${ENABLE_SECURITY_MIDDLEWARE:-False}
+      - EMAIL_BACKEND=${EMAIL_BACKEND:-console}
+      - API_BASE_URL=${API_BASE_URL:-http://localhost:8000}
     depends_on:
       db:
         condition: service_healthy
@@ -49,6 +59,9 @@ services:
       - ./logs:/app/logs
     networks:
       - nexuspolls-network
+    # Expose port for direct access (useful for development)
+    ports:
+      - "8000:8000"
 
   redis:
     image: redis:7-alpine
@@ -59,6 +72,7 @@ services:
     networks:
       - nexuspolls-network
 
+  # Make nginx optional for local development
   nginx:
     image: nginx:alpine
     restart: unless-stopped
@@ -72,6 +86,9 @@ services:
       - web
     networks:
       - nexuspolls-network
+    # Add profile to make nginx optional
+    profiles:
+      - with-nginx
 
 volumes:
   postgres_data:
@@ -82,4 +99,3 @@ volumes:
 networks:
   nexuspolls-network:
     driver: bridge
-    

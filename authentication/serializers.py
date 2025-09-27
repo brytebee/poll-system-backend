@@ -2,7 +2,7 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from django.contrib.auth.password_validation import validate_password
-from django.core.exceptions import ValidationError
+from drf_spectacular.utils import extend_schema_field
 from .models import CustomUser
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -86,6 +86,26 @@ class UserProfileSerializer(serializers.ModelSerializer):
             'votes_cast_count'
         )
         read_only_fields = ('id', 'username', 'date_joined', 'last_login')
+
+    @extend_schema_field(serializers.CharField())
+    def get_display_name(self, obj) -> str:
+        """Get user's display name"""
+        return obj.display_name
+
+    @extend_schema_field(serializers.CharField())
+    def get_full_name(self, obj) -> str:
+        """Get user's full name"""
+        return obj.full_name
+
+    @extend_schema_field(serializers.IntegerField())
+    def get_polls_created_count(self, obj) -> int:
+        """Get count of polls created by user"""
+        return obj.get_polls_created_count()
+
+    @extend_schema_field(serializers.IntegerField())
+    def get_votes_cast_count(self, obj) -> int:
+        """Get count of votes cast by user"""
+        return obj.get_votes_cast_count()
 
 class UserUpdateSerializer(serializers.ModelSerializer):
     """User profile update serializer"""
