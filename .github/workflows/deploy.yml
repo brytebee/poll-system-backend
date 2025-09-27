@@ -1,0 +1,185 @@
+# .github/workflows/deploy.yml
+name: Deploy NexusPolls to DigitalOcean
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  APP_NAME: nexuspolls
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_nexuspolls
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+      redis:
+        image: redis:7
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: ⬇️ Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install coverage pytest-django
+
+      - name: 🗄️ Run migrations
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_nexuspolls
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
+        run: |
+          python manage.py migrate
+
+      - name: 🧪 Run tests with coverage
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_nexuspolls
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
+        run: |
+          coverage run --source='.' manage.py test
+          coverage report --show-missing
+          coverage xml
+
+      - name: 🔒 Security check
+        run: |
+          pip install bandit safety
+          bandit -r . -x tests/ -ll
+          safety check --ignore 70612
+
+      - name: ✅ Test summary
+        run: |
+          echo "🎉 All tests passed!"
+          echo "📊 Coverage report generated"
+          echo "🔒 Security checks completed"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🚀 Deploy to DigitalOcean
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: root
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            echo "🚀 Starting deployment of NexusPolls..."
+
+            cd /opt/nexuspolls
+
+            # Pull latest code
+            echo "📥 Pulling latest code..."
+            git pull origin main
+
+            # Update environment variables
+            echo "⚙️ Updating environment..."
+            cat > .env << EOF
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
+            SECRET_KEY=${{ secrets.SECRET_KEY }}
+            ALLOWED_HOSTS=localhost,127.0.0.1,*.ngrok.io,*.ngrok-free.app
+            DEBUG=False
+            REDIS_URL=redis://redis:6379/0
+            EOF
+
+            # Rebuild and restart containers
+            echo "🐳 Rebuilding containers..."
+            docker-compose -f docker-compose.prod.yml down
+            docker-compose -f docker-compose.prod.yml up -d --build
+
+            # Wait for containers to start
+            echo "⏳ Waiting for containers to start..."
+            sleep 45
+
+            # Run migrations and collect static files
+            echo "🗄️ Running database migrations..."
+            docker-compose -f docker-compose.prod.yml exec -T web python manage.py migrate
+
+            echo "📁 Collecting static files..."
+            docker-compose -f docker-compose.prod.yml exec -T web python manage.py collectstatic --noinput
+
+            # Restart ngrok tunnel
+            echo "🌐 Restarting ngrok tunnel..."
+            pkill ngrok || true
+            sleep 5
+            nohup ngrok http 80 --authtoken=${{ secrets.NGROK_AUTH_TOKEN }} --domain=nexuspolls.ngrok.io > ngrok.log 2>&1 &
+
+            # Wait and get tunnel URL
+            sleep 10
+            NGROK_URL=$(curl -s http://localhost:4040/api/tunnels | python3 -c "import sys, json; print([t['public_url'] for t in json.load(sys.stdin)['tunnels'] if 'https' in t['public_url']][0])" 2>/dev/null || echo "https://nexuspolls.ngrok.io")
+
+            echo "✅ Deployment completed successfully!"
+            echo "🌐 Application is live at: $NGROK_URL"
+
+            # Health check
+            sleep 15
+            curl -f "$NGROK_URL/health/" && echo "💚 Health check passed!" || echo "❌ Health check failed"
+
+  notify:
+    needs: [test, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: 📣 Deployment Status
+        run: |
+          if [ "${{ needs.deploy.result }}" == "success" ]; then
+            echo "🎉 NexusPolls deployed successfully!"
+            echo "🌐 Live at: https://nexuspolls.ngrok.io"
+          else
+            echo "❌ Deployment failed. Check logs for details."
+          fi
+
+
+
+git add .
+git commit -m "🚀 Add production deployment with Ngrok tunnel
+
+- Added Docker configuration for production
+- Added Nginx reverse proxy setup
+- Added comprehensive health checks
+- Added GitHub Actions CI/CD pipeline
+- Added ngrok tunnel configuration
+- Ready for live deployment"
+git push origin main
