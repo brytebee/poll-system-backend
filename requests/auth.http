@@ -1,6 +1,6 @@
 # requests/auth.http
 # @baseUrl = http://127.0.0.1:8000/api/auth
-@baseUrl = https://c1b8fe56001b.ngrok-free.app/api/auth
+@baseUrl = https://37ae27a7e64b.ngrok-free.app/api/auth
 
 ### Register
 POST {{baseUrl}}/register/

@@ -123,33 +123,29 @@ class UserLoginView(TokenObtainPairView):
         }
     )
     def post(self, request, *args, **kwargs):
-        # Get tokens from parent class
-        response = super().post(request, *args, **kwargs)
+        # First validate credentials with our custom serializer
+        serializer = UserLoginSerializer(
+            data=request.data,
+            context={'request': request}
+        )
         
-        if response.status_code == 200:
-            # Store the tokens before any modifications
-            tokens = {
-                'access': response.data.get('access'),
-                'refresh': response.data.get('refresh')
-            }
+        if serializer.is_valid():
+            user = serializer.validated_data['user']
             
-            # Get user from token
-            serializer = UserLoginSerializer(
-                data=request.data,
-                context={'request': request}
-            )
-            if serializer.is_valid():
-                user = serializer.validated_data['user']
-                
-                # Build complete response
-                response.data = {
-                    'access': tokens['access'],
-                    'refresh': tokens['refresh'],
-                    'user': UserProfileSerializer(user).data,
-                    'message': 'Login successful'
-                }
+            # Generate tokens directly for the authenticated user
+            refresh = RefreshToken.for_user(user)
+            
+            return Response({
+                'access': str(refresh.access_token),
+                'refresh': str(refresh),
+                'user': UserProfileSerializer(user).data,
+                'message': 'Login successful'
+            }, status=status.HTTP_200_OK)
         
-        return response
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
 class UserProfileView(RetrieveUpdateAPIView):
     """User profile view"""

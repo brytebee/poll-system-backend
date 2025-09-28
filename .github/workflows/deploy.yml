@@ -198,13 +198,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deployment Warning
+      - name: Deployment Notice
         run: |
-          echo "🚨 DEPLOYMENT WARNING 🚨"
+          echo "🚀 Starting deployment of NexusPolls..."
           echo "Reason: ${{ needs.check-deployment-trigger.outputs.deployment_reason }}"
-          echo "⚠️  This deployment will restart ngrok and generate a NEW URL"
-          echo "📱 Your app URL will change - check the deployment logs for the new URL"
-          echo "🔄 Consider upgrading to ngrok Pro for persistent URLs"
+          echo "✅ Ngrok URL will remain unchanged"
 
       - name: Deploy to DigitalOcean
         uses: appleboy/ssh-action@v1.0.3
@@ -215,7 +213,7 @@ jobs:
           port: 22
           script: |
             echo "🚀 Starting deployment of NexusPolls..."
-            echo "⚠️  WARNING: This will generate a new ngrok URL"
+            echo "✅ Preserving existing ngrok tunnel"
 
             # Navigate to project directory
             cd /opt/nexuspolls
@@ -224,25 +222,7 @@ jobs:
             echo "📥 Pulling latest code..."
             git pull origin main
 
-            # Update environment variables
-            echo "⚙️ Updating environment..."
-            cat > .env << EOF
-            ENV=prod
-            DEBUG=False
-            SECRET_KEY=${{ secrets.SECRET_KEY }}
-            ALLOWED_HOSTS=localhost,127.0.0.1,web,0.0.0.0,${{ secrets.DO_HOST }},*.ngrok.io,*.ngrok-free.app
-            CORS_ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000,https://*.ngrok.io,https://*.ngrok-free.app
-            CORS_ALLOWED_ORIGIN_REGEXES=^https://.*\.ngrok\.io$,^https://.*\.ngrok-free\.app$
-            REDIS_URL=redis://redis:6379/0
-            USE_HTTPS=False
-            SECURE_SSL_REDIRECT=False
-            USE_DATABASE_SSL=False
-            ENABLE_SECURITY_MIDDLEWARE=True
-            EMAIL_BACKEND=console
-            API_BASE_URL=http://localhost:8000
-            EOF
-
-            # Stop existing containers
+            # Stop existing containers (but preserve ngrok)
             echo "🛑 Stopping existing containers..."
             docker-compose -f docker-compose.prod.yml down --remove-orphans || true
 
@@ -280,50 +260,63 @@ jobs:
               sleep 5
             done
 
-            # Setup ngrok
-            echo "🔗 Setting up ngrok tunnel..."
-            echo "⚠️  Stopping existing ngrok process (URL will change)"
-            pkill ngrok || true
-            sleep 5
-
-            # Start ngrok
-            if [ -n "${{ secrets.NGROK_DOMAIN }}" ] && [ "${{ secrets.NGROK_DOMAIN }}" != "" ]; then
-              echo "🎯 Starting ngrok with reserved domain..."
-              nohup ngrok http 80 --authtoken=${{ secrets.NGROK_AUTH_TOKEN }} --domain=${{ secrets.NGROK_DOMAIN }} > ngrok.log 2>&1 &
-            else
-              echo "🎲 Starting ngrok with random domain (URL will be different)..."
-              nohup ngrok http 80 --authtoken=${{ secrets.NGROK_AUTH_TOKEN }} > ngrok.log 2>&1 &
-            fi
-
-            # Wait for ngrok
-            echo "⏳ Initializing ngrok tunnel..."
-            sleep 30
-
-            # Get URL and save for later use
-            NGROK_URL=""
-            for i in {1..15}; do
-              NGROK_URL=$(curl -s http://localhost:4040/api/tunnels 2>/dev/null | python3 -c "
-              import sys, json
-              try:
-                  data = json.load(sys.stdin)
-                  for tunnel in data.get('tunnels', []):
-                      url = tunnel.get('public_url', '')
-                      if 'https' in url:
-                          print(url)
-                          break
-              except:
-                  pass
-              " 2>/dev/null)
+            # Check if ngrok is still running
+            echo "🔗 Checking ngrok status..."
+            if pgrep ngrok >/dev/null 2>&1; then
+              echo "✅ Ngrok is still running - URL preserved"
               
-              if [ -n "$NGROK_URL" ]; then
-                break
-              fi
-              echo "⏳ Waiting for ngrok URL... ($i/15)"
-              sleep 5
-            done
+              # Get existing URL
+              NGROK_URL=""
+              for i in {1..10}; do
+                NGROK_URL=$(curl -s http://localhost:4040/api/tunnels 2>/dev/null | python3 -c "
+                import sys, json
+                try:
+                    data = json.load(sys.stdin)
+                    for tunnel in data.get('tunnels', []):
+                        url = tunnel.get('public_url', '')
+                        if 'https' in url:
+                            print(url)
+                            break
+                except:
+                    pass
+                " 2>/dev/null)
+                
+                if [ -n "$NGROK_URL" ]; then
+                  break
+                fi
+                echo "⏳ Retrieving existing ngrok URL... ($i/10)"
+                sleep 2
+              done
 
-            # Save URL to a file for the GitHub Action to read
-            echo "$NGROK_URL" > /tmp/ngrok_url.txt
+              if [ -n "$NGROK_URL" ]; then
+                echo ""
+                echo "🌐 APPLICATION URLs (unchanged):"
+                echo "┌─────────────────────────────────────────────────────────"
+                echo "│ 📱 Main App: $NGROK_URL"
+                echo "│ 🏥 Health: $NGROK_URL/health/"
+                echo "│ 👑 Admin: $NGROK_URL/admin/"
+                echo "│ 🔌 API: $NGROK_URL/api/"
+                echo "└─────────────────────────────────────────────────────────"
+                
+                # Health check with existing URL
+                echo ""
+                echo "🔍 Running health check on existing URL..."
+                sleep 15
+                if curl -f "$NGROK_URL/health/" >/dev/null 2>&1; then
+                  echo "💚 Health check passed!"
+                  echo "🎉 Application is fully operational at: $NGROK_URL"
+                else
+                  echo "⚠️ Health check failed - checking logs..."
+                  docker-compose -f docker-compose.prod.yml logs --tail=20 web
+                fi
+              else
+                echo "⚠️ Could not retrieve existing ngrok URL"
+              fi
+            else
+              echo "❌ Ngrok is not running - you may need to start it manually"
+              echo "💡 To start ngrok manually, run:"
+              echo "   nohup ngrok http 80 --authtoken=YOUR_TOKEN > ngrok.log 2>&1 &"
+            fi
 
             # Show results
             echo ""
@@ -332,76 +325,15 @@ jobs:
             echo "📊 Container Status:"
             docker-compose -f docker-compose.prod.yml ps
 
-            if [ -n "$NGROK_URL" ]; then
-              echo ""
-              echo "🌐 NEW APPLICATION URLs:"
-              echo "┌─────────────────────────────────────────────────────────"
-              echo "│ 📱 Main App: $NGROK_URL"
-              echo "│ 🏥 Health: $NGROK_URL/health/"
-              echo "│ 👑 Admin: $NGROK_URL/admin/"
-              echo "│ 🔌 API: $NGROK_URL/api/"
-              echo "└─────────────────────────────────────────────────────────"
-              echo ""
-              echo "⚠️  IMPORTANT: Your app URL has changed!"
-              echo "📝 Update your frontend/mobile app with the new URL above"
-              
-              # Update env with actual URL
-              sed -i "s|API_BASE_URL=.*|API_BASE_URL=$NGROK_URL|" .env
-              
-              # Health check
-              echo ""
-              echo "🔍 Running final health check..."
-              sleep 15
-              if curl -f "$NGROK_URL/health/" >/dev/null 2>&1; then
-                echo "💚 Health check passed!"
-                echo "🎉 Application is fully operational at: $NGROK_URL"
-              else
-                echo "⚠️ Health check failed - checking logs..."
-                docker-compose -f docker-compose.prod.yml logs --tail=20 web
-              fi
-            else
-              echo "❌ Could not retrieve ngrok URL - troubleshooting..."
-              echo "🔍 Ngrok process: $(pgrep ngrok || echo 'Not running')"
-              if [ -f ngrok.log ]; then
-                echo "📋 Ngrok log:"
-                tail -20 ngrok.log
-              fi
-            fi
-
             echo ""
             echo "📋 Deployment Summary:"
             echo "   ✅ Database: PostgreSQL (containerized)"
             echo "   ✅ Cache: Redis (containerized)"
             echo "   ✅ Web: Django + Gunicorn"
             echo "   ✅ Proxy: Nginx"
-            echo "   ✅ Tunnel: Ngrok"
+            echo "   ✅ Tunnel: Ngrok (preserved)"
             echo ""
             echo "🚀 NexusPolls deployment completed!"
-
-      - name: Update GitHub Secret with New URL
-        if: success()
-        uses: gliech/create-github-secret-action@v1
-        with:
-          name: CURRENT_NGROK_URL
-          value: ${{ steps.get-url.outputs.ngrok_url }}
-          pa_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
-      - name: Get Ngrok URL
-        id: get-url
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.DO_HOST }}
-          username: root
-          key: ${{ secrets.DO_SSH_KEY }}
-          script: |
-            if [ -f /tmp/ngrok_url.txt ]; then
-              NGROK_URL=$(cat /tmp/ngrok_url.txt)
-              echo "ngrok_url=$NGROK_URL" >> $GITHUB_OUTPUT
-              echo "Retrieved URL: $NGROK_URL"
-            else
-              echo "ngrok_url=" >> $GITHUB_OUTPUT
-              echo "No URL file found"
-            fi
 
   notify:
     needs: [test, check-deployment-trigger, deploy]
@@ -421,8 +353,8 @@ jobs:
             if [[ "${{ needs.deploy.result }}" == "success" ]]; then
               echo ""
               echo "🎉 NexusPolls deployed successfully!"
-              echo "⚠️  Your ngrok URL has changed - check deployment logs"
-              echo "📱 Update any clients with the new URL"
+              echo "✅ Ngrok URL preserved - no changes needed"
+              echo "📱 Existing clients continue to work"
             else
               echo ""
               echo "❌ Deployment failed"
@@ -431,6 +363,7 @@ jobs:
           else
             echo ""
             echo "✅ Tests completed successfully"
-            echo "ℹ️  No deployment triggered - ngrok URL unchanged"
+            echo "ℹ️  No deployment triggered"
             echo "💡 To deploy: merge to main or use manual workflow"
           fi
+          
