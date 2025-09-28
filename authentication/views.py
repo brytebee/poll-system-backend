@@ -109,20 +109,10 @@ class UserLoginView(TokenObtainPairView):
     """Enhanced login view with user data"""
     serializer_class = UserLoginSerializer
     
-    @extend_schema(
-        summary="User login",
-        description="Authenticate user and return tokens with user profile",
-        tags=['Authentication'],
-        request=UserLoginSerializer,
-        responses={
-            200: OpenApiResponse(
-                response=LoginResponseSerializer,
-                description="Login successful"
-            ),
-            400: OpenApiResponse(response=ErrorResponseSerializer, description="Invalid credentials")
-        }
-    )
     def post(self, request, *args, **kwargs):
+        import logging
+        logger = logging.getLogger(__name__)
+        
         # First validate credentials with our custom serializer
         serializer = UserLoginSerializer(
             data=request.data,
@@ -131,16 +121,41 @@ class UserLoginView(TokenObtainPairView):
         
         if serializer.is_valid():
             user = serializer.validated_data['user']
+            logger.info(f"User authenticated: {user.username}")
             
-            # Generate tokens directly for the authenticated user
-            refresh = RefreshToken.for_user(user)
-            
-            return Response({
-                'access': str(refresh.access_token),
-                'refresh': str(refresh),
-                'user': UserProfileSerializer(user).data,
-                'message': 'Login successful'
-            }, status=status.HTTP_200_OK)
+            try:
+                # Generate tokens directly for the authenticated user
+                refresh = RefreshToken.for_user(user)
+                logger.info(f"Refresh token created: {bool(refresh)}")
+                
+                access_token = str(refresh.access_token)
+                refresh_token = str(refresh)
+                
+                logger.info(f"Access token length: {len(access_token) if access_token else 0}")
+                logger.info(f"Refresh token length: {len(refresh_token) if refresh_token else 0}")
+                
+                # Debug: Check if tokens are actually strings
+                logger.info(f"Access token type: {type(access_token)}")
+                logger.info(f"Refresh token type: {type(refresh_token)}")
+                
+                response_data = {
+                    'access': access_token,
+                    'refresh': refresh_token,
+                    'user': UserProfileSerializer(user).data,
+                    'message': 'Login successful'
+                }
+                
+                logger.info(f"Response access token: {response_data['access'][:50] if response_data['access'] else 'None'}...")
+                logger.info(f"Response refresh token: {response_data['refresh'][:50] if response_data['refresh'] else 'None'}...")
+                
+                return Response(response_data, status=status.HTTP_200_OK)
+                
+            except Exception as e:
+                logger.error(f"Token generation failed: {str(e)}")
+                return Response({
+                    'error': 'Token generation failed',
+                    'detail': str(e)
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
         return Response(
             serializer.errors,
