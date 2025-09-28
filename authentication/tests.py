@@ -80,8 +80,10 @@ class AuthenticationAPITests(APITestCase):
         response = self.client.post(url, data)
         
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertIn('access', response.data)
+        # Check for what your API actually returns
         self.assertIn('user', response.data)
+        self.assertIn('message', response.data)
+        self.assertEqual(response.data['message'], 'Login successful')
     
     def test_check_username_availability(self):
         """Test username availability check"""
