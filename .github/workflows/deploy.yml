@@ -39,238 +39,207 @@ jobs:
           - 6379:6379
 
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 🐍 Set up Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.11"
 
-      - name: 📦 Cache pip dependencies
+      - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements/base.txt') }}
 
-      - name: ⬇️ Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements/base.txt
           pip install coverage pytest-django
 
-      - name: 🔍 Debug URL patterns and fix test issues
+      - name: Create required directories
         run: |
-          # Create static directory
-          mkdir -p static
+          mkdir -p static staticfiles media templates poll_system/settings
 
-          # Create a comprehensive test fixer
-          cat > fix_and_run_tests.py << 'EOF'
+      - name: Create CI-specific settings
+        run: |
+          cat > poll_system/settings/ci.py << 'EOF'
           import os
-          import sys
-          import django
-          from django.conf import settings
-          from django.core.management import execute_from_command_line
-          from django.urls import reverse
-          from django.test.utils import override_settings
+          from pathlib import Path
 
-          # Set up Django
-          os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'poll_system.settings.base')
-          django.setup()
+          BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-          # Apply all the necessary patches
-          settings.APPEND_SLASH = False  # Critical: prevents 301 redirects
-          settings.STATICFILES_DIRS = []  # Prevents static file warnings
+          SECRET_KEY = os.getenv('SECRET_KEY', 'test-secret-key-for-ci-cd-pipeline-testing')
+          DEBUG = True
+          ALLOWED_HOSTS = ['*']
 
-          # Debug: Print URL patterns to understand what's happening
-          def debug_urls():
-              print("=== DEBUG: URL PATTERNS ===")
-              try:
-                  print("Authentication URLs:")
-                  print(f"register: {reverse('authentication:register')}")
-                  print(f"login: {reverse('authentication:login')}")  
-                  print(f"check_username: {reverse('authentication:check_username')}")
-              except Exception as e:
-                  print(f"Error reversing URLs: {e}")
-              print("=== END DEBUG ===")
-
-          # Patch REST Framework settings
-          if hasattr(settings, 'REST_FRAMEWORK'):
-              settings.REST_FRAMEWORK = {
-                  'DEFAULT_AUTHENTICATION_CLASSES': [
-                      'rest_framework.authentication.SessionAuthentication',
-                  ],
-                  'DEFAULT_PERMISSION_CLASSES': [
-                      'rest_framework.permissions.AllowAny',
-                  ],
-                  'DEFAULT_RENDERER_CLASSES': [
-                      'rest_framework.renderers.JSONRenderer',
-                  ],
-              }
-
-          # CORS settings
-          settings.CORS_ALLOW_ALL_ORIGINS = True
-
-          if __name__ == '__main__':
-              # Debug URLs first
-              debug_urls()
-              
-              # Run the management command
-              execute_from_command_line(sys.argv)
-          EOF
-
-      - name: 🗄️ Run migrations with debug
-        env:
-          DJANGO_SETTINGS_MODULE: poll_system.settings.base
-          ENV: test
-          DEBUG: True
-          DB_NAME: test_nexuspolls
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_HOST: localhost
-          DB_PORT: 5432
-          REDIS_URL: redis://localhost:6379/0
-          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
-          ALLOWED_HOSTS: localhost,127.0.0.1,testserver
-        run: |
-          python fix_and_run_tests.py migrate --verbosity=1
-
-      - name: 🧪 Run tests with comprehensive fixes
-        env:
-          DJANGO_SETTINGS_MODULE: poll_system.settings.base
-          ENV: test
-          DEBUG: True
-          DB_NAME: test_nexuspolls
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_HOST: localhost
-          DB_PORT: 5432
-          REDIS_URL: redis://localhost:6379/0
-          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
-          ALLOWED_HOSTS: localhost,127.0.0.1,testserver
-        run: |
-          echo "Running tests with URL debugging and fixes..."
-
-          # First, let's see what URLs are being generated
-          python fix_and_run_tests.py shell -c "
-          from django.urls import reverse
-          print('=== URL RESOLUTION TEST ===')
-          try:
-              print('register URL:', reverse('authentication:register'))
-              print('login URL:', reverse('authentication:login'))
-              print('check_username URL:', reverse('authentication:check_username'))
-          except Exception as e:
-              print('URL resolution error:', e)
-          print('=== END URL TEST ===')
-          "
-
-          # Now run the actual tests
-          coverage run --source='.' fix_and_run_tests.py test authentication.tests.AuthenticationAPITests.test_user_registration --verbosity=3 || echo "Registration test had issues"
-          coverage run --append --source='.' fix_and_run_tests.py test authentication.tests.AuthenticationAPITests.test_user_login --verbosity=3 || echo "Login test had issues"
-          coverage run --append --source='.' fix_and_run_tests.py test authentication.tests.AuthenticationAPITests.test_check_username_availability --verbosity=3 || echo "Username check test had issues"
-
-          # Run all other tests
-          coverage run --append --source='.' fix_and_run_tests.py test --exclude-tag=slow --verbosity=2 || echo "Some tests had issues - continuing"
-
-          # Generate coverage report
-          coverage report --show-missing --skip-covered || echo "Coverage report generated"
-          coverage xml || echo "Coverage XML generated"
-
-          echo "Test execution completed - checking for common issues"
-
-      - name: 🔧 Alternative test approach - Force trailing slashes
-        if: always()
-        env:
-          DJANGO_SETTINGS_MODULE: poll_system.settings.base
-          ENV: test
-          DEBUG: True
-          DB_NAME: test_nexuspolls
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          DB_HOST: localhost
-          DB_PORT: 5432
-          REDIS_URL: redis://localhost:6379/0
-          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
-          ALLOWED_HOSTS: localhost,127.0.0.1,testserver
-        run: |
-          echo "Trying alternative approach - testing actual URLs manually"
-
-          # Create a test script that manually constructs URLs with trailing slashes
-          cat > manual_url_test.py << 'EOF'
-          import os
-          import django
-          from django.test import TestCase, Client
-          from django.contrib.auth import get_user_model
-
-          os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'poll_system.settings.base')
-          django.setup()
-
-          # Patch settings
-          from django.conf import settings
-          settings.APPEND_SLASH = False
-          settings.STATICFILES_DIRS = []
-
-          User = get_user_model()
-          client = Client()
-
-          print("=== MANUAL URL TESTING ===")
-
-          # Test registration with different URL formats
-          urls_to_try = [
-              '/api/auth/register',
-              '/api/auth/register/',
-              '/auth/register',
-              '/auth/register/',
-              '/authentication/register/',
-              '/authentication/register',
+          INSTALLED_APPS = [
+              'django.contrib.admin',
+              'django.contrib.auth',
+              'django.contrib.contenttypes',
+              'django.contrib.sessions',
+              'django.contrib.messages',
+              'django.contrib.staticfiles',
+              'rest_framework',
+              'rest_framework.authtoken',
+              'corsheaders',
+              'polls',
+              'authentication',
           ]
 
-          for url in urls_to_try:
-              try:
-                  response = client.get(url)
-                  print(f"GET {url}: {response.status_code}")
-                  if response.status_code not in [404, 405]:  # 405 = Method Not Allowed is OK for GET on POST endpoint
-                      print(f"  ^ This URL works! Status: {response.status_code}")
-              except Exception as e:
-                  print(f"GET {url}: Error - {e}")
+          MIDDLEWARE = [
+              'corsheaders.middleware.CorsMiddleware',
+              'django.middleware.common.CommonMiddleware',
+              'django.contrib.sessions.middleware.SessionMiddleware',
+              'django.middleware.csrf.CsrfViewMiddleware',
+              'django.contrib.auth.middleware.AuthenticationMiddleware',
+              'django.contrib.messages.middleware.MessageMiddleware',
+          ]
 
-          print("=== END MANUAL TEST ===")
+          ROOT_URLCONF = 'poll_system.urls'
+
+          TEMPLATES = [
+              {
+                  'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                  'DIRS': [BASE_DIR / 'templates'],
+                  'APP_DIRS': True,
+                  'OPTIONS': {
+                      'context_processors': [
+                          'django.template.context_processors.debug',
+                          'django.template.context_processors.request',
+                          'django.contrib.auth.context_processors.auth',
+                          'django.contrib.messages.context_processors.messages',
+                      ],
+                  },
+              },
+          ]
+
+          WSGI_APPLICATION = 'poll_system.wsgi.application'
+
+          DATABASES = {
+              'default': {
+                  'ENGINE': 'django.db.backends.postgresql',
+                  'NAME': os.getenv('DB_NAME', 'test_nexuspolls'),
+                  'USER': os.getenv('DB_USER', 'postgres'),
+                  'PASSWORD': os.getenv('DB_PASSWORD', 'postgres'),
+                  'HOST': os.getenv('DB_HOST', 'localhost'),
+                  'PORT': os.getenv('DB_PORT', '5432'),
+              }
+          }
+
+          LANGUAGE_CODE = 'en-us'
+          TIME_ZONE = 'UTC'
+          USE_I18N = True
+          USE_TZ = True
+
+          STATIC_URL = '/static/'
+          STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+          MEDIA_URL = '/media/'
+          MEDIA_ROOT = BASE_DIR / 'media'
+
+          DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+          REST_FRAMEWORK = {
+              'DEFAULT_AUTHENTICATION_CLASSES': [
+                  'rest_framework.authentication.SessionAuthentication',
+              ],
+              'DEFAULT_PERMISSION_CLASSES': [
+                  'rest_framework.permissions.AllowAny',
+              ],
+              'DEFAULT_RENDERER_CLASSES': [
+                  'rest_framework.renderers.JSONRenderer',
+              ],
+          }
+
+          CORS_ALLOW_ALL_ORIGINS = True
+          CORS_ALLOWED_ORIGINS = ["http://testserver", "http://localhost"]
+
+          CACHES = {
+              'default': {
+                  'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+                  'LOCATION': os.getenv('REDIS_URL', 'redis://localhost:6379/0'),
+              }
+          }
+
+          # KEY SETTING: Disable trailing slash redirects
+          APPEND_SLASH = False
+
+          SECURE_SSL_REDIRECT = False
+          SECURE_PROXY_SSL_HEADER = None
+
+          LOGGING = {
+              'version': 1,
+              'disable_existing_loggers': False,
+              'handlers': {
+                  'console': {'class': 'logging.StreamHandler'},
+              },
+              'root': {'handlers': ['console'], 'level': 'ERROR'},
+          }
           EOF
 
-          python manual_url_test.py
+      - name: Run migrations
+        env:
+          DJANGO_SETTINGS_MODULE: poll_system.settings.ci
+          DB_NAME: test_nexuspolls
+          DB_USER: postgres
+          DB_PASSWORD: postgres
+          DB_HOST: localhost
+          DB_PORT: 5432
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
+        run: |
+          python manage.py migrate --verbosity=1
 
-      - name: 🔒 Security check
-        if: always()
+      - name: Run tests with coverage
+        env:
+          DJANGO_SETTINGS_MODULE: poll_system.settings.ci
+          DB_NAME: test_nexuspolls
+          DB_USER: postgres
+          DB_PASSWORD: postgres
+          DB_HOST: localhost
+          DB_PORT: 5432
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: test-secret-key-for-ci-cd-pipeline-testing
+        run: |
+          coverage run --source='.' manage.py test --verbosity=2 --keepdb
+          coverage report --show-missing --skip-covered
+          coverage xml
+
+      - name: Security check
         run: |
           pip install bandit safety
           bandit -r . -x tests/,*/migrations/ -ll || echo "Security scan completed"
           safety check --ignore 70612 || echo "Safety check completed"
 
-      - name: ✅ Test summary
-        if: always()
+      - name: Test summary
         run: |
-          echo "CI pipeline completed with debugging information"
-          echo "Check the logs above for URL resolution details"
-          echo "Proceeding with deployment regardless of test status for now"
+          echo "CI pipeline completed successfully!"
+          echo "All tests passed"
+          echo "Ready for deployment"
 
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && always() # Deploy even if tests fail for now
+    if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 🚀 Deploy to DigitalOcean
-        uses: appleboy/ssh-action@v0.1.7
+      - name: Deploy to DigitalOcean
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.DO_HOST }}
           username: root
           key: ${{ secrets.DO_SSH_KEY }}
+          port: 22
           script: |
             echo "Starting deployment of NexusPolls..."
 
+            # Navigate to project directory
             cd /opt/nexuspolls
 
             # Pull latest code
@@ -339,7 +308,7 @@ jobs:
             sleep 3
 
             # Start ngrok
-            if [ -n "${{ secrets.NGROK_DOMAIN }}" ]; then
+            if [ -n "${{ secrets.NGROK_DOMAIN }}" ] && [ "${{ secrets.NGROK_DOMAIN }}" != "" ]; then
               nohup ngrok http 80 --authtoken=${{ secrets.NGROK_AUTH_TOKEN }} --domain=${{ secrets.NGROK_DOMAIN }} > ngrok.log 2>&1 &
             else
               nohup ngrok http 80 --authtoken=${{ secrets.NGROK_AUTH_TOKEN }} > ngrok.log 2>&1 &
@@ -347,11 +316,11 @@ jobs:
 
             # Wait for ngrok
             echo "Initializing ngrok tunnel..."
-            sleep 20
+            sleep 25
 
             # Get URL
             NGROK_URL=""
-            for i in {1..10}; do
+            for i in {1..12}; do
               NGROK_URL=$(curl -s http://localhost:4040/api/tunnels 2>/dev/null | python3 -c "
               import sys, json
               try:
@@ -368,7 +337,7 @@ jobs:
               if [ -n "$NGROK_URL" ]; then
                 break
               fi
-              echo "Waiting for ngrok URL... ($i/10)"
+              echo "Waiting for ngrok URL... ($i/12)"
               sleep 5
             done
 
@@ -384,21 +353,38 @@ jobs:
               echo "  Main App: $NGROK_URL"
               echo "  Health Check: $NGROK_URL/health/"
               echo "  Admin Panel: $NGROK_URL/admin/"
+              echo "  API: $NGROK_URL/api/"
               
               # Update env
               sed -i "s|API_BASE_URL=.*|API_BASE_URL=$NGROK_URL|" .env
               
               # Health check
-              sleep 10
+              sleep 15
               if curl -f "$NGROK_URL/health/" >/dev/null 2>&1; then
                 echo "Health check passed!"
+                echo "Application is fully operational!"
               else
-                echo "Health check failed - check logs"
+                echo "Health check failed - checking logs..."
+                docker-compose -f docker-compose.prod.yml logs --tail=20 web
               fi
             else
-              echo "Could not retrieve ngrok URL - check logs"
+              echo "Could not retrieve ngrok URL - troubleshooting..."
+              echo "Ngrok process: $(pgrep ngrok || echo 'Not running')"
+              echo "Local health: $(curl -s http://localhost/health/ 2>/dev/null || echo 'Failed')"
+              if [ -f ngrok.log ]; then
+                echo "Ngrok log:"
+                tail -15 ngrok.log
+              fi
             fi
 
+            echo ""
+            echo "Deployment Summary:"
+            echo "  Database: PostgreSQL (containerized)"
+            echo "  Cache: Redis (containerized)"
+            echo "  Web: Django + Gunicorn"
+            echo "  Proxy: Nginx"
+            echo "  Tunnel: Ngrok"
+            echo ""
             echo "NexusPolls deployment completed!"
 
   notify:
@@ -407,18 +393,25 @@ jobs:
     if: always()
 
     steps:
-      - name: 📣 Deployment Status
+      - name: Deployment Status
         run: |
           echo "Pipeline Results:"
           echo "  Tests: ${{ needs.test.result }}"
           echo "  Deploy: ${{ needs.deploy.result }}"
 
-          if [ "${{ needs.deploy.result }}" == "success" ]; then
+          if [ "${{ needs.test.result }}" == "success" ] && [ "${{ needs.deploy.result }}" == "success" ]; then
             echo ""
             echo "NexusPolls deployed successfully!"
-            echo "Check deployment logs for URL debugging info"
-            echo "Application should be live via ngrok tunnel"
+            echo "All tests passed"
+            echo "Application is live"
           else
             echo ""
-            echo "Check logs for debugging information"
+            echo "Pipeline issues detected:"
+            if [ "${{ needs.test.result }}" != "success" ]; then
+              echo "  - Tests failed or had issues"
+            fi
+            if [ "${{ needs.deploy.result }}" != "success" ]; then
+              echo "  - Deployment failed or had issues"
+            fi
+            echo "Check the job logs for details"
           fi
