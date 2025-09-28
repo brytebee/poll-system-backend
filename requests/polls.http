@@ -1,7 +1,9 @@
 # requests/polls.http
 
-@baseUrl = http://127.0.0.1:8000/api
-@authUrl = http://127.0.0.1:8000/api/auth
+# @baseUrl = http://127.0.0.1:8000/api
+# @authUrl = http://127.0.0.1:8000/api/auth
+@baseUrl = https://c1b8fe56001b.ngrok-free.app/api
+@authUrl = https://c1b8fe56001b.ngrok-free.app/api/auth
 
 ### Login (to get access token)
 # @name login
@@ -10,7 +12,7 @@ Content-Type: application/json
 
 {
     "username": "user001",
-    "password": "newpass123!"
+    "password": "secrepass00!"
 }
 
 ### Extract tokens from login response
@@ -159,5 +161,5 @@ Content-Type: application/json
 }
 
 ### Health Check
-GET http://127.0.0.1:8000/api/health/
+GET https://c1b8fe56001b.ngrok-free.app/api/health/
 Content-Type: application/json

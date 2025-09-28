@@ -127,6 +127,12 @@ class UserLoginView(TokenObtainPairView):
         response = super().post(request, *args, **kwargs)
         
         if response.status_code == 200:
+            # Store the tokens before any modifications
+            tokens = {
+                'access': response.data.get('access'),
+                'refresh': response.data.get('refresh')
+            }
+            
             # Get user from token
             serializer = UserLoginSerializer(
                 data=request.data,
@@ -134,8 +140,14 @@ class UserLoginView(TokenObtainPairView):
             )
             if serializer.is_valid():
                 user = serializer.validated_data['user']
-                response.data['user'] = UserProfileSerializer(user).data
-                response.data['message'] = 'Login successful'
+                
+                # Build complete response
+                response.data = {
+                    'access': tokens['access'],
+                    'refresh': tokens['refresh'],
+                    'user': UserProfileSerializer(user).data,
+                    'message': 'Login successful'
+                }
         
         return response
 

@@ -1233,3 +1233,12 @@ INFO 2025-09-25 16:49:45,645 django.server 28384 9496 "GET /admin/polls/poll/a40
 INFO 2025-09-25 16:49:45,782 django.server 28384 9496 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
 INFO 2025-09-25 16:50:19,772 django.server 28384 9496 "GET /admin/polls/poll/a4050f7b-2021-467f-b39a-b26eee43282f/history/ HTTP/1.1" 200 9691
 INFO 2025-09-25 16:50:28,500 django.server 28384 9496 "GET /admin/polls/poll/a4050f7b-2021-467f-b39a-b26eee43282f/change/ HTTP/1.1" 200 26750
+INFO 2025-09-28 15:50:55,311 django.utils.autoreload 9348 30712 Watching for file changes with StatReloader
+INFO 2025-09-28 15:51:41,776 django.server 9348 12852 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 15:51:52,715 django.server 9348 25556 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 15:52:41,819 django.server 9348 15488 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 15:54:05,122 django.server 9348 12704 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 15:54:06,391 django.server 9348 12568 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 15:54:07,565 django.server 9348 10640 "POST /api/auth/login/ HTTP/1.1" 301 0
+INFO 2025-09-28 16:07:35,504 django.utils.autoreload 9348 30712 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\authentication\views.py changed, reloading.
+INFO 2025-09-28 16:07:38,874 django.utils.autoreload 26200 26600 Watching for file changes with StatReloader
