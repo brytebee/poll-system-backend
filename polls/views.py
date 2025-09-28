@@ -255,10 +255,11 @@ class PollViewSet(viewsets.ModelViewSet):
         serializer = PollListSerializer(queryset, many=True, context={'request': request})
         return Response(serializer.data)
 
-class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
-    """Optimized Category ViewSet"""
+# Manage Categories
+class CategoryViewSet(viewsets.ModelViewSet):
+    """Full CRUD Category ViewSet"""
     serializer_class = CategorySerializer
-    permission_classes = [permissions.AllowAny]  # Categories are public
+    permission_classes = [permissions.AllowAny]  # Allow all users full access / Update it to admin in future
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name', 'description']
     ordering_fields = ['name', 'created_at']
@@ -284,3 +285,40 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
         
         return response
     
+    def create(self, request, *args, **kwargs):
+        """Create category and clear cache"""
+        response = super().create(request, *args, **kwargs)
+        if response.status_code == 201:
+            # Clear cache when new category is created
+            cache.delete("categories_list")
+        return response
+    
+    def update(self, request, *args, **kwargs):
+        """Update category and clear cache"""
+        response = super().update(request, *args, **kwargs)
+        if response.status_code == 200:
+            # Clear cache when category is updated
+            cache.delete("categories_list")
+            # Clear specific category cache if exists
+            if hasattr(self.get_object(), 'id'):
+                cache.delete(f"category_{self.get_object().id}_polls_count")
+        return response
+    
+    def partial_update(self, request, *args, **kwargs):
+        """Partial update category and clear cache"""
+        response = super().partial_update(request, *args, **kwargs)
+        if response.status_code == 200:
+            cache.delete("categories_list")
+            if hasattr(self.get_object(), 'id'):
+                cache.delete(f"category_{self.get_object().id}_polls_count")
+        return response
+    
+    def destroy(self, request, *args, **kwargs):
+        """Delete category and clear cache"""
+        category_id = self.get_object().id
+        response = super().destroy(request, *args, **kwargs)
+        if response.status_code == 204:
+            # Clear cache when category is deleted
+            cache.delete("categories_list")
+            cache.delete(f"category_{category_id}_polls_count")
+        return response

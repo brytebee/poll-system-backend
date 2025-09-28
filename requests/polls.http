@@ -45,7 +45,10 @@ Authorization: Bearer {{access_token}}
 {
     "title": "Should all programmers learn CSS",
     "description": "A poll to determine all developers should learn CSS",
-    "category": "fdd75574-6c90-4256-b772-142958f6dcf3",
+    "category": {
+        "name": "Technology",
+        "description": "Polls related to technology and programming"
+    },
     "options": [
         {
             "text": "Most definitely"
