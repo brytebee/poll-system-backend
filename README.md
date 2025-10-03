@@ -4,7 +4,7 @@ A robust Django REST API for creating and managing online polls with real-time v
 
 ## Entity Relationship Diagram (ERD)
 
-[!image](/static/images/presentation/erd_diagram.svg)
+![ERD Diagram](/static/images/presentation/erd_diagram.svg)
 
 ## Features
 
