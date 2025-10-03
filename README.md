@@ -2,6 +2,10 @@
 
 A robust Django REST API for creating and managing online polls with real-time voting capabilities.
 
+## Entity Relationship Diagram (ERD)
+
+[!image](/static/images/presentation/erd_diagram.svg)
+
 ## Features
 
 - **Custom User Authentication** with extended profile fields
@@ -208,5 +212,5 @@ For support and questions:
 
 ---
 
-**Status**: 🚧 Development Phase - Day 5 Complete
+**Status**: 🚧 Development Phase - Completed
 **Next Steps**: API endpoints for Poll and Vote CRUD
