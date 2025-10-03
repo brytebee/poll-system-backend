@@ -7,10 +7,10 @@ POST {{baseUrl}}/register/
 Content-Type: application/json
 
 {
-  "email": "user001@gy.un",
+  "email": "user001@gy2.un",
   "first_name": "User",
   "last_name": "One",
-  "username": "user001",
+  "username": "user0012",
   "password": "secrepass00!",
   "password_confirm": "secrepass00!"
 }

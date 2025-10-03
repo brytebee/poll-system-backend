@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Poll System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">📊NexusPolls</div>
+          <div class="nav-links">
+            <a href="#" onclick="showHome()">Home</a>
+            <a href="#" onclick="showMyPolls()" class="auth-only hidden"
+              >My Polls</a
+            >
+            <a href="#" onclick="openCreatePollModal()" class="auth-only hidden"
+              >Create Poll</a
+            >
+            <a href="/presentation" class="btn btn-text">Presentation</a>
+            <a href="/api/docs/" class="btn btn-text">Documentation</a>
+            <a href="/api/redoc/" class="btn btn-text">Redoc</a>
+            <div class="guest-only">
+              <button class="btn btn-outline" onclick="openLoginModal()">
+                Login
+              </button>
+              <button class="btn btn-primary" onclick="openRegisterModal()">
+                Sign Up
+              </button>
+            </div>
+            <div class="auth-only hidden">
+              <span id="username-display"></span>
+              <button class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <!-- Hero Section -->
+        <div class="hero" id="hero-section">
+          <h1>Create & Share Polls Instantly</h1>
+          <p>Make decisions together with real-time voting</p>
+          <button class="btn btn-primary" onclick="openCreatePollModal()">
+            Create Your First Poll
+          </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            class="form-control"
+            id="search-input"
+            placeholder="Search polls..."
+          />
+          <select
+            class="form-control"
+            id="category-filter"
+            style="max-width: 200px"
+          >
+            <option value="">All Categories</option>
+          </select>
+          <button class="btn btn-primary" onclick="searchPolls()">
+            Search
+          </button>
+        </div>
+
+        <!-- Polls Container -->
+        <div id="polls-container">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Login</h2>
+          <button class="close-btn" onclick="closeModal('login-modal')">
+            &times;
+          </button>
+        </div>
+        <div id="login-error" class="alert alert-error hidden"></div>
+        <form onsubmit="login(event)">
+          <div class="form-group">
+            <label class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="login-username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="login-password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Login
+          </button>
+        </form>
+        <p style="text-align: center; margin-top: 1rem">
+          Don't have an account?
+          <a href="#" onclick="openRegisterModal()">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Create Account</h2>
+          <button class="close-btn" onclick="closeModal('register-modal')">
+            &times;
+          </button>
+        </div>
+        <div id="register-error" class="alert alert-error hidden"></div>
+        <form onsubmit="register(event)">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="register-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="register-username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="register-firstname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="register-lastname"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="register-password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="register-password-confirm"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Create Poll Modal -->
+    <div id="create-poll-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Create New Poll</h2>
+          <button class="close-btn" onclick="closeModal('create-poll-modal')">
+            &times;
+          </button>
+        </div>
+        <div id="create-poll-error" class="alert alert-error hidden"></div>
+        <form onsubmit="createPoll(event)">
+          <div class="form-group">
+            <label class="form-label">Poll Title</label>
+            <input type="text" class="form-control" id="poll-title" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" id="poll-description"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-control" id="poll-category" required></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Options</label>
+            <div id="poll-options-container">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Option 1"
+                style="margin-bottom: 0.5rem"
+                required
+              />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Option 2"
+                style="margin-bottom: 0.5rem"
+                required
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-outline"
+              onclick="addPollOption()"
+              style="margin-top: 0.5rem"
+            >
+              + Add Option
+            </button>
+          </div>
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 0.5rem">
+              <input type="checkbox" id="allow-multiple-votes" />
+              Allow multiple votes
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Create Poll
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Vote Modal -->
+    <div id="vote-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="vote-modal-title"></h2>
+          <button class="close-btn" onclick="closeModal('vote-modal')">
+            &times;
+          </button>
+        </div>
+        <div id="vote-error" class="alert alert-error hidden"></div>
+        <div id="vote-options-container"></div>
+        <button
+          class="btn btn-primary"
+          onclick="submitVote()"
+          style="width: 100%; margin-top: 1rem"
+        >
+          Submit Vote
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Set API base URL to same domain
+      window.API_BASE_URL = window.location.origin + "/api";
+    </script>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>

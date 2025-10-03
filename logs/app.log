@@ -1242,3 +1242,1707 @@ INFO 2025-09-28 15:54:06,391 django.server 9348 12568 "POST /api/auth/login/ HTT
 INFO 2025-09-28 15:54:07,565 django.server 9348 10640 "POST /api/auth/login/ HTTP/1.1" 301 0
 INFO 2025-09-28 16:07:35,504 django.utils.autoreload 9348 30712 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\authentication\views.py changed, reloading.
 INFO 2025-09-28 16:07:38,874 django.utils.autoreload 26200 26600 Watching for file changes with StatReloader
+INFO 2025-09-29 15:38:45,930 django.utils.autoreload 27700 10364 Watching for file changes with StatReloader
+INFO 2025-09-29 15:39:20,589 django.server 27700 23072 "GET /api/docs/ HTTP/1.1" 301 0
+INFO 2025-09-29 15:39:20,598 django.server 27700 6716 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-09-29 15:39:20,598 django.server 27700 6716 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:20,603 django.server 27700 10680 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S\x9a\x9a\x00\x00\x00')
+ERROR 2025-09-29 15:39:20,607 django.server 27700 10680 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:21,121 django.server 27700 20180 code 400, message Bad request version ('«Þå\x87ä\x92Îþ×¹\x12Ôraâx)æf\x89\x84\x88\x8c;\x05íøxS5hÞ(PÜ\x9b/\x94*o<$^Ój·\x14\x94')
+ERROR 2025-09-29 15:39:21,122 django.server 27700 20180 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:21,122 django.server 27700 20236 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x033wÕû5å\x01\x9d·Hk({HN{n8;\x1b»tæPM¸·gÿÆA\x8e')
+ERROR 2025-09-29 15:39:21,125 django.server 27700 20236 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:21,126 django.server 27700 10912 code 400, message Bad request version ('¼æúê\x8fç\x9d!\x9fvú·\x87\x99î\x01ËjQæ{\x0fÖ\x14ÄÓ*Ôm¥"Ô\x00')
+ERROR 2025-09-29 15:39:21,127 django.server 27700 10912 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:21,128 django.server 27700 26156 code 400, message Bad request version ('\x9d\x96=Öý\x139\x97O7ª\x89')
+ERROR 2025-09-29 15:39:21,129 django.server 27700 26156 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:24,522 django.server 27700 10936 code 400, message Bad request version ('ÜÄú8\x9cÎ¢\x8c´v')
+ERROR 2025-09-29 15:39:24,529 django.server 27700 10936 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:24,529 django.server 27700 6024 code 400, message Bad request version ('\x13\\$º½Jþæbc¤')
+ERROR 2025-09-29 15:39:24,541 django.server 27700 6024 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:24,544 django.server 27700 27600 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03p0áÈ\x0ev\x16\x12\x93\x92\x8dÇ')
+ERROR 2025-09-29 15:39:24,545 django.server 27700 27600 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:39:24,546 django.server 27700 28388 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03M\x80\x9e\x16®[\x98¹.qáö¯4\x12Ãþr\x96ï\x16ðír\x19ä9s/Þi%')
+ERROR 2025-09-29 15:39:24,546 django.server 27700 28388 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:40:07,598 django.server 27700 23452 code 400, message Bad request version ('ezF\x10ù')
+ERROR 2025-09-29 15:40:07,599 django.server 27700 23452 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:40:07,604 django.server 27700 4660 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 15:40:07,606 django.server 27700 4660 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:40:07,607 django.server 27700 21696 code 400, message Bad request version ('Ü¬$\x14\x89#±!\x8bÙØ\x060yÌE')
+ERROR 2025-09-29 15:40:07,614 django.server 27700 21696 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:40:07,632 django.server 27700 22004 code 400, message Bad request version ('¾º')
+ERROR 2025-09-29 15:40:07,633 django.server 27700 22004 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:40:36,851 django.utils.autoreload 10676 14836 Watching for file changes with StatReloader
+INFO 2025-09-29 15:42:38,847 django.server 10676 1708 code 400, message Bad request version ('\x00ªs©àAÞP\x80\x0e\x84\x9fb±Í×¸J®È\x89k\x9a\x8e\x8bµ\x9c\x17¤\x04O\x15gz@b\x16¦\x95\x8ft¸0È')
+INFO 2025-09-29 15:42:38,852 django.server 10676 27908 code 400, message Bad request version ('Yº\x0f»H*{Qª\x888°\x9a')
+ERROR 2025-09-29 15:42:38,857 django.server 10676 1708 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 15:42:38,860 django.server 10676 27908 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:38,871 django.server 10676 19056 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93::\x00\x00\x00')
+ERROR 2025-09-29 15:42:38,872 django.server 10676 19056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:38,872 django.server 10676 14420 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93JJ\x00\x00\x00')
+ERROR 2025-09-29 15:42:38,874 django.server 10676 14420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,213 django.server 10676 10780 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x8a\x8a\x00\x00\x00')
+ERROR 2025-09-29 15:42:40,220 django.server 10676 10780 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,235 django.server 10676 29712 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-09-29 15:42:40,237 django.server 10676 29712 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,237 django.server 10676 27044 code 400, message Bad request version ('ý®p)h¢\x12p\x1býdÉõ\x10Öo\x0e=ãkë\x00')
+ERROR 2025-09-29 15:42:40,239 django.server 10676 27044 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,250 django.server 10676 5484 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04Ài\x91\x17t\x15\x9fÄ#2\x02ô·\x8dÜoN\x95')
+ERROR 2025-09-29 15:42:40,253 django.server 10676 5484 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,894 django.server 10676 21060 code 400, message Bad request version ('ç&@ëôRë\x06Ø')
+ERROR 2025-09-29 15:42:40,903 django.server 10676 21060 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,903 django.server 10676 8892 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-09-29 15:42:40,913 django.server 10676 8892 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,916 django.server 10676 1284 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-09-29 15:42:40,921 django.server 10676 1284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:40,922 django.server 10676 10332 code 400, message Bad request version ('L/Æ')
+ERROR 2025-09-29 15:42:40,925 django.server 10676 10332 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,360 django.server 10676 29368 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SJJ\x00\x00\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-29 15:42:41,365 django.server 10676 29368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,367 django.server 10676 29152 code 400, message Bad request version ('MI')
+ERROR 2025-09-29 15:42:41,370 django.server 10676 29152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,372 django.server 10676 23252 code 400, message Bad request version ('µíêÞ¸')
+ERROR 2025-09-29 15:42:41,375 django.server 10676 23252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,381 django.server 10676 19208 code 400, message Bad request version ('@pD\x12\x83äBg9\x8e,+ºÿ\x01\x00\x01\x00\x00')
+ERROR 2025-09-29 15:42:41,384 django.server 10676 19208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,564 django.server 10676 8220 code 400, message Bad request version ('\x84\x9cM9*âJV\x9aU\x90îh\x99~Öulq\x83¦ëDIÛ')
+ERROR 2025-09-29 15:42:41,568 django.server 10676 8220 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,569 django.server 10676 11140 code 400, message Bad request version ('\x9fH')
+ERROR 2025-09-29 15:42:41,571 django.server 10676 11140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,587 django.server 10676 28140 code 400, message Bad request version ('\x94\x80\x9e')
+ERROR 2025-09-29 15:42:41,596 django.server 10676 28140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,596 django.server 10676 12088 code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 15:42:41,598 django.server 10676 12088 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,752 django.server 10676 30604 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-09-29 15:42:41,756 django.server 10676 30604 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,759 django.server 10676 27620 code 400, message Bad request version ('¤/\x03öHBS\x92z.:£\x99YEÊ\x9d.\x92\x11¶[áz\x9c$HUhi')
+ERROR 2025-09-29 15:42:41,763 django.server 10676 27620 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,767 django.server 10676 28800 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x8a\x8a\x00\x00\x00')
+ERROR 2025-09-29 15:42:41,770 django.server 10676 28800 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,771 django.server 10676 7140 code 400, message Bad request version ('\x00+\x00\x07\x06::\x03\x04\x03\x03\x00')
+ERROR 2025-09-29 15:42:41,772 django.server 10676 7140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,929 django.server 10676 8748 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 15:42:41,930 django.server 10676 8748 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,938 django.server 10676 8584 code 400, message Bad request version ('%RÒ\x90\xad*0ã&')
+ERROR 2025-09-29 15:42:41,939 django.server 10676 8584 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,940 django.server 10676 11796 code 400, message Bad request version ('8\x04`ã')
+ERROR 2025-09-29 15:42:41,942 django.server 10676 11796 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:41,948 django.server 10676 8636 code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-09-29 15:42:41,950 django.server 10676 8636 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:42,104 django.server 10676 8824 code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03«H\x05÷êZ*AQ*\x8aé£Ë·ÍAö=ÈÞ´«f\x08Ú%')
+ERROR 2025-09-29 15:42:42,105 django.server 10676 8824 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:42,109 django.server 10676 26836 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÊÊ\x00\x00\x00\x17\x00\x00\x00-\x00\x02\x01\x01ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ªª\x03\x04\x03\x03\x00')
+ERROR 2025-09-29 15:42:42,111 django.server 10676 26836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:42,112 django.server 10676 13676 code 400, message Bad request version ('\x02h2\x08http/1.1\x00#\x00\x00\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00ÿ\x01\x00\x01\x00\x003\x04ï\x04í')
+ERROR 2025-09-29 15:42:42,113 django.server 10676 13676 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:42,122 django.server 10676 11192 code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00DÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04À\x91\x05·ß$\x93T\x05kÍ)M=µ¬\xad&i\x06©Y|X\x98')
+ERROR 2025-09-29 15:42:42,126 django.server 10676 11192 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:43,521 django.server 10676 14436 code 400, message Bad request version ('²)')
+INFO 2025-09-29 15:42:43,522 django.server 10676 27124 code 400, message Bad request version ('é^á\x93\x04\x9e\x00')
+ERROR 2025-09-29 15:42:43,522 django.server 10676 14436 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 15:42:43,522 django.server 10676 27124 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:42:43,529 django.server 10676 27052 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÊÊ\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00')
+INFO 2025-09-29 15:42:43,531 django.server 10676 11552 code 400, message Bad request version ('\x01\x1a\x00\x00\x01\x00\x01')
+ERROR 2025-09-29 15:42:43,532 django.server 10676 27052 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 15:42:43,532 django.server 10676 11552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:22,555 django.server 10676 17440 code 400, message Bad request version ('ó1T\x14Ë\x9a\x96ºÉé\x7f¯\x034Ë¦Ë\x08\x18\x80\x8aâ>î·¼Ìª-?')
+INFO 2025-09-29 15:44:22,558 django.server 10676 4424 code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-09-29 15:44:22,558 django.server 10676 17440 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 15:44:22,559 django.server 10676 4424 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:22,564 django.server 10676 30580 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-09-29 15:44:22,565 django.server 10676 30580 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:22,565 django.server 10676 11524 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93jj\x00\x00\x00')
+ERROR 2025-09-29 15:44:22,565 django.server 10676 11524 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,392 django.server 10676 18372 code 400, message Bad request version ('\x83ªÛzO8¨ëéMG\xadî\x17Iý\x95[©C½¥\x9b\x81\x05ä~Ì^')
+ERROR 2025-09-29 15:44:23,399 django.server 10676 18372 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,402 django.server 10676 9660 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 15:44:23,405 django.server 10676 9660 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,406 django.server 10676 29436 code 400, message Bad request version ('\x00\x02\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 15:44:23,409 django.server 10676 29436 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,422 django.server 10676 12332 code 400, message Bad request version ('t`\x0e')
+ERROR 2025-09-29 15:44:23,431 django.server 10676 12332 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,698 django.server 10676 22164 code 400, message Bad request version ('N´AÐR6\x17\x83µ4ÂØ\x81U)ÙbÇ\\L¿Å@\x0fÄqt}Þ\x19pù!R\x16\x8c°V6î^\x87_\x11$Í\x18>Xk\x15ñ\x9bFä4$¨Åt½\x00\x12\x00\x00\x00#\x00\x00\x00')
+ERROR 2025-09-29 15:44:23,699 django.server 10676 22164 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,709 django.server 10676 8488 code 400, message Bad request version ('7É\\¡')
+ERROR 2025-09-29 15:44:23,710 django.server 10676 8488 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,715 django.server 10676 3840 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-09-29 15:44:23,717 django.server 10676 3840 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:23,727 django.server 10676 13804 code 400, message Bad request version ('5ßü\x98\x86û\x9e\x19\x0fH\x07¼õ')
+ERROR 2025-09-29 15:44:23,729 django.server 10676 13804 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:24,272 django.server 10676 22804 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-09-29 15:44:24,273 django.server 10676 22804 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:24,283 django.server 10676 19420 code 400, message Bad request version ('\x15«h\x17X/\x17p½>ßýlg')
+ERROR 2025-09-29 15:44:24,286 django.server 10676 19420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:24,287 django.server 10676 8284 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x9bÇôfÏóÅ\x983ÓOw\x1b{Hô\x036')
+ERROR 2025-09-29 15:44:24,288 django.server 10676 8284 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:24,292 django.server 10676 19096 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÊÊ\x00\x00\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-29 15:44:24,295 django.server 10676 19096 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:26,020 django.server 10676 20104 code 400, message Bad request version ('{+\x19¹\x14Éì\x8d\x9d\x9c\x18ðl\x11\x83×`')
+ERROR 2025-09-29 15:44:26,023 django.server 10676 20104 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:26,024 django.server 10676 8324 code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x8a\x8a\x00\x00\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00')
+ERROR 2025-09-29 15:44:26,030 django.server 10676 8324 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:44:26,034 django.server 10676 16228 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063êê\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+INFO 2025-09-29 15:44:26,035 django.server 10676 8276 code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sªª\x00\x00\x00')
+ERROR 2025-09-29 15:44:26,036 django.server 10676 16228 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 15:44:26,036 django.server 10676 8276 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 15:59:47,868 django.server 10676 20848 "GET /api/health/ HTTP/1.1" 301 0
+INFO 2025-09-29 16:03:43,219 django.server 10676 68 code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ä\x8b\x1a\x897Þ¦A]9=»í½\x82NökÏ~$')
+ERROR 2025-09-29 16:03:43,231 django.server 10676 68 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:43,232 django.server 10676 25628 code 400, message Bad request version ('¹ub')
+ERROR 2025-09-29 16:03:43,237 django.server 10676 25628 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:43,241 django.server 10676 24860 code 400, message Bad request version ('c"\x19\x12exºÊ®0¹ô\x83Y\x90\x97±Ú·yõ{')
+ERROR 2025-09-29 16:03:43,242 django.server 10676 24860 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:43,242 django.server 10676 28296 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x9a\x9a\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 16:03:43,253 django.server 10676 28296 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:46,202 django.server 10676 29452 code 400, message Bad request version ('`ÏhvR')
+INFO 2025-09-29 16:03:46,206 django.server 10676 7824 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00\x00')
+ERROR 2025-09-29 16:03:46,206 django.server 10676 29452 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:03:46,208 django.server 10676 7824 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:46,228 django.server 10676 24564 code 400, message Bad request version ('\x02-')
+ERROR 2025-09-29 16:03:46,230 django.server 10676 24564 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:03:46,230 django.server 10676 22896 code 400, message Bad request syntax ("\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03îA}'x\x84ýÍ³")
+ERROR 2025-09-29 16:03:46,236 django.server 10676 22896 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:08,546 django.utils.autoreload 9384 14796 Watching for file changes with StatReloader
+INFO 2025-09-29 16:06:15,853 django.server 9384 24780 code 400, message Bad request version ('g.\x8eD÷\x11.9ÚY\x92Ý\x1b_U\x80Ô½¯²\x87\x00')
+ERROR 2025-09-29 16:06:15,862 django.server 9384 24780 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:15,863 django.server 9384 24000 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ºº\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00')
+ERROR 2025-09-29 16:06:15,868 django.server 9384 24000 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:15,873 django.server 9384 7748 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00')
+INFO 2025-09-29 16:06:15,878 django.server 9384 28432 code 400, message Bad request version ('\x8cö¶ÎÃ4W\\<×+')
+ERROR 2025-09-29 16:06:15,878 django.server 9384 7748 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:06:15,879 django.server 9384 28432 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:19,333 django.server 9384 14148 code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00')
+INFO 2025-09-29 16:06:19,334 django.server 9384 27724 code 400, message Bad request version ('/\x99\x11à@\x88\x18ª_,=Dk\x8dÔ\x8cÕCr½\x915\x06Zq§úB\x9ei\x8cg\x00\x90lÓ')
+ERROR 2025-09-29 16:06:19,335 django.server 9384 14148 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:06:19,336 django.server 9384 27724 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:19,355 django.server 9384 15828 code 400, message Bad request version ('|þò¼\x80\x10U¿\x98')
+ERROR 2025-09-29 16:06:19,359 django.server 9384 15828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:19,361 django.server 9384 22936 code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 16:06:19,362 django.server 9384 22936 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:22,143 django.server 9384 25128 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S\x1a\x1a\x00\x00\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-09-29 16:06:22,158 django.server 9384 25128 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:22,158 django.server 9384 25420 code 400, message Bad request version ('\x02Ýn-¤\x902k´Sr\x8fæ`\x08»u*ñÉ\x8f\x9a\x02í=Ôkù6\x8e=·\x00')
+ERROR 2025-09-29 16:06:22,159 django.server 9384 25420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:06:22,163 django.server 9384 23368 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00+\x00\x07\x06ºº\x03\x04\x03\x03\x00')
+INFO 2025-09-29 16:06:22,163 django.server 9384 25032 code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00\x00')
+ERROR 2025-09-29 16:06:22,163 django.server 9384 23368 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:06:22,164 django.server 9384 25032 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:08,335 django.server 9384 26892 code 400, message Bad request version ('\x87\x05Âw\x84')
+ERROR 2025-09-29 16:07:08,338 django.server 9384 26892 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:08,352 django.server 9384 17828 code 400, message Bad request version ('\x03\x95¾H·(\x01\x89¨zT)\x15\x80j,ë\x98wJrêå\x94\x8aµW\x9a\x8c5¤\x99')
+ERROR 2025-09-29 16:07:08,353 django.server 9384 17828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:08,360 django.server 9384 3240 code 400, message Bad request version ('ùCq')
+INFO 2025-09-29 16:07:08,361 django.server 9384 8624 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 16:07:08,362 django.server 9384 3240 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:07:08,362 django.server 9384 8624 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:10,195 django.server 9384 14920 code 400, message Bad request version ('](\x82\x05CxÀ\x8c+a\x14µ')
+ERROR 2025-09-29 16:07:10,203 django.server 9384 14920 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:10,210 django.server 9384 27844 code 400, message Bad request version ('*\x87L\x1aaÂZ')
+ERROR 2025-09-29 16:07:10,213 django.server 9384 27844 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:10,213 django.server 9384 28236 code 400, message Bad request version ('jd«ÆÃz¦\x18\x03p.3×\x94z,³R')
+ERROR 2025-09-29 16:07:10,215 django.server 9384 28236 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:10,224 django.server 9384 17748 code 400, message Bad request version ('\x9b\x96ç\x18dï\x83rú\x15n\x99Ë-©û¶ì\x88F&4V\x87')
+ERROR 2025-09-29 16:07:10,225 django.server 9384 17748 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:20,217 django.utils.autoreload 28420 17844 Watching for file changes with StatReloader
+INFO 2025-09-29 16:07:26,901 django.server 28420 16724 code 400, message Bad request version ('Þ=mD[\x9d8ªîN§%4E¯g£t')
+ERROR 2025-09-29 16:07:26,904 django.server 28420 16724 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:26,907 django.server 28420 16980 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 16:07:26,910 django.server 28420 16980 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:26,923 django.server 28420 11352 code 400, message Bad request version ('\x00\x02\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00')
+ERROR 2025-09-29 16:07:26,925 django.server 28420 11352 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:07:26,933 django.server 28420 13688 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93JJ\x00\x00\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x17\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-09-29 16:07:26,957 django.server 28420 13688 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:09:19,981 django.utils.autoreload 7228 17644 Watching for file changes with StatReloader
+INFO 2025-09-29 16:09:24,379 django.server 7228 13172 code 400, message Bad request version ('\x9d!Ü(¿k')
+ERROR 2025-09-29 16:09:24,381 django.server 7228 13172 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:09:24,381 django.server 7228 29448 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x00#\x00\x00\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-29 16:09:24,387 django.server 7228 29448 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:09:24,391 django.server 7228 14428 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 16:09:24,392 django.server 7228 14428 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:09:24,392 django.server 7228 27388 code 400, message Bad request version ('ù¼Ë\x07\x88')
+ERROR 2025-09-29 16:09:24,393 django.server 7228 27388 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:11:22,986 django.utils.autoreload 1628 21308 Watching for file changes with StatReloader
+INFO 2025-09-29 16:12:02,595 django.server 1628 21708 code 400, message Bad request version ('×\x97\xadp¢k')
+ERROR 2025-09-29 16:12:02,601 django.server 1628 21708 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:02,602 django.server 1628 25292 code 400, message Bad request version ('ÁÊ\x90?Pí$ßòuc\x88Â\x16³CìdTÊ\x11')
+ERROR 2025-09-29 16:12:02,603 django.server 1628 25292 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:02,607 django.server 1628 8100 code 400, message Bad request version (':yx\x04b\x16â`\x14\x90æR\x8au\x0f\xad®è\x8bø\x82Ù)\x18\x17+Ë³')
+ERROR 2025-09-29 16:12:02,608 django.server 1628 8100 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:02,610 django.server 1628 3840 code 400, message Bad request version ('ï|HBÑ$~\x94Âµ§{,\x10C²e\x9cUÃK_,ÎcÅH\x89')
+ERROR 2025-09-29 16:12:02,611 django.server 1628 3840 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:16,289 django.utils.autoreload 5108 13260 Watching for file changes with StatReloader
+INFO 2025-09-29 16:12:41,588 django.server 5108 21828 code 400, message Bad request version ('WÎ{t\x9b\x18ý7\x82Àè¸')
+ERROR 2025-09-29 16:12:41,603 django.server 5108 21828 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:41,603 django.server 5108 23952 code 400, message Bad request version ('s\x88\x80\x14"\x18¡')
+ERROR 2025-09-29 16:12:41,604 django.server 5108 23952 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:12:41,614 django.server 5108 12240 code 400, message Bad request version ('ïÌ³á¢øG\x00')
+INFO 2025-09-29 16:12:41,614 django.server 5108 18012 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x17\x00\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04À\x7fC\x8e{fI|ªp_±')
+ERROR 2025-09-29 16:12:41,615 django.server 5108 12240 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:12:41,615 django.server 5108 18012 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:02,748 django.utils.autoreload 16704 25828 Watching for file changes with StatReloader
+INFO 2025-09-29 16:13:10,446 django.server 16704 4212 code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÊÊ\x00\x00\x00#\x00\x00\x00\x12\x00\x00\x00')
+ERROR 2025-09-29 16:13:10,456 django.server 16704 4212 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:10,472 django.server 16704 23316 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x9a\x9a\x00\x00\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x00-\x00\x02\x01\x01DÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00')
+ERROR 2025-09-29 16:13:10,474 django.server 16704 23316 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:10,477 django.server 16704 29520 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-09-29 16:13:10,477 django.server 16704 29520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:10,478 django.server 16704 14960 code 400, message Bad request version ('\x19\x8dgÊYÈ[\x87Æ*dVÕhÏ')
+ERROR 2025-09-29 16:13:10,479 django.server 16704 14960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:42,076 django.server 16704 10904 code 400, message Bad request version ('Üe\x12j¡»r')
+ERROR 2025-09-29 16:13:42,079 django.server 16704 10904 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:42,082 django.server 16704 10468 code 400, message Bad request version ('"g²')
+ERROR 2025-09-29 16:13:42,084 django.server 16704 10468 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:42,090 django.server 16704 7244 code 400, message Bad request version ('îY<\x02`BÝ·\xad\x90EBOÒ\x011\x81b-5»\x05HO')
+INFO 2025-09-29 16:13:42,092 django.server 16704 8740 code 400, message Bad request version ('X\x83\x92\x82\x1b')
+ERROR 2025-09-29 16:13:42,092 django.server 16704 7244 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:13:42,093 django.server 16704 8740 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,212 django.server 16704 16792 code 400, message Bad request version ("´m\x17·ÜSEñµ]8\x17x°\x16³~ö'dºø\x8b*·7\x88f&Æ¢à\x97|áâqÓ\x96r\x0e\x80|")
+ERROR 2025-09-29 16:13:43,224 django.server 16704 16792 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,234 django.server 16704 29664 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00')
+ERROR 2025-09-29 16:13:43,239 django.server 16704 29664 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,246 django.server 16704 9520 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sêê\x00\x00\x003\x04ï\x04í\x9a\x9a\x00\x01\x00\x11ì\x04Àè6\x11XwÌÖAEÝuÇ\x9f')
+ERROR 2025-09-29 16:13:43,262 django.server 16704 9520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,273 django.server 16704 8224 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x8a\x8a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04ÀB&Rt25ã\x90\x8ee$\x19\x8cc{¬¦,)\x10Êc)Wq\x86(\x19ª\x8bÕ+H\x8dÈnÎ')
+ERROR 2025-09-29 16:13:43,278 django.server 16704 8224 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,378 django.server 16704 4424 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Ý\x05¹Ö¼×Xm³ñWU`\x8c@«É¾£¬\x03E¿,û')
+ERROR 2025-09-29 16:13:43,383 django.server 16704 4424 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,385 django.server 16704 27832 code 400, message Bad request version ('\x84"\x0e>ÃYw\x1bY;.óöÚ7©\x11\x9bgMrµ')
+ERROR 2025-09-29 16:13:43,387 django.server 16704 27832 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,404 django.server 16704 21720 code 400, message Bad request version ('cÃ%\x03Wq@Âù\x1a\x98\x992E!d¢Ù+Ñ&')
+ERROR 2025-09-29 16:13:43,410 django.server 16704 21720 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:43,421 django.server 16704 9056 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ªª\x00\x00\x00#\x00\x00ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 16:13:43,424 django.server 16704 9056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:13:53,670 django.utils.autoreload 16228 27700 Watching for file changes with StatReloader
+INFO 2025-09-29 16:53:12,726 django.server 16228 28088 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ºº\x00\x00\x00\x12\x00\x00\x00')
+INFO 2025-09-29 16:53:12,736 django.server 16228 348 code 400, message Bad request version ('`ù8\x91ÔÈÎ?î±\x8cù\x00')
+ERROR 2025-09-29 16:53:12,750 django.server 16228 28088 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:53:12,750 django.server 16228 348 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:53:12,778 django.server 16228 24144 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03%\x07')
+ERROR 2025-09-29 16:53:12,780 django.server 16228 24144 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:53:12,784 django.server 16228 18040 code 400, message Bad request version ('#¼*C+Ë')
+ERROR 2025-09-29 16:53:12,786 django.server 16228 18040 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:32,065 django.server 16228 8876 code 400, message Bad request version ('nß\x8c<Kð?J§>Y\x01oÛ\x01\x18ú')
+ERROR 2025-09-29 16:54:32,075 django.server 16228 8876 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:32,076 django.server 16228 21720 code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063**\x00\x00\x00')
+ERROR 2025-09-29 16:54:32,087 django.server 16228 21720 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:32,090 django.server 16228 17560 code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 16:54:32,091 django.server 16228 17560 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:32,103 django.server 16228 23004 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-09-29 16:54:32,104 django.server 16228 23004 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:34,437 django.server 16228 13172 code 400, message Bad request version ('âÅlv')
+ERROR 2025-09-29 16:54:34,440 django.server 16228 13172 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:34,441 django.server 16228 8056 code 400, message Bad request version ('$þ\x89=\x1amÿa#Õ\x84Ö}Â<!È\x02\\\x16¢¶Cþ,¨sL\x86»/}¿~]ß\x02{Á2\x98Ý\x17öõ\x82ÚIÒ\x82ÒÕüòq£RÌ¡\x9c\x90\x14´vï\x9b2L´+&¯Üø\x92C')
+ERROR 2025-09-29 16:54:34,445 django.server 16228 8056 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:34,453 django.server 16228 30252 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 16:54:34,457 django.server 16228 30252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:34,457 django.server 16228 24860 code 400, message Bad request version ('Ý\x90Ã\x8eîåù³üFýøTÙàB\x8bçK|B\x16K\x8eå\\7j\x02¿ÊA\x00')
+ERROR 2025-09-29 16:54:34,476 django.server 16228 24860 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,057 django.server 16228 11880 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03£\x96È\\j\x9e2S¥©0onä\x11æçÊâ')
+ERROR 2025-09-29 16:54:35,058 django.server 16228 11880 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,059 django.server 16228 24928 code 400, message Bad request version ('\x08kÁ\x91\x18Ù\x1b(ó\x84\x91+áÿýxØ\x9cn~;i4ïÕãªÍê\x14\x00ð\x91¨\x84\x94u')
+ERROR 2025-09-29 16:54:35,063 django.server 16228 24928 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,068 django.server 16228 19012 code 400, message Bad request version ('ÁÀëÍþ!\\')
+ERROR 2025-09-29 16:54:35,070 django.server 16228 19012 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,077 django.server 16228 22340 code 400, message Bad request version ('Kü\x83¨ÿùz\x0f#3')
+ERROR 2025-09-29 16:54:35,077 django.server 16228 22340 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,252 django.server 16228 16500 code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00+\x00\x07\x06ªª\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x00')
+INFO 2025-09-29 16:54:35,257 django.server 16228 19900 code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
+ERROR 2025-09-29 16:54:35,258 django.server 16228 16500 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:54:35,258 django.server 16228 19900 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,266 django.server 16228 24628 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-29 16:54:35,268 django.server 16228 24628 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,269 django.server 16228 17424 code 400, message Bad request version ('\x99M[\x96]MSVhe5w')
+ERROR 2025-09-29 16:54:35,270 django.server 16228 17424 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,434 django.server 16228 24524 code 400, message Bad request version ('\x83M¢\x8f\x91Df\x8epä\x00æfQ\x86Å\x92ºg\x06ìÕ¡ßG\x86>\x89\x02@8&¸\x18S\x1b')
+ERROR 2025-09-29 16:54:35,444 django.server 16228 24524 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,445 django.server 16228 28252 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S')
+ERROR 2025-09-29 16:54:35,456 django.server 16228 28252 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,458 django.server 16228 12376 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x9dÍÉ\x1b\x1aù$.\x9a\x8f¼j\x8a³Yä')
+ERROR 2025-09-29 16:54:35,463 django.server 16228 12376 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,479 django.server 16228 25612 code 400, message Bad request version ('1[]Ú\x00')
+ERROR 2025-09-29 16:54:35,510 django.server 16228 25612 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,620 django.server 16228 6400 code 400, message Bad request version ('\x90\x84\x836ÊÖ,')
+ERROR 2025-09-29 16:54:35,621 django.server 16228 6400 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,623 django.server 16228 19788 code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06**\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00DÍ\x00\x05\x00\x03\x02h2\x003\x04ï\x04í**\x00\x01\x00\x11ì\x04ÀÏ¥À&E\x9aoº¹øA\x07På')
+ERROR 2025-09-29 16:54:35,624 django.server 16228 19788 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,636 django.server 16228 7228 code 400, message Bad request version ('°ù\x1b±\x02\x0e')
+ERROR 2025-09-29 16:54:35,645 django.server 16228 7228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,654 django.server 16228 4668 code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-09-29 16:54:35,667 django.server 16228 4668 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,804 django.server 16228 1540 code 400, message Bad request version ('ÔôB\x1a\x1a\x00:¥sâ<\x98{üD.°w¿ªª¡\x981ya¨\x06Åq')
+ERROR 2025-09-29 16:54:35,807 django.server 16228 1540 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,811 django.server 16228 10640 code 400, message Bad request version ('Í(\x84ª\x993\x91:¹ä¥±O`Ï,a§\x05')
+ERROR 2025-09-29 16:54:35,816 django.server 16228 10640 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,825 django.server 16228 21068 code 400, message Bad request version ('ý,søíp\x87º\x10Ú\x9f\x11¤ìz|]µ¼£»\x8c0{\x93\x00')
+ERROR 2025-09-29 16:54:35,834 django.server 16228 21068 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:54:35,834 django.server 16228 2496 code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÚÚ\x00\x00\x00')
+ERROR 2025-09-29 16:54:35,838 django.server 16228 2496 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:42,553 django.utils.autoreload 14900 12464 Watching for file changes with StatReloader
+INFO 2025-09-29 16:55:43,808 django.server 14900 10008 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 16:55:43,815 django.server 14900 10008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:43,826 django.server 14900 28148 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')
+ERROR 2025-09-29 16:55:43,826 django.server 14900 28148 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:44,027 django.server 14900 14856 code 400, message Bad request version ('ÏÞ{¾Ju?ò´°\x13¿\x00')
+ERROR 2025-09-29 16:55:44,028 django.server 14900 14856 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:44,030 django.server 14900 7552 code 400, message Bad request version ('ýW\x12u\x8b/\x95%\x90a`-ô|ÂÕ0\x9a@\x04Y&ÂdÇdê)¬?\x19ål"Kvl8\x8fCþ-t2\x00Úü\x00')
+ERROR 2025-09-29 16:55:44,035 django.server 14900 7552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:44,046 django.server 14900 18740 code 400, message Bad request version ('à<h\x9a')
+ERROR 2025-09-29 16:55:44,047 django.server 14900 18740 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:55:44,074 django.server 14900 22704 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+ERROR 2025-09-29 16:55:44,076 django.server 14900 22704 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:56:56,955 django.utils.autoreload 25468 16148 Watching for file changes with StatReloader
+INFO 2025-09-29 16:56:58,977 django.server 25468 22280 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ºº\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 16:56:58,983 django.server 25468 22280 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:56:58,983 django.server 25468 22576 code 400, message Bad request version ('>\x93\\¹c\x01yêr¯6')
+ERROR 2025-09-29 16:56:58,985 django.server 25468 22576 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:56:58,988 django.server 25468 14836 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00\x00')
+ERROR 2025-09-29 16:56:58,989 django.server 25468 14836 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:56:58,990 django.server 25468 22656 code 400, message Bad request version ('\x11âÔT\x10{pEcN-oh')
+ERROR 2025-09-29 16:56:58,991 django.server 25468 22656 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:57:01,605 django.server 25468 10256 code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06::\x03\x04\x03\x03\x00\x12\x00\x00\x00')
+INFO 2025-09-29 16:57:01,609 django.server 25468 8324 code 400, message Bad request version ('ÞØ\x96Qº©\x86YO\x94¼Ø¥Tr\x9b>%¸\x12áºÔ\x12C4^(öË@=\x00')
+ERROR 2025-09-29 16:57:01,615 django.server 25468 10256 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 16:57:01,616 django.server 25468 8324 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:57:01,619 django.server 25468 8020 code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x00')
+ERROR 2025-09-29 16:57:01,620 django.server 25468 8020 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:57:01,622 django.server 25468 23084 code 400, message Bad request version ("¿§*@ù¥NK/èç5éû\x17Ì[\x00Ì\x7fåó«U×*'.\x87¾v¥\x8cÇ¡\x81ç4?u9Ù\x02¬)()>4w-µ¨")
+ERROR 2025-09-29 16:57:01,624 django.server 25468 23084 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:04,198 django.utils.autoreload 10500 9344 Watching for file changes with StatReloader
+INFO 2025-09-29 16:58:53,604 django.utils.autoreload 10500 9344 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-29 16:58:56,325 django.utils.autoreload 17728 14872 Watching for file changes with StatReloader
+INFO 2025-09-29 16:58:56,985 django.server 17728 28152 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ÝÓûýók,6\x17~u¤Ë\x9c:»+cGd9ÖAMK')
+ERROR 2025-09-29 16:58:56,987 django.server 17728 28152 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:56,988 django.server 17728 5812 code 400, message Bad request version ('=«u¹êëÐ\x8a\x97\\(þÔ\x9f\x00Ã\x82¡9)*?Å\x8c»ÌÜ')
+ERROR 2025-09-29 16:58:56,994 django.server 17728 5812 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:57,002 django.server 17728 29876 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00+\x00\x07\x06::\x03\x04\x03\x03\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-09-29 16:58:57,003 django.server 17728 29876 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:57,044 django.server 17728 9784 code 400, message Bad request version ('<WV\x06ÅÅ£N%')
+ERROR 2025-09-29 16:58:57,060 django.server 17728 9784 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:57,237 django.server 17728 12880 code 400, message Bad request version ('\x9c\x1b\x7f4)§\x82\x86¹Ò\x17û\x00')
+ERROR 2025-09-29 16:58:57,237 django.server 17728 12880 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:58:57,240 django.server 17728 27984 code 400, message Bad request version ('9ºFÔ¯±\x0eºÂ{')
+ERROR 2025-09-29 16:58:57,241 django.server 17728 27984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:11,496 django.utils.autoreload 28380 1284 Watching for file changes with StatReloader
+INFO 2025-09-29 16:59:14,552 django.server 28380 8304 code 400, message Bad request version ('\x00\x02\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00')
+ERROR 2025-09-29 16:59:14,554 django.server 28380 8304 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:14,555 django.server 28380 23644 code 400, message Bad request version ('\x02h2\x08http/1.1\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À§')
+ERROR 2025-09-29 16:59:14,557 django.server 28380 23644 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:14,568 django.server 28380 18624 code 400, message Bad request version ('a\x93\x95ÐxoÈFºôÖ\x10NÔ!\x03Ü&\x8fÂ\x84÷\x9c^')
+ERROR 2025-09-29 16:59:14,569 django.server 28380 18624 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:14,575 django.server 28380 25872 code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 16:59:14,583 django.server 28380 25872 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:32,818 django.server 28380 26432 code 400, message Bad request version ('sçJÝá\x11v\x03á\x12\x89G§C\x86û¥H\\\x00')
+ERROR 2025-09-29 16:59:32,823 django.server 28380 26432 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:32,827 django.server 28380 29944 code 400, message Bad request version ('#Ü÷T¤¤"þr\x00NéÁÒ³\x8dÈRÏ\x00ÐBW')
+ERROR 2025-09-29 16:59:32,829 django.server 28380 29944 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:32,835 django.server 28380 3148 code 400, message Bad request version ('}Ü\x00r\x03D\x870$¶D\x8c¼øZÖ\x0fMDÍ\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 16:59:32,836 django.server 28380 3148 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 16:59:32,837 django.server 28380 11180 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x038Á¼Õ.\x89\x05@Å\x17ÁöðI2VévÀ3åË.ð\x88t¨\x15|Ã\x99')
+ERROR 2025-09-29 16:59:32,837 django.server 28380 11180 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:01:31,015 django.utils.autoreload 28380 1284 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-29 17:01:33,502 django.utils.autoreload 9916 1992 Watching for file changes with StatReloader
+INFO 2025-09-29 17:01:45,672 django.server 9916 24420 code 400, message Bad request version ('XGFò¦Â·ØlÞ\x144Ì)')
+ERROR 2025-09-29 17:01:45,676 django.server 9916 24420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:01:45,678 django.server 9916 27420 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03a=àØ¨ØßöÑÜÄ')
+ERROR 2025-09-29 17:01:45,683 django.server 9916 27420 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:01:45,685 django.server 9916 11580 code 400, message Bad request version ('\x8b\x930\x92É´±*ò')
+ERROR 2025-09-29 17:01:45,687 django.server 9916 11580 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:01:45,687 django.server 9916 4260 code 400, message Bad request version ('\x00\x02\x01\x00\x00#\x00\x00\x00')
+ERROR 2025-09-29 17:01:45,688 django.server 9916 4260 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:01:59,718 django.utils.autoreload 11616 28832 Watching for file changes with StatReloader
+INFO 2025-09-29 17:02:03,528 django.server 11616 30040 code 400, message Bad request version ('§"')
+ERROR 2025-09-29 17:02:03,530 django.server 11616 30040 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:03,536 django.server 11616 20520 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¿¿ÀûàÆ\x82)\x0e=g\x94WY\x7fªM\x9bH\x84\x86\x92')
+ERROR 2025-09-29 17:02:03,537 django.server 11616 20520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:03,564 django.server 11616 8520 code 400, message Bad request version ('ñ<½T')
+ERROR 2025-09-29 17:02:03,566 django.server 11616 8520 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:03,627 django.server 11616 10684 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x038~¼\x05DÈ¨+·§Ë!\x06ãz\x8d²')
+ERROR 2025-09-29 17:02:03,646 django.server 11616 10684 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:10,794 django.server 11616 5788 code 400, message Bad request version ('\x84·Jç¶&/mM')
+ERROR 2025-09-29 17:02:10,797 django.server 11616 5788 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:10,797 django.server 11616 29104 code 400, message Bad request version ('Ù\x9d¬\x18}\x18\x00')
+ERROR 2025-09-29 17:02:10,803 django.server 11616 29104 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:10,826 django.server 11616 17940 code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93zz\x00\x00\x00')
+ERROR 2025-09-29 17:02:10,833 django.server 11616 17940 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:02:10,834 django.server 11616 28364 code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93')
+ERROR 2025-09-29 17:02:10,845 django.server 11616 28364 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:52,276 django.utils.autoreload 11616 28832 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-29 17:05:54,098 django.utils.autoreload 23480 27848 Watching for file changes with StatReloader
+INFO 2025-09-29 17:05:56,673 django.server 23480 27772 code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÚÚ\x00\x00\x00')
+ERROR 2025-09-29 17:05:56,674 django.server 23480 27772 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:56,677 django.server 23480 16864 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-09-29 17:05:56,678 django.server 23480 16864 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:56,680 django.server 23480 4348 code 400, message Bad request version ('#f&\x10A\x92Õ¼[')
+ERROR 2025-09-29 17:05:56,683 django.server 23480 4348 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:56,685 django.server 23480 16612 code 400, message Bad request version ('\x02h2\x08http/1.1\x00#\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 17:05:56,688 django.server 23480 16612 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,393 django.server 23480 21388 code 400, message Bad request version ('\x02\x89KB©\x84}Að\x82ýR\x94"p5ïeP\\fCZkym¸v¹\x1a@ö')
+ERROR 2025-09-29 17:05:57,394 django.server 23480 21388 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,395 django.server 23480 21892 code 400, message Bad request version ('d0-Ã\x99H\x90¦\x0f4¦{Å\x13)Cì±ºW')
+ERROR 2025-09-29 17:05:57,397 django.server 23480 21892 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,401 django.server 23480 26164 code 400, message Bad request version ('úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sêê\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00')
+ERROR 2025-09-29 17:05:57,405 django.server 23480 26164 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,408 django.server 23480 22160 code 400, message Bad request version ('¸|EL.Ê{')
+ERROR 2025-09-29 17:05:57,412 django.server 23480 22160 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,609 django.server 23480 30476 code 400, message Bad request version ('\x1a\x02:¯naê')
+ERROR 2025-09-29 17:05:57,614 django.server 23480 30476 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,615 django.server 23480 20180 code 400, message Bad request version ("ï\x81'GQ/\x82ø×À|")
+ERROR 2025-09-29 17:05:57,619 django.server 23480 20180 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,630 django.server 23480 19176 code 400, message Bad request version ('\x89¡\x16â\x95ëßV¨V\x84\x00')
+INFO 2025-09-29 17:05:57,631 django.server 23480 29516 code 400, message Bad request version ('\x93|Ì÷s\x03¶\x84B\x07\x08OUÊ\x8b4T®p¢g')
+ERROR 2025-09-29 17:05:57,631 django.server 23480 19176 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 17:05:57,632 django.server 23480 29516 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,811 django.server 23480 28812 code 400, message Bad request version ('¬|>')
+ERROR 2025-09-29 17:05:57,812 django.server 23480 28812 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,813 django.server 23480 14112 code 400, message Bad request version ('º\x02\x00S\x94\x8c\x82\x04e\x1b;°ÏñbJ\x8b&®Z\x96Ì°÷¡Û')
+ERROR 2025-09-29 17:05:57,815 django.server 23480 14112 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,819 django.server 23480 16464 code 400, message Bad request version ('Ù(=ÖÂ\x19p*¨y§¾aQ+4\x04.Ê\x03V\x7fù¸Õ1F9ó')
+ERROR 2025-09-29 17:05:57,820 django.server 23480 16464 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,821 django.server 23480 8624 code 400, message Bad request version ('\x00\x02\x01\x00\x00')
+ERROR 2025-09-29 17:05:57,826 django.server 23480 8624 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,985 django.server 23480 13188 code 400, message Bad request version ('\x96\x10ûS\x11K\x17"=¡ðáTQDßb\x92³ï¶Øý]ú\x90ÇRLP¬\x84\x00')
+ERROR 2025-09-29 17:05:57,986 django.server 23480 13188 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,986 django.server 23480 28140 code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03xÑoýkÑv')
+ERROR 2025-09-29 17:05:57,987 django.server 23480 28140 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,990 django.server 23480 25512 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2025-09-29 17:05:57,995 django.server 23480 25512 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:57,996 django.server 23480 28208 code 400, message Bad request version ('½ZÕ\x9búü=`z0\x92Y¾Râ^\x80\x93ºì')
+ERROR 2025-09-29 17:05:57,997 django.server 23480 28208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,344 django.server 23480 19920 code 400, message Bad request version ('\x0e¤\x02ù!/\x00')
+ERROR 2025-09-29 17:05:58,345 django.server 23480 19920 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,348 django.server 23480 5812 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-09-29 17:05:58,352 django.server 23480 5812 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,355 django.server 23480 12880 code 400, message Bad request version ('\xad\x00')
+ERROR 2025-09-29 17:05:58,357 django.server 23480 12880 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,362 django.server 23480 9100 code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03í"')
+ERROR 2025-09-29 17:05:58,365 django.server 23480 9100 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,520 django.server 23480 10116 code 400, message Bad request version ('\x99Ðô\x03vt¬)Å\x96ó|\x860I\x13oöy\x87\x99\x99ùæ¡µÃ\x87B¸ìw\x00Ð\x14Àê]\x8e¾2¬]ÍÎ\x87M¶¿¨³\x01ÆÑÑ<mS%\x9bþÈY\x9a\x80\x88Þä#?\x02|4;g·Ysn£v£«4j¨ÀÊè·')
+ERROR 2025-09-29 17:05:58,521 django.server 23480 10116 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,521 django.server 23480 27292 code 400, message Bad request version ('\x8fë§¶V³{¾tgª')
+ERROR 2025-09-29 17:05:58,526 django.server 23480 27292 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,530 django.server 23480 25544 code 400, message Bad request version ('\x8eJ\x92UY¦âm\x17¸Ur»G1\x0f\x96LQhú6À¥\x88Q±\x84\x10iR~¶U÷iå×pßHµö\x95±\x00\x87yÿ\x01\x00\x01\x00\x00')
+ERROR 2025-09-29 17:05:58,530 django.server 23480 25544 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,530 django.server 23480 7064 code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00')
+ERROR 2025-09-29 17:05:58,531 django.server 23480 7064 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,704 django.server 23480 3008 code 400, message Bad request version ('Å\x08\x81Ø»2ý\x9e]ÑÓtù^úA\x932:µ\x9ev^³^\x84ÂÆgò\x83\x12S\x8fÌ\x08)\x1b¤ü\x10Í\x10KvÜDIM¹Í§Ñã')
+ERROR 2025-09-29 17:05:58,705 django.server 23480 3008 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,705 django.server 23480 3220 code 400, message Bad request version ('f2?©G\x00')
+ERROR 2025-09-29 17:05:58,706 django.server 23480 3220 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,710 django.server 23480 10680 code 400, message Bad request version ('¸MLî')
+ERROR 2025-09-29 17:05:58,711 django.server 23480 10680 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,718 django.server 23480 9728 code 400, message Bad request version ('FæO\x00O4G\x02t¹\x00')
+ERROR 2025-09-29 17:05:58,720 django.server 23480 9728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,854 django.server 23480 21428 code 400, message Bad request version ('±Y¿ÿ§ß\x8eÏpHê')
+ERROR 2025-09-29 17:05:58,855 django.server 23480 21428 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,856 django.server 23480 1548 code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
+ERROR 2025-09-29 17:05:58,858 django.server 23480 1548 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,859 django.server 23480 30036 code 400, message Bad request version ('\x02h2\x08http/1.1\x003\x04ï\x04í')
+ERROR 2025-09-29 17:05:58,860 django.server 23480 30036 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:05:58,863 django.server 23480 860 code 400, message Bad request version ('¼L2]h\x9b½D\x10Ã\x8að\x8cF"DN6\x93O"\x91{W¶\x84\x01\xadQóÍ%V-\x128\x917D<ë;®D#lÌ¡X¹ð+\x9fÓz\'x¨Q\x02&\x805hæ\x82\x05\xad`¼\x8f\x95\x80\x7f8P\x92\x05\x15ôW¯U\x04tµW')
+ERROR 2025-09-29 17:05:58,864 django.server 23480 860 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:06:10,332 django.utils.autoreload 24968 13904 Watching for file changes with StatReloader
+INFO 2025-09-29 17:06:16,296 django.server 24968 24432 code 400, message Bad request version ('ÀÆ')
+ERROR 2025-09-29 17:06:16,305 django.server 24968 24432 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:06:16,308 django.server 24968 13396 code 400, message Bad request version ('\x81Á\x1aÀ\x1b\x1bk\x7f\x1bZ×Á÷Û?²¹ß|\x03\x19\x1a±\x88\x12\x19@\x06¯\x8c«ikÒW\x13')
+ERROR 2025-09-29 17:06:16,312 django.server 24968 13396 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:06:16,316 django.server 24968 24992 code 400, message Bad request version (';}\x04Ä¨Ézª\x19©')
+ERROR 2025-09-29 17:06:16,317 django.server 24968 24992 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 17:06:16,317 django.server 24968 23308 code 400, message Bad request version ('úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93úú\x00\x00\x00')
+ERROR 2025-09-29 17:06:16,318 django.server 24968 23308 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:37,671 django.server 24968 22116 code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x003\x04ï\x04íJJ\x00\x01\x00\x11ì\x04À£t4ê')
+INFO 2025-09-29 23:05:37,683 django.server 24968 30228 code 400, message Bad request version ("°£\x80±:;¶\x07°þZ[³¹£âBÐ\x15\x13åÂ\x16ùÕ¥dR\x9d¿\x16F\x00°\x91'\x997\x13üÖë7ÄP«\x03×È£\x10ÎJÀ\x86Û\x9fõõî0³¾í\x1b\\ÁO8Y\x8fÓ\x9a®]+Tjþ»ÍIBA&3ÍÉd]ü9\x14Þ-:\x820ïgwe6úw")
+ERROR 2025-09-29 23:05:37,695 django.server 24968 22116 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2025-09-29 23:05:37,696 django.server 24968 30228 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:37,710 django.server 24968 16940 code 400, message Bad request version ('B£')
+ERROR 2025-09-29 23:05:37,711 django.server 24968 16940 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:37,712 django.server 24968 8956 code 400, message Bad request version ('\x00\x02\x01\x00\x00\x12\x00\x00\x00+\x00\x07\x06::\x03\x04\x03\x03\x00')
+ERROR 2025-09-29 23:05:37,713 django.server 24968 8956 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:44,491 django.server 24968 14096 code 400, message Bad request version ('\\ùÍ2\x9bP´\x15tñ*ª\x05ç\x9d¥ª\x94lU\x00W\x81\x18"S#<\x89¾P6\x08Cg#Þ')
+ERROR 2025-09-29 23:05:44,492 django.server 24968 14096 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:44,519 django.server 24968 4424 code 400, message Bad request version ('\x16\x16')
+ERROR 2025-09-29 23:05:44,521 django.server 24968 4424 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:44,530 django.server 24968 10320 code 400, message Bad request version ('çä·q\x8d>\x9e=*')
+ERROR 2025-09-29 23:05:44,531 django.server 24968 10320 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-29 23:05:44,544 django.server 24968 26108 code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x98í\x14\x8d[ùàýbW\x11')
+ERROR 2025-09-29 23:05:44,545 django.server 24968 26108 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2025-09-30 16:20:54,856 django.utils.autoreload 25872 2052 Watching for file changes with StatReloader
+INFO 2025-09-30 16:21:19,640 django.server 25872 23264 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:21:21,578 django.server 25872 23264 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-09-30 16:23:14,929 django.utils.autoreload 25872 2052 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:23:17,222 django.utils.autoreload 10036 11424 Watching for file changes with StatReloader
+INFO 2025-09-30 16:23:17,774 django.server 10036 28316 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:23:18,145 django.server 10036 28316 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-09-30 16:23:20,414 django.server 10036 28316 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:23:20,548 django.server 10036 28316 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-09-30 16:23:21,834 django.server 10036 28316 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:23:21,985 django.server 10036 28316 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-09-30 16:23:38,148 django.utils.autoreload 9420 2508 Watching for file changes with StatReloader
+INFO 2025-09-30 16:23:49,521 django.server 9420 17856 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:23:49,718 django.server 9420 17856 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-09-30 16:24:46,299 django.utils.autoreload 9420 2508 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:24:47,942 django.utils.autoreload 1952 10020 Watching for file changes with StatReloader
+INFO 2025-09-30 16:24:48,533 django.server 1952 25660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:24:48,742 django.server 1952 25660 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:24:50,750 django.server 1952 25660 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:24:50,875 django.server 1952 25660 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:08,060 django.utils.autoreload 1952 10020 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:25:10,102 django.utils.autoreload 3432 15776 Watching for file changes with StatReloader
+INFO 2025-09-30 16:25:11,469 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:11,640 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:13,304 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:13,440 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:14,142 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:14,280 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:14,402 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:14,575 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:14,635 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:14,820 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:14,856 django.server 3432 16624 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:15,063 django.server 3432 16624 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:25:29,416 django.utils.autoreload 21788 29084 Watching for file changes with StatReloader
+INFO 2025-09-30 16:25:40,312 django.server 21788 27852 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:25:40,510 django.server 21788 27852 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:28:31,853 django.server 21788 18536 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:28:32,020 django.server 21788 18536 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-09-30 16:30:32,042 django.utils.autoreload 21788 29084 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:30:33,743 django.utils.autoreload 8748 18592 Watching for file changes with StatReloader
+INFO 2025-09-30 16:31:24,056 django.server 8748 25820 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:31:40,109 django.server 8748 25820 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:32:01,701 django.utils.autoreload 8748 18592 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:32:03,501 django.utils.autoreload 5792 744 Watching for file changes with StatReloader
+INFO 2025-09-30 16:32:23,626 django.utils.autoreload 5792 744 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:32:25,321 django.utils.autoreload 25712 23988 Watching for file changes with StatReloader
+INFO 2025-09-30 16:32:38,000 django.server 25712 24760 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:32:56,630 django.utils.autoreload 10052 12568 Watching for file changes with StatReloader
+INFO 2025-09-30 16:33:20,880 django.server 10052 4484 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:33:58,752 django.server 10052 4484 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:34:12,164 django.utils.autoreload 13980 1224 Watching for file changes with StatReloader
+INFO 2025-09-30 16:34:29,983 django.server 13980 2748 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:35:00,823 django.server 13980 2748 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:37:36,921 django.server 13980 20992 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:37:56,498 django.server 13980 28372 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:39:35,688 django.server 13980 6492 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:40:20,107 django.utils.autoreload 13980 1224 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:40:21,835 django.utils.autoreload 3240 9268 Watching for file changes with StatReloader
+INFO 2025-09-30 16:40:34,629 django.server 3240 13532 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:41:18,465 django.utils.autoreload 3240 9268 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:41:20,232 django.utils.autoreload 25872 21756 Watching for file changes with StatReloader
+INFO 2025-09-30 16:41:33,028 django.server 25872 22680 "GET /api/docs/ HTTP/1.1" 200 4655
+WARNING 2025-09-30 16:41:59,175 django.request 25872 10188 Not Found: /
+WARNING 2025-09-30 16:41:59,176 django.server 25872 10188 "GET / HTTP/1.1" 404 2913
+WARNING 2025-09-30 16:42:03,336 django.request 25872 10188 Not Found: /favicon.ico
+WARNING 2025-09-30 16:42:03,337 django.server 25872 10188 "GET /favicon.ico HTTP/1.1" 404 2964
+INFO 2025-09-30 16:42:12,393 django.server 25872 10188 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-30 16:42:12,733 django.server 25872 10188 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-09-30 16:42:13,071 django.server 25872 21320 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-09-30 16:42:13,094 django.server 25872 10188 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-09-30 16:42:13,104 django.server 25872 13272 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-09-30 16:42:13,107 django.server 25872 27304 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-09-30 16:42:13,108 django.server 25872 29316 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-09-30 16:42:13,127 django.server 25872 21320 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-09-30 16:42:13,140 django.server 25872 18360 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-09-30 16:44:45,538 django.server 25872 18868 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-30 16:44:45,546 django.server 25872 18868 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-09-30 16:44:50,927 django.server 25872 18868 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4357
+WARNING 2025-09-30 16:45:44,614 django.request 25872 8076 Not Found: /api/redocs/
+WARNING 2025-09-30 16:45:44,615 django.server 25872 8076 "GET /api/redocs/ HTTP/1.1" 404 6925
+INFO 2025-09-30 16:46:00,458 django.server 25872 8076 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-09-30 16:46:24,693 django.server 25872 14868 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-09-30 16:46:52,985 django.utils.autoreload 25872 21756 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-09-30 16:46:54,869 django.utils.autoreload 14780 4048 Watching for file changes with StatReloader
+INFO 2025-09-30 16:47:19,778 django.server 14780 21616 "GET /api/docs/ HTTP/1.1" 200 4655
+ERROR 2025-09-30 16:51:41,059 common.exceptions 14780 21616 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/auth/profile/
+WARNING 2025-09-30 16:51:41,061 django.request 14780 21616 Unauthorized: /api/auth/profile/
+WARNING 2025-09-30 16:51:41,061 django.server 14780 21616 "GET /api/auth/profile/ HTTP/1.1" 401 158
+WARNING 2025-09-30 16:51:45,219 django.request 14780 21616 Not Found: /favicon.ico
+WARNING 2025-09-30 16:51:45,219 django.server 14780 21616 "GET /favicon.ico HTTP/1.1" 404 179
+ERROR 2025-09-30 16:53:42,102 common.exceptions 14780 21616 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/auth/login/
+WARNING 2025-09-30 16:53:42,103 django.request 14780 21616 Method Not Allowed: /api/auth/login/
+WARNING 2025-09-30 16:53:42,103 django.server 14780 21616 "GET /api/auth/login/ HTTP/1.1" 405 141
+ERROR 2025-09-30 16:54:10,824 common.exceptions 14780 21616 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/auth/login/
+WARNING 2025-09-30 16:54:10,825 django.request 14780 21616 Method Not Allowed: /api/auth/login/
+WARNING 2025-09-30 16:54:10,825 django.server 14780 21616 "GET /api/auth/login/ HTTP/1.1" 405 141
+INFO 2025-09-30 16:55:33,092 django.server 14780 29796 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-09-30 16:57:00,710 django.server 14780 8756 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-09-30 17:00:03,449 django.server 14780 28764 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 07:14:13,720 django.server 14780 17780 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 08:23:11,515 django.server 14780 18672 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-10-01 12:20:56,788 django.utils.autoreload 17188 16120 Watching for file changes with StatReloader
+WARNING 2025-10-01 12:21:39,032 django.request 17188 5012 Not Found: /
+WARNING 2025-10-01 12:21:39,034 django.server 17188 5012 "GET / HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:39,161 django.request 17188 5012 Not Found: /favicon.ico
+WARNING 2025-10-01 12:21:39,163 django.server 17188 5012 "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-10-01 12:21:43,825 django.server 17188 5012 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-10-01 12:21:44,139 django.server 17188 5012 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+WARNING 2025-10-01 12:21:44,171 django.request 17188 5012 Not Found: /static/admin/css/base.css
+WARNING 2025-10-01 12:21:44,173 django.request 17188 5020 Not Found: /static/admin/css/dark_mode.css
+WARNING 2025-10-01 12:21:44,174 django.server 17188 5020 "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,175 django.server 17188 5012 "GET /static/admin/css/base.css HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,177 django.request 17188 5020 Not Found: /static/admin/css/nav_sidebar.css
+WARNING 2025-10-01 12:21:44,178 django.server 17188 5020 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,181 django.request 17188 5012 Not Found: /static/admin/css/login.css
+WARNING 2025-10-01 12:21:44,182 django.request 17188 5020 Not Found: /static/admin/css/responsive.css
+WARNING 2025-10-01 12:21:44,184 django.server 17188 5020 "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,183 django.server 17188 5012 "GET /static/admin/css/login.css HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,190 django.request 17188 5020 Not Found: /static/admin/js/nav_sidebar.js
+WARNING 2025-10-01 12:21:44,193 django.server 17188 5020 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+WARNING 2025-10-01 12:21:44,192 django.request 17188 5012 Not Found: /static/admin/js/theme.js
+WARNING 2025-10-01 12:21:44,200 django.server 17188 5012 "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+INFO 2025-10-01 12:22:07,270 django.server 17188 5012 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-10-01 12:22:09,055 django.server 17188 5012 "GET /api/schema/ HTTP/1.1" 200 38546
+INFO 2025-10-01 12:34:54,629 django.server 17188 14588 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 12:34:59,454 django.server 17188 14588 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 12:43:54,840 django.server 17188 16784 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 12:43:56,441 django.server 17188 16784 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 12:44:08,585 django.server 17188 16784 "GET /api/health/ HTTP/1.1" 200 235
+INFO 2025-10-01 12:45:03,716 django.utils.autoreload 8208 14752 Watching for file changes with StatReloader
+INFO 2025-10-01 13:01:02,983 django.server 8208 12972 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:01:18,839 django.server 8208 12972 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:14:01,211 django.utils.autoreload 4576 16344 Watching for file changes with StatReloader
+INFO 2025-10-01 13:14:24,409 django.server 4576 16296 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:14:40,754 django.server 4576 16296 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:18:05,164 django.utils.autoreload 14556 9788 Watching for file changes with StatReloader
+INFO 2025-10-01 13:18:26,605 django.server 14556 5976 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:22:26,216 django.utils.autoreload 14556 9788 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 13:22:28,923 django.utils.autoreload 7516 17016 Watching for file changes with StatReloader
+INFO 2025-10-01 13:24:14,982 django.server 7516 15720 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:25:43,499 django.utils.autoreload 15008 16680 Watching for file changes with StatReloader
+INFO 2025-10-01 13:25:55,927 django.server 15008 16452 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:25:56,346 django.server 15008 16452 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 13:32:58,613 django.server 15008 5788 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:32:58,930 django.server 15008 5788 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 13:33:18,771 django.utils.autoreload 11368 11676 Watching for file changes with StatReloader
+INFO 2025-10-01 13:33:42,935 django.server 11368 3412 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:33:58,300 django.utils.autoreload 15744 8436 Watching for file changes with StatReloader
+INFO 2025-10-01 13:34:12,472 django.server 15744 17388 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:37:41,999 django.utils.autoreload 15744 8436 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 13:37:43,947 django.utils.autoreload 2408 13928 Watching for file changes with StatReloader
+INFO 2025-10-01 13:38:00,499 django.server 2408 6808 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:38:08,669 django.utils.autoreload 8268 6464 Watching for file changes with StatReloader
+INFO 2025-10-01 13:38:27,682 django.server 8268 3808 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:39:12,906 django.utils.autoreload 8268 6464 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 13:39:14,552 django.utils.autoreload 14744 12444 Watching for file changes with StatReloader
+INFO 2025-10-01 13:41:31,197 django.utils.autoreload 14092 16536 Watching for file changes with StatReloader
+INFO 2025-10-01 13:41:44,099 django.server 14092 5648 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:44:48,456 django.utils.autoreload 13788 15476 Watching for file changes with StatReloader
+INFO 2025-10-01 13:45:06,033 django.server 13788 10052 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:45:21,075 django.server 13788 10052 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:46:56,891 django.utils.autoreload 9720 8948 Watching for file changes with StatReloader
+INFO 2025-10-01 13:47:05,384 django.server 9720 8024 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:47:05,753 django.server 9720 8024 "GET /api/schema/ HTTP/1.1" 200 79311
+INFO 2025-10-01 13:47:19,376 django.server 9720 8024 "GET /api/health/ HTTP/1.1" 200 235
+INFO 2025-10-01 13:49:54,900 django.utils.autoreload 9720 8948 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 13:49:57,000 django.utils.autoreload 5436 12084 Watching for file changes with StatReloader
+INFO 2025-10-01 13:50:00,739 django.server 5436 12068 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:50:01,004 django.server 5436 12068 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 13:52:25,243 django.utils.autoreload 5436 12084 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 13:52:27,165 django.utils.autoreload 13780 17100 Watching for file changes with StatReloader
+INFO 2025-10-01 13:52:30,550 django.server 13780 14276 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:52:30,798 django.server 13780 14276 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 13:53:08,746 django.server 13780 14276 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 13:53:08,946 django.server 13780 14276 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 13:55:36,216 django.utils.autoreload 9220 14012 Watching for file changes with StatReloader
+INFO 2025-10-01 13:56:01,027 django.server 9220 17340 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 14:06:24,590 django.server 9220 8476 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 14:07:13,568 django.utils.autoreload 13576 6600 Watching for file changes with StatReloader
+INFO 2025-10-01 14:07:40,981 django.server 13576 10636 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 14:07:41,326 django.server 13576 10636 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 14:42:56,549 django.server 13576 16436 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 14:42:56,918 django.server 13576 16436 "GET /api/schema/ HTTP/1.1" 200 79310
+INFO 2025-10-01 14:44:01,568 django.utils.autoreload 10996 17108 Watching for file changes with StatReloader
+INFO 2025-10-01 14:44:06,613 django.server 10996 14384 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 14:44:07,321 django.server 10996 14384 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 14:58:07,489 django.server 10996 3412 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 15:25:24,217 django.utils.autoreload 10996 17108 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\urls.py changed, reloading.
+INFO 2025-10-01 15:25:26,680 django.utils.autoreload 17288 15340 Watching for file changes with StatReloader
+INFO 2025-10-01 15:26:16,100 django.utils.autoreload 17288 15340 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\urls.py changed, reloading.
+INFO 2025-10-01 15:26:17,641 django.utils.autoreload 12952 1960 Watching for file changes with StatReloader
+INFO 2025-10-01 15:43:40,244 django.utils.autoreload 13240 7264 Watching for file changes with StatReloader
+INFO 2025-10-01 15:43:46,464 django.server 13240 14296 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:43:46,480 django.request 13240 14296 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:43:46,481 django.request 13240 11836 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:43:46,483 django.server 13240 11836 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:43:46,485 django.server 13240 14296 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:43:46,559 django.request 13240 14296 Not Found: /favicon.ico
+WARNING 2025-10-01 15:43:46,563 django.server 13240 14296 "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:53,618 django.server 13240 1336 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:53,687 django.request 13240 1336 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:53,688 django.request 13240 1232 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:53,689 django.server 13240 1232 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:53,690 django.server 13240 1336 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:54,990 django.server 13240 1336 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:55,025 django.request 13240 1336 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:55,032 django.request 13240 1232 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:55,036 django.server 13240 1336 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:55,039 django.server 13240 1232 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:55,929 django.server 13240 1232 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:55,953 django.request 13240 1232 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:55,955 django.request 13240 1336 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:55,960 django.server 13240 1336 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:55,956 django.server 13240 1232 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:56,834 django.server 13240 1336 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:56,857 django.request 13240 1336 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:56,859 django.request 13240 1232 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:56,860 django.server 13240 1232 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:56,861 django.server 13240 1336 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:57,467 django.server 13240 1336 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:57,488 django.request 13240 1232 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:57,489 django.request 13240 1336 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:57,491 django.server 13240 1232 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:57,493 django.server 13240 1336 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:57,654 django.server 13240 1336 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:57,673 django.request 13240 1336 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:57,676 django.request 13240 1232 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:57,677 django.server 13240 1336 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:57,678 django.server 13240 1232 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:58,159 django.server 13240 14136 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:58,170 django.request 13240 14136 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:58,172 django.request 13240 15508 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:58,173 django.server 13240 15508 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:58,173 django.server 13240 14136 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:58,222 django.server 13240 14136 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:58,241 django.request 13240 14136 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:58,243 django.request 13240 15508 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:58,243 django.server 13240 14136 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:58,244 django.server 13240 15508 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:58,431 django.server 13240 15508 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:58,452 django.request 13240 14136 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:58,453 django.request 13240 15508 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:58,454 django.server 13240 14136 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:58,457 django.server 13240 15508 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:44:58,650 django.server 13240 15508 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:44:58,670 django.request 13240 15508 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:44:58,671 django.request 13240 14136 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:44:58,672 django.server 13240 14136 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:44:58,672 django.server 13240 15508 "GET /static/css/style.css HTTP/1.1" 404 179
+ERROR 2025-10-01 15:45:17,286 django.request 13240 16452 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+ERROR 2025-10-01 15:45:17,484 django.server 13240 16452 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:45:21,609 django.request 13240 6480 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+ERROR 2025-10-01 15:45:21,614 django.server 13240 6480 "GET / HTTP/1.1" 500 145
+INFO 2025-10-01 15:45:38,677 django.server 13240 7524 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:45:38,690 django.request 13240 7524 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:45:38,690 django.request 13240 14384 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:45:38,691 django.server 13240 7524 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:45:38,692 django.server 13240 14384 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:45:42,144 django.server 13240 14384 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 15:45:42,459 django.server 13240 14384 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 15:45:48,264 django.server 13240 3364 "GET / HTTP/1.1" 200 8911
+WARNING 2025-10-01 15:45:48,280 django.request 13240 3364 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:45:48,282 django.server 13240 3364 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:45:48,286 django.request 13240 3364 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:45:48,287 django.server 13240 3364 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:45:48,340 django.request 13240 3364 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:45:48,341 django.server 13240 3364 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:46:59,137 django.server 13240 4668 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:46:59,152 django.request 13240 4668 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:46:59,153 django.request 13240 16512 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:46:59,153 django.server 13240 4668 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:46:59,156 django.server 13240 16512 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:47:10,464 django.server 13240 10088 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:47:10,477 django.request 13240 10088 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:47:10,479 django.request 13240 7728 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:47:10,479 django.server 13240 7728 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:47:10,479 django.server 13240 10088 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:48:23,349 django.utils.autoreload 10008 12580 Watching for file changes with StatReloader
+INFO 2025-10-01 15:48:32,434 django.server 10008 15760 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:48:32,448 django.request 10008 15760 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:48:32,448 django.request 10008 2204 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:48:32,449 django.server 10008 15760 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:48:32,449 django.server 10008 2204 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:48:34,746 django.server 10008 16368 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:48:34,759 django.request 10008 16368 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:48:34,761 django.server 10008 16368 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:48:34,764 django.request 10008 16972 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:48:34,766 django.server 10008 16972 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:48:35,983 django.server 10008 16972 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:48:36,004 django.request 10008 16368 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:48:36,005 django.request 10008 16972 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:48:36,006 django.server 10008 16972 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:48:36,006 django.server 10008 16368 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:48:40,832 django.server 10008 16368 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:48:40,864 django.request 10008 16368 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:48:40,867 django.request 10008 16972 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:48:40,867 django.server 10008 16972 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:48:40,869 django.server 10008 16368 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:50:00,314 django.utils.autoreload 10008 12580 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\urls.py changed, reloading.
+INFO 2025-10-01 15:50:02,443 django.utils.autoreload 15228 13444 Watching for file changes with StatReloader
+INFO 2025-10-01 15:50:08,716 django.server 15228 16288 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:50:08,731 django.request 15228 16288 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:50:08,732 django.request 15228 14260 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:50:08,733 django.server 15228 14260 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:50:08,733 django.server 15228 16288 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:50:09,671 django.server 15228 14260 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:50:09,691 django.request 15228 16288 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:50:09,692 django.request 15228 14260 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:50:09,694 django.server 15228 16288 "GET /static/js/app.js HTTP/1.1" 404 179
+WARNING 2025-10-01 15:50:09,696 django.server 15228 14260 "GET /static/css/style.css HTTP/1.1" 404 179
+INFO 2025-10-01 15:50:10,975 django.server 15228 14260 "GET / HTTP/1.1" 200 8637
+WARNING 2025-10-01 15:50:10,995 django.request 15228 14260 Not Found: /static/css/style.css
+WARNING 2025-10-01 15:50:10,996 django.request 15228 16288 Not Found: /static/js/app.js
+WARNING 2025-10-01 15:50:10,998 django.server 15228 14260 "GET /static/css/style.css HTTP/1.1" 404 179
+WARNING 2025-10-01 15:50:11,001 django.server 15228 16288 "GET /static/js/app.js HTTP/1.1" 404 179
+INFO 2025-10-01 15:51:48,637 django.utils.autoreload 15228 13444 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\settings\base.py changed, reloading.
+INFO 2025-10-01 15:51:50,558 django.utils.autoreload 5432 8384 Watching for file changes with StatReloader
+INFO 2025-10-01 15:55:55,030 django.utils.autoreload 9484 11620 Watching for file changes with StatReloader
+ERROR 2025-10-01 15:56:05,261 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:56:05,344 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:56:08,239 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:56:08,244 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:00,517 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:00,521 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:01,425 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:01,431 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:01,641 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:01,647 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:01,796 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:01,803 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:12,685 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:12,688 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:13,528 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:13,538 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:13,761 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:13,772 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:13,947 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:13,950 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:14,168 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:14,177 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 15:57:52,172 django.request 9484 7636 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 15:57:52,177 django.server 9484 7636 "GET / HTTP/1.1" 500 145
+ERROR 2025-10-01 16:00:17,577 django.request 9484 6852 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+           ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 203, in url
+    return self._url(self.stored_name, name, force)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 182, in _url
+    hashed_name = hashed_name_func(*args)
+  File "C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\venv\Lib\site-packages\django\contrib\staticfiles\storage.py", line 513, in stored_name
+    raise ValueError(
+        "Missing staticfiles manifest entry for '%s'" % clean_name
+    )
+ValueError: Missing staticfiles manifest entry for 'css/style.css'
+ERROR 2025-10-01 16:00:17,582 django.server 9484 6852 "GET / HTTP/1.1" 500 145
+INFO 2025-10-01 16:01:21,474 django.utils.autoreload 15788 8588 Watching for file changes with StatReloader
+INFO 2025-10-01 16:01:29,383 django.server 15788 3092 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-01 16:01:29,681 django.server 15788 3092 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-01 16:01:33,531 django.server 15788 3092 "GET / HTTP/1.1" 200 8937
+INFO 2025-10-01 16:01:33,586 django.server 15788 14384 "GET /static/js/app.e38215bcd307.js HTTP/1.1" 200 3643
+INFO 2025-10-01 16:01:33,602 django.server 15788 3092 "GET /static/css/style.080896186109.css HTTP/1.1" 200 1961
+INFO 2025-10-01 16:01:33,903 django.server 15788 14384 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-01 16:01:33,903 django.server 15788 3092 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-01 16:02:53,967 django.server 15788 4672 "GET /api/polls/a4050f7b-2021-467f-b39a-b26eee43282f/ HTTP/1.1" 200 1410
+INFO 2025-10-01 16:03:01,038 django.server 15788 4672 "GET /api/polls/d812613f-de60-45e9-bd08-9045fab05b2a/ HTTP/1.1" 200 1544
+INFO 2025-10-01 16:03:06,366 django.server 15788 4672 "GET /api/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/ HTTP/1.1" 200 1220
+INFO 2025-10-01 16:04:08,519 django.server 15788 1880 "GET / HTTP/1.1" 200 8940
+INFO 2025-10-01 16:04:08,549 django.server 15788 13580 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-01 16:04:08,559 django.server 15788 1880 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-01 16:07:47,106 django.server 15788 12668 "GET /api/polls/?category=21315e90-6545-4cdb-973b-d85b55dc9ef2& HTTP/1.1" 200 52
+INFO 2025-10-01 16:07:51,808 django.server 15788 12668 "GET /api/polls/?category=fdd75574-6c90-4256-b772-142958f6dcf3& HTTP/1.1" 200 1145
+INFO 2025-10-01 16:07:56,304 django.server 15788 1936 "GET /api/polls/?category=5349676e-8d44-4349-9463-4ca6bafbd119& HTTP/1.1" 200 52
+INFO 2025-10-01 16:08:00,444 django.server 15788 1936 "GET /api/polls/? HTTP/1.1" 200 1650
+INFO 2025-10-02 20:58:30,359 django.utils.autoreload 13348 2364 Watching for file changes with StatReloader
+INFO 2025-10-03 09:55:45,792 django.utils.autoreload 3080 5352 Watching for file changes with StatReloader
+INFO 2025-10-03 09:56:14,498 django.utils.autoreload 2276 14128 Watching for file changes with StatReloader
+WARNING 2025-10-03 10:00:29,042 django.request 2276 10388 Not Found: /favicon.ico
+WARNING 2025-10-03 10:00:29,046 django.server 2276 10388 "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2025-10-03 10:47:14,653 django.server 2276 7284 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-03 10:47:15,571 django.server 2276 7284 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-03 10:47:22,344 django.server 2276 7284 "GET / HTTP/1.1" 200 8940
+INFO 2025-10-03 10:47:22,789 django.server 2276 10108 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 10:47:22,792 django.server 2276 7284 "GET /api/categories/ HTTP/1.1" 200 960
+WARNING 2025-10-03 10:47:32,873 django.request 2276 7284 Not Found: /presentation
+WARNING 2025-10-03 10:47:32,873 django.server 2276 7284 "GET /presentation HTTP/1.1" 404 179
+INFO 2025-10-03 10:47:44,266 django.server 2276 7284 "GET / HTTP/1.1" 200 8940
+INFO 2025-10-03 10:47:44,323 django.server 2276 7284 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 10:47:44,342 django.server 2276 10108 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:11:35,014 django.server 2276 12104 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-03 12:11:35,245 django.server 2276 12104 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-03 12:13:00,450 django.utils.autoreload 21440 20296 Watching for file changes with StatReloader
+INFO 2025-10-03 12:13:36,889 django.server 21440 21280 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-03 12:13:37,120 django.server 21440 21280 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-03 12:13:58,896 django.server 21440 8980 "GET / HTTP/1.1" 200 8940
+INFO 2025-10-03 12:13:59,080 django.server 21440 8980 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 12:13:59,087 django.server 21440 9816 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:19:35,797 django.server 21440 7232 "GET / HTTP/1.1" 200 8940
+INFO 2025-10-03 12:19:35,815 django.server 21440 7232 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 12:19:35,934 django.server 21440 15664 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:20:22,895 django.server 21440 15664 "GET / HTTP/1.1" 200 8944
+INFO 2025-10-03 12:20:22,914 django.server 21440 15664 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 12:20:22,914 django.server 21440 7232 "GET /api/polls/ HTTP/1.1" 200 1650
+WARNING 2025-10-03 12:21:11,089 django.request 21440 7232 Not Found: /presentation
+WARNING 2025-10-03 12:21:11,090 django.server 21440 7232 "GET /presentation HTTP/1.1" 404 179
+WARNING 2025-10-03 12:21:15,968 django.request 21440 7232 Not Found: /presentation/
+WARNING 2025-10-03 12:21:15,972 django.server 21440 7232 "GET /presentation/ HTTP/1.1" 404 179
+INFO 2025-10-03 12:22:15,496 django.utils.autoreload 21440 20296 C:\Users\RevFavour\Documents\dev\capstone\poll-system-backend\poll_system\urls.py changed, reloading.
+INFO 2025-10-03 12:22:17,539 django.utils.autoreload 21316 17476 Watching for file changes with StatReloader
+INFO 2025-10-03 12:22:20,570 django.server 21316 5180 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:22:20,599 django.server 21316 5180 "GET /static/css/presentation.795852122449.css HTTP/1.1" 200 2108
+INFO 2025-10-03 12:22:20,600 django.server 21316 2972 "GET /static/js/presentation.ac92141575b4.js HTTP/1.1" 200 4428
+INFO 2025-10-03 12:29:45,486 django.server 21316 11640 "GET /presentation HTTP/1.1" 301 0
+INFO 2025-10-03 12:29:45,501 django.server 21316 4028 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:29:50,144 django.server 21316 4028 "GET / HTTP/1.1" 200 9018
+INFO 2025-10-03 12:29:50,279 django.server 21316 4028 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 12:29:50,318 django.server 21316 1804 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:29:55,191 django.server 21316 1804 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:30:01,812 django.server 21316 1804 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:31:30,223 django.server 21316 460 "GET / HTTP/1.1" 200 9155
+INFO 2025-10-03 12:31:30,242 django.server 21316 460 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 12:31:30,243 django.server 21316 20992 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:31:35,223 django.server 21316 20992 "GET /api/polls/ HTTP/1.1" 200 1650
+INFO 2025-10-03 12:31:36,128 django.server 21316 20992 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:31:48,112 django.server 21316 20992 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-10-03 12:31:49,380 django.server 21316 20992 "GET /api/schema/ HTTP/1.1" 200 38561
+INFO 2025-10-03 12:31:56,099 django.server 21316 20992 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-03 12:31:56,320 django.server 21316 20992 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-03 12:32:24,864 django.server 21316 2788 "GET /api/redoc/ HTTP/1.1" 200 738
+INFO 2025-10-03 12:32:25,103 django.server 21316 2788 "GET /api/schema/ HTTP/1.1" 200 38561
+INFO 2025-10-03 12:32:28,971 django.server 21316 2788 "GET /api/docs/ HTTP/1.1" 200 4655
+INFO 2025-10-03 12:32:29,112 django.server 21316 2788 "GET /api/schema/ HTTP/1.1" 200 79325
+INFO 2025-10-03 12:32:31,739 django.server 21316 2788 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:42:14,104 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:43:20,723 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:43:28,379 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:46:02,459 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:46:07,754 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:49:54,340 django.server 21316 21116 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 12:59:43,897 django.server 21316 21284 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:26:01,916 django.server 21316 7004 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:27:15,021 django.utils.autoreload 1084 21100 Watching for file changes with StatReloader
+INFO 2025-10-03 13:27:24,809 django.server 1084 284 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:27:24,836 django.server 1084 284 "GET /static/js/presentation.05d09cc4e68d.js HTTP/1.1" 200 4563
+INFO 2025-10-03 13:27:28,708 django.server 1084 284 "GET /static/images/presentation/erd_diagram.jpg HTTP/1.1" 200 120973
+INFO 2025-10-03 13:27:42,847 django.server 1084 3020 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 200 741409
+INFO 2025-10-03 13:27:42,849 django.server 1084 4432 "GET /static/images/presentation/account_creation.png HTTP/1.1" 200 867046
+INFO 2025-10-03 13:27:42,856 django.server 1084 15548 "GET /static/images/presentation/poll_result.png HTTP/1.1" 200 722509
+INFO 2025-10-03 13:28:29,125 django.server 1084 3092 "GET /static/images/presentation/erd_diagram.jpg HTTP/1.1" 304 0
+INFO 2025-10-03 13:33:39,827 django.server 1084 19056 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:33:43,023 django.server 1084 19056 "GET /static/images/presentation/erd_diagram.jpg HTTP/1.1" 304 0
+INFO 2025-10-03 13:33:43,842 django.server 1084 9280 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:33:43,842 django.server 1084 14156 "GET /static/images/presentation/poll_result.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:33:43,842 django.server 1084 19056 "GET /static/images/presentation/account_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:34:33,638 django.utils.autoreload 18756 13348 Watching for file changes with StatReloader
+INFO 2025-10-03 13:34:41,863 django.server 18756 18772 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:34:41,898 django.server 18756 18772 "GET /static/css/presentation.c101a7458fc1.css HTTP/1.1" 200 2105
+INFO 2025-10-03 13:34:44,855 django.server 18756 18772 "GET /static/images/presentation/erd_diagram.jpg HTTP/1.1" 304 0
+INFO 2025-10-03 13:34:45,553 django.server 18756 13216 "GET /static/images/presentation/poll_result.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:34:45,553 django.server 18756 18772 "GET /static/images/presentation/account_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:34:45,553 django.server 18756 21436 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:45:26,623 django.server 18756 20000 "GET /static/images/presentation/erd_diagram.jpg HTTP/1.1" 304 0
+INFO 2025-10-03 13:50:22,521 django.utils.autoreload 2392 15076 Watching for file changes with StatReloader
+INFO 2025-10-03 13:50:31,220 django.server 2392 14764 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:50:31,253 django.server 2392 21180 "GET /static/js/presentation.b24f679a6ca1.js HTTP/1.1" 200 4589
+INFO 2025-10-03 13:50:31,254 django.server 2392 14764 "GET /static/css/presentation.72ffb448cb44.css HTTP/1.1" 200 2108
+INFO 2025-10-03 13:50:34,518 django.server 2392 14764 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 200 675929
+INFO 2025-10-03 13:50:36,282 django.server 2392 21180 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 200 261236
+INFO 2025-10-03 13:50:36,284 django.server 2392 14764 "GET /static/images/presentation/account_creation.png HTTP/1.1" 200 194444
+INFO 2025-10-03 13:50:36,288 django.server 2392 13952 "GET /static/images/presentation/poll_result.png HTTP/1.1" 200 253851
+INFO 2025-10-03 13:50:43,059 django.server 2392 13952 "GET /static/images/presentation/clean_code.png HTTP/1.1" 200 321846
+INFO 2025-10-03 13:51:40,983 django.server 2392 14764 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:51:40,983 django.server 2392 13952 "GET /static/images/presentation/account_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:51:40,983 django.server 2392 21180 "GET /static/images/presentation/poll_result.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:51:41,997 django.server 2392 21180 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 304 0
+INFO 2025-10-03 13:53:33,604 django.utils.autoreload 16464 18788 Watching for file changes with StatReloader
+INFO 2025-10-03 13:53:39,373 django.server 16464 15224 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:53:39,409 django.server 16464 15224 "GET /static/css/presentation.4740e6d80db2.css HTTP/1.1" 200 2116
+INFO 2025-10-03 13:53:44,140 django.server 16464 15224 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 304 0
+INFO 2025-10-03 13:56:37,031 django.utils.autoreload 15800 13980 Watching for file changes with StatReloader
+INFO 2025-10-03 13:56:44,867 django.server 15800 4996 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:56:44,898 django.server 15800 4996 "GET /static/css/presentation.57afcc165a13.css HTTP/1.1" 200 2119
+INFO 2025-10-03 13:56:44,910 django.server 15800 18268 "GET /static/js/presentation.9c9785ed440a.js HTTP/1.1" 200 4593
+INFO 2025-10-03 13:56:47,596 django.server 15800 18268 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 304 0
+INFO 2025-10-03 13:57:44,429 django.utils.autoreload 10384 7960 Watching for file changes with StatReloader
+INFO 2025-10-03 13:57:52,455 django.server 10384 15400 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 13:57:52,486 django.server 10384 15400 "GET /static/css/presentation.a91d7bfb6bef.css HTTP/1.1" 200 2113
+INFO 2025-10-03 13:57:52,499 django.server 10384 3524 "GET /static/js/presentation.0fe786ede43c.js HTTP/1.1" 200 4593
+INFO 2025-10-03 13:57:56,652 django.server 10384 3524 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 304 0
+INFO 2025-10-03 13:58:18,030 django.server 10384 3524 "GET /static/images/presentation/account_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:58:18,031 django.server 10384 15400 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:58:18,031 django.server 10384 16188 "GET /static/images/presentation/poll_result.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:58:21,701 django.server 10384 21256 "GET /static/images/presentation/clean_code.png HTTP/1.1" 304 0
+INFO 2025-10-03 13:59:48,015 django.utils.autoreload 17512 11256 Watching for file changes with StatReloader
+INFO 2025-10-03 14:00:01,096 django.server 17512 12348 "GET /presentation/ HTTP/1.1" 200 415
+INFO 2025-10-03 14:00:01,125 django.server 17512 12348 "GET /static/css/presentation.ff58f6338f4f.css HTTP/1.1" 200 2116
+INFO 2025-10-03 14:00:01,125 django.server 17512 12244 "GET /static/js/presentation.2c8557318639.js HTTP/1.1" 200 4594
+INFO 2025-10-03 14:00:04,267 django.server 17512 12244 "GET /static/images/presentation/erd_diagram.svg HTTP/1.1" 304 0
+INFO 2025-10-03 14:00:08,383 django.server 17512 12392 "GET /static/images/presentation/poll_result.png HTTP/1.1" 304 0
+INFO 2025-10-03 14:00:08,383 django.server 17512 12244 "GET /static/images/presentation/account_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 14:00:08,387 django.server 17512 12348 "GET /static/images/presentation/poll_creation.png HTTP/1.1" 304 0
+INFO 2025-10-03 14:00:09,218 django.server 17512 12244 "GET /static/images/presentation/clean_code.png HTTP/1.1" 304 0
+INFO 2025-10-03 14:00:16,587 django.server 17512 18280 "GET /static/images/presentation/swagger_docs.png HTTP/1.1" 200 98633
+WARNING 2025-10-03 14:02:44,434 django.request 17512 12988 Bad Request: /api/auth/login/
+WARNING 2025-10-03 14:02:44,435 django.server 17512 12988 "POST /api/auth/login/ HTTP/1.1" 400 53
+WARNING 2025-10-03 14:02:52,082 django.request 17512 12988 Bad Request: /api/auth/login/
+WARNING 2025-10-03 14:02:52,083 django.server 17512 12988 "POST /api/auth/login/ HTTP/1.1" 400 53
+WARNING 2025-10-03 14:04:53,093 django.request 17512 12988 Bad Request: /api/auth/login/
+WARNING 2025-10-03 14:04:53,094 django.server 17512 12988 "POST /api/auth/login/ HTTP/1.1" 400 53
+INFO 2025-10-03 14:05:11,696 django.server 17512 12988 "GET / HTTP/1.1" 200 9155
+INFO 2025-10-03 14:05:11,853 django.server 17512 12988 "GET /api/categories/ HTTP/1.1" 200 960
+INFO 2025-10-03 14:05:11,952 django.server 17512 12988 "GET /api/polls/ HTTP/1.1" 200 1650
+WARNING 2025-10-03 14:05:26,768 django.request 17512 12988 Bad Request: /api/auth/login/
+WARNING 2025-10-03 14:05:26,770 django.server 17512 12988 "POST /api/auth/login/ HTTP/1.1" 400 53
