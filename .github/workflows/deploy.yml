@@ -220,6 +220,7 @@ jobs:
 
             # Pull latest code
             echo "📥 Pulling latest code..."
+            git stash // added to ensure that the server logs do not block pulling
             git pull origin main
 
             # Stop existing containers (but preserve ngrok)

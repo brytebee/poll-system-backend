@@ -1,6 +1,6 @@
 # Poll System Backend
 
-A robust Django REST API for creating and managing online polls with real-time voting capabilities.
+A robust Django REST API for creating and managing online polls with real-time voting capabilities. I created a simple [Frontend](https://37ae27a7e64b.ngrok-free.app/) and a [presentation slide](https://37ae27a7e64b.ngrok-free.app/presentation/). I created a [Github Action](https://github.com/brytebee/poll-system-backend/actions) pipeline that ensure that every code and feature added run all previous tests to ensure nothing is broken. The pipeline then deploys to digital ocean where I have used Ngrok to configure a domain and afterwards returns feedback notification.
 
 ## Entity Relationship Diagram (ERD)
 
