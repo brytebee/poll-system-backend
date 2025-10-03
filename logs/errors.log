@@ -195,3 +195,6 @@ ERROR 2025-09-25 16:32:53,703 common.exceptions 28056 21468 API Error: InvalidTo
 ERROR 2025-09-25 16:38:01,901 common.exceptions 28384 29416 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/24811685-1e29-43eb-99f4-242299d84b69/
 ERROR 2025-09-25 16:45:42,440 common.exceptions 28384 30172 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
 ERROR 2025-09-25 16:46:00,787 common.exceptions 28384 25564 API Error: Http404 - An error occurred - Status: 404 - Path: /api/polls/25e6ac20-89af-4224-aeb5-69af5a02e611/
+ERROR 2025-09-30 16:51:41,059 common.exceptions 14780 21616 API Error: NotAuthenticated - An error occurred - Status: 401 - Path: /api/auth/profile/
+ERROR 2025-09-30 16:53:42,102 common.exceptions 14780 21616 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/auth/login/
+ERROR 2025-09-30 16:54:10,824 common.exceptions 14780 21616 API Error: MethodNotAllowed - An error occurred - Status: 405 - Path: /api/auth/login/

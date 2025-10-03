@@ -18,7 +18,7 @@ def generate_secret_key():
 # Use generated secret key (generate once and use in .env file)
 SECRET_KEY = config('SECRET_KEY', default=generate_secret_key())
 DEBUG = config('DEBUG', default=False, cast=bool)
-ENV = config('ENV', default='prod')
+ENV = config('ENV', default='dev')
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
@@ -60,6 +60,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE_BASE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -126,6 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -161,7 +163,7 @@ if not DEBUG:
 
 # CORS Settings
 if DEBUG:
-    CORS_ALLOW_ALL_ORIGINS = False
+    CORS_ALLOW_ALL_ORIGINS = True
     CORS_ALLOWED_ORIGINS = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
@@ -170,7 +172,7 @@ if DEBUG:
 else:
     CORS_ALLOWED_ORIGINS = config(
         'CORS_ALLOWED_ORIGINS',
-        default='https://yourdomain.com',
+        default='https://37ae27a7e64b.ngrok-free.app/',
         cast=lambda v: [s.strip() for s in v.split(',')]
     )
 
@@ -201,7 +203,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-    ],
+    ] + (['rest_framework.renderers.BrowsableAPIRenderer'] if DEBUG or ENV == 'dev' else []),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
@@ -411,8 +413,9 @@ SPECTACULAR_SETTINGS = {
     'SCHEMA_PATH_PREFIX': '/api/',
     'SERVERS': [
         {
-            'url': 'http://localhost:8000' if DEBUG else config('API_BASE_URL', default='https://api.yourdomain.com'),
-            'description': 'Development server' if DEBUG else 'Production server'
+            'url': 'https://37ae27a7e64b.ngrok-free.app' if ENV=="dev" else config('API_BASE_URL', default='https://37ae27a7e64b.ngrok-free.app'),
+            # 'url': 'http://localhost:8000' if DEBUG else config('API_BASE_URL', default='https://37ae27a7e64b.ngrok-free.app'),
+            'description': 'Development server' if ENV=="dev" else 'Production server'
         },
     ],
     'TAGS': [

@@ -43,24 +43,22 @@ Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "title": "Should all programmers learn CSS",
-    "description": "A poll to determine all developers should learn CSS",
-    "category": {
-        "name": "Technology",
-        "description": "Polls related to technology and programming"
-    },
+    "title": "What programming language should a beginner start with?",
+    "description": "A poll to determine beginner friedly programming language",
+    "category":
+        "d86c36c3-49b1-4199-b2cb-d7b4c63d4198",
     "options": [
         {
-            "text": "Most definitely"
+            "text": "Python"
         },
         {
-            "text": "If they think it's necessary"
+            "text": "JavaScript"
         },
         {
-            "text": "Maybe"
+            "text": "Ruby"
         },
         {
-            "text": "Hell no"
+            "text": "Java"
         }
     ],
     "is_active": true,
@@ -75,7 +73,7 @@ Authorization: Bearer {{access_token}}
 ### GET /api/polls/{id}/ - Get specific poll
 GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/
 
-### PUT /api/polls/{id}/ - Update poll (requires auth)
+### PUT /api/polls/{id}/ - Update poll
 PUT {{baseUrl}}/polls/b3933e86-217d-4952-b7da-4e00d57ef386/
 Content-Type: application/json
 Authorization: Bearer {{access_token}}
@@ -110,21 +108,21 @@ Authorization: Bearer {{access_token}}
     ]
 }
 
-### DELETE /api/polls/{id}/ - Delete poll (requires auth)
+### DELETE /api/polls/{id}/ - Delete poll
 DELETE {{baseUrl}}/polls/50b50bc4-f267-46cc-aede-b2eee97172a2/
 Authorization: Bearer {{access_token}}
 
 ### POST /api/polls/{id}/vote/ - Vote on poll
-POST {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/vote/
+POST {{baseUrl}}/polls/09da177c-84ae-4bc2-94ee-324829431f4e/vote/
 Content-Type: application/json
 Authorization: Bearer {{access_token}}
 
 {
-    "option_id": "58414a73-e25f-44b2-882f-4504d2ed35a3"
+    "option_id": "de719a1c-7ee6-4467-8a40-2f431a898ea7"
 }
 
 ### GET /api/polls/{id}/results/ - Get poll results
-GET {{baseUrl}}/polls/941b4b85-e4a6-4b8e-b6aa-14b67019aa74/results/
+GET {{baseUrl}}/polls/09da177c-84ae-4bc2-94ee-324829431f4e/results/
 
 ### GET /api/categories/{id}/ - Get specific category
 GET {{baseUrl}}/categories/58414a73-e25f-44b2-882f-4504d2ed35a3/
